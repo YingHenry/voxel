@@ -1,0 +1,6894 @@
+# depslib dependency file v1.0
+1410365135 source:c:\users\user\desktop\game opengl\affichage_2d.cpp
+	"distance.h"
+	"texte.h"
+	"variable.h"
+	"vecteur.h"
+	<math.h>
+
+1350928384 c:\users\user\desktop\game opengl\rectangle.h
+
+1350926836 c:\users\user\desktop\game opengl\camera_2d.h
+	"souris.h"
+
+1392886483 c:\users\user\desktop\game opengl\souris.h
+	"variable.h"
+	<SDL.h>
+
+1413878942 c:\users\user\desktop\game opengl\variable.h
+	<SDL.h>
+	<GL/gl.h>
+	<iostream>
+	<string>
+	<list>
+	<map>
+	<time.h>
+	<SDL_mixer.h>
+	"carte.h"
+	"coffre.h"
+	"item.h"
+	"menu.h"
+	"modele.h"
+	"objet.h"
+	"projectile.h"
+	"terrain.h"
+
+1399296468 c:\users\user\desktop\game opengl\texte.h
+	<SDL.h>
+	<string>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl.h
+	"SDL_main.h"
+	"SDL_stdinc.h"
+	"SDL_audio.h"
+	"SDL_cdrom.h"
+	"SDL_cpuinfo.h"
+	"SDL_endian.h"
+	"SDL_error.h"
+	"SDL_events.h"
+	"SDL_loadso.h"
+	"SDL_mutex.h"
+	"SDL_rwops.h"
+	"SDL_thread.h"
+	"SDL_timer.h"
+	"SDL_video.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl_main.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl_stdinc.h
+	"SDL_config.h"
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdlib.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
+	<inttypes.h>
+	<stdint.h>
+	<ctype.h>
+	<iconv.h>
+	"begin_code.h"
+	<alloca.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	"close_code.h"
+
+1326110988 c:\program files (x86)\codeblocks\mingw\include\sdl_config.h
+	"SDL_platform.h"
+	"SDL_config_dreamcast.h"
+	"SDL_config_macos.h"
+	"SDL_config_macosx.h"
+	"SDL_config_symbian.h"
+	"SDL_config_win32.h"
+	"SDL_config_os2.h"
+	"SDL_config_minimal.h"
+
+1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl_platform.h
+
+1250305082 c:\program files (x86)\codeblocks\mingw\include\sys\types.h
+	<_mingw.h>
+	<stddef.h>
+
+1250305074 c:\program files (x86)\codeblocks\mingw\include\_mingw.h
+
+1250305080 c:\program files (x86)\codeblocks\mingw\include\stdio.h
+	<_mingw.h>
+	<stddef.h>
+	<stdarg.h>
+	<sys/types.h>
+
+1250305080 c:\program files (x86)\codeblocks\mingw\include\stdlib.h
+	<_mingw.h>
+	<stddef.h>
+
+1250305078 c:\program files (x86)\codeblocks\mingw\include\malloc.h
+	<_mingw.h>
+	<stdlib.h>
+
+1250305078 c:\program files (x86)\codeblocks\mingw\include\memory.h
+	<string.h>
+
+1250305080 c:\program files (x86)\codeblocks\mingw\include\string.h
+	<_mingw.h>
+	<stddef.h>
+
+1250305080 c:\program files (x86)\codeblocks\mingw\include\strings.h
+	<string.h>
+
+1250305076 c:\program files (x86)\codeblocks\mingw\include\inttypes.h
+	<_mingw.h>
+	<stdint.h>
+	<stddef.h>
+
+1250305080 c:\program files (x86)\codeblocks\mingw\include\stdint.h
+	<stddef.h>
+
+1250305076 c:\program files (x86)\codeblocks\mingw\include\ctype.h
+	<_mingw.h>
+	<stddef.h>
+
+1326111000 c:\program files (x86)\codeblocks\mingw\include\begin_code.h
+
+1325738640 c:\program files (x86)\codeblocks\mingw\include\close_code.h
+
+1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl_audio.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_endian.h"
+	"SDL_mutex.h"
+	"SDL_thread.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl_error.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl_endian.h
+	"SDL_stdinc.h"
+	<endian.h>
+	"begin_code.h"
+	"close_code.h"
+
+1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl_mutex.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl_thread.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_mutex.h"
+	"begin_code.h"
+	<process.h>
+	"close_code.h"
+
+1250305078 c:\program files (x86)\codeblocks\mingw\include\process.h
+	<_mingw.h>
+	<sys/types.h>
+	<stdint.h>
+
+1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl_rwops.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl_cdrom.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl_cpuinfo.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl_events.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_active.h"
+	"SDL_keyboard.h"
+	"SDL_mouse.h"
+	"SDL_joystick.h"
+	"SDL_quit.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl_active.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl_keyboard.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_keysym.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl_keysym.h
+
+1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl_mouse.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl_video.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl_joystick.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl_quit.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+
+1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl_loadso.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl_timer.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl_version.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1228530734 c:\program files (x86)\codeblocks\mingw\include\gl\gl.h
+
+1228530734 c:\program files (x86)\codeblocks\mingw\include\gl\glu.h
+	<stddef.h>
+	<GL/gl.h>
+
+1392632833 c:\users\user\desktop\game opengl\define.h
+
+1414433428 source:c:\users\user\desktop\game opengl\affichage_3d.cpp
+	<cmath>
+	<GL/gl.h>
+	<GL/glu.h>
+	"affichage_2D.h"
+	"affichage_3D.h"
+	"astar.h"
+	"audio.h"
+	"brouillard.h"
+	"chargement.h"
+	"cible.h"
+	"coffre.h"
+	"define.h"
+	"destruction.h"
+	"distance.h"
+	"frustum.h"
+	"menu.h"
+	"neige.h"
+	"objetAffichage.h"
+	"particule.h"
+	"portail.h"
+	"sauvegarde.h"
+	"skybox.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+	"vegetation.h"
+	"vecteur.h"
+
+1388093430 c:\users\user\desktop\game opengl\distance.h
+
+1413370338 source:c:\users\user\desktop\game opengl\aleatoire.cpp
+	<cstdlib>
+	<math.h>
+
+1390572765 c:\users\user\desktop\game opengl\aleatoire.h
+
+1404284512 source:c:\users\user\desktop\game opengl\astar.cpp
+	<cmath>
+	"affichage_3D.h"
+	"distance.h"
+	"variable.h"
+
+1397474821 c:\users\user\desktop\game opengl\astar.h
+
+1350926404 source:c:\users\user\desktop\game opengl\camera_2d.cpp
+	"camera_2D.h"
+
+1413717254 source:c:\users\user\desktop\game opengl\cible.cpp
+	<GL/gl.h>
+	<GL/glu.h>
+	<math.h>
+	"cible.h"
+	"define.h"
+	"distance.h"
+	"texture.h"
+	"variable.h"
+	"vecteur.h"
+
+1414432270 source:c:\users\user\desktop\game opengl\collision.cpp
+	"distance.h"
+	"explosion.h"
+	"objet.h"
+	"variable.h"
+
+1353270507 source:c:\users\user\desktop\game opengl\compteurfps.cpp
+	"compteurFPS.h"
+	<stdlib.h>
+	<stdio.h>
+	<SDL.h>
+
+1350928565 c:\users\user\desktop\game opengl\compteurfps.h
+
+1388093430 source:c:\users\user\desktop\game opengl\distance.cpp
+	<math.h>
+	"distance.h"
+
+1250305078 c:\program files (x86)\codeblocks\mingw\include\math.h
+	<_mingw.h>
+
+1413894430 source:c:\users\user\desktop\game opengl\main.cpp
+	<SDL_opengl.h>
+	<GL/glext.h>
+	<SDL.h>
+	<SDL_ttf.h>
+	<SDL_rotozoom.h>
+	<SDL_mixer.h>
+	<SDL_image.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<math.h>
+	<cstdlib>
+	<iostream>
+	<list>
+	<string>
+	<sstream>
+	<fstream>
+	"affichage_2D.h"
+	"affichage_3D.h"
+	"aleatoire.h"
+	"apparition.h"
+	"arme.h"
+	"aStar.h"
+	"audio.h"
+	"boussole.h"
+	"brouillard.h"
+	"caisse.h"
+	"carte.h"
+	"chargement.h"
+	"cible.h"
+	"clavier.h"
+	"coffre.h"
+	"collision.h"
+	"compteurFPS.h"
+	"define.h"
+	"deplacement.h"
+	"destruction.h"
+	"distance.h"
+	"explosion.h"
+	"extension.h"
+	"fermeture.h"
+	"fluide.h"
+	"frustum.h"
+	"gravite.h"
+	"HUD.h"
+	"inventaire.h"
+	"joueur.h"
+	"manette.h"
+	"menu.h"
+	"modele.h"
+	"objet.h"
+	"objetAffichage.h"
+	"particule.h"
+	"personnage.h"
+	"portail.h"
+	"projectile.h"
+	"puzzle.h"
+	"raccourci.h"
+	"sauvegarde.h"
+	"scenario.h"
+	"sdlglutils.h"
+	"simplexNoise.h"
+	"skybox.h"
+	"souris.h"
+	"temps.h"
+	"terrain.h"
+	"texte.h"
+	"texture.h"
+	"typedef.h"
+	"vague.h"
+	"variable.h"
+	"vecteur.h"
+	"vegetation.h"
+	"video.h"
+	"vision.h"
+	"time.h"
+
+1255904894 c:\program files (x86)\codeblocks\mingw\include\sdl_ttf.h
+	"SDL.h"
+	"begin_code.h"
+	"close_code.h"
+
+1103611386 c:\program files (x86)\codeblocks\mingw\include\sdl_rotozoom.h
+	<math.h>
+	"SDL.h"
+
+1258242752 c:\program files (x86)\codeblocks\mingw\include\sdl_mixer.h
+	"SDL_types.h"
+	"SDL_rwops.h"
+	"SDL_audio.h"
+	"SDL_endian.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl_types.h
+	"SDL_stdinc.h"
+
+1258242678 c:\program files (x86)\codeblocks\mingw\include\sdl_image.h
+	"SDL.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1410365163 c:\users\user\desktop\game opengl\affichage_2d.h
+	<GL/gl.h>
+
+1413716834 c:\users\user\desktop\game opengl\affichage_3d.h
+	<GL/gl.h>
+	<GL/glu.h>
+
+1413717254 c:\users\user\desktop\game opengl\cible.h
+	<GL/gl.h>
+	<GL/glu.h>
+
+1414427903 c:\users\user\desktop\game opengl\collision.h
+
+1356434791 c:\users\user\desktop\game opengl\manette.h
+
+1401111549 c:\users\user\desktop\game opengl\particule.h
+
+1353270631 c:\users\user\desktop\game opengl\sdlglutils.h
+	<GL/gl.h>
+	<SDL.h>
+
+1381862205 c:\users\user\desktop\game opengl\shader.h
+	<GL/glew.h>
+	<OpenGL/gl3.h>
+	<GL3/gl3.h>
+	<SDL_opengl.h>
+	<GL/glext.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<iostream>
+	<string>
+	<fstream>
+
+1353261751 c:\users\user\desktop\game opengl\structure.h
+	<GL/gl.h>
+
+1375708207 c:\users\user\desktop\game opengl\texture.h
+	<string>
+	<SDL.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1356434726 source:c:\users\user\desktop\game opengl\manette.cpp
+	<SDL.h>
+	"manette.h"
+	"variable.h"
+
+1413532361 source:c:\users\user\desktop\game opengl\particule.cpp
+	<SDL.h>
+	<GL/gl.h>
+	<cmath>
+	"affichage_3D.h"
+	"aleatoire.h"
+	"particule.h"
+	"variable.h"
+
+1350927294 source:c:\users\user\desktop\game opengl\rectangle.cpp
+	"rectangle.h"
+
+1355306136 source:c:\users\user\desktop\game opengl\sdlglutils.cpp
+	"sdlglutils.h"
+	<SDL.h>
+	<SDL_image.h>
+	<GL/glu.h>
+	<cstring>
+	<cstdlib>
+
+1381862787 source:c:\users\user\desktop\game opengl\shader.cpp
+	"define.h"
+	"extension.h"
+	"shader.h"
+
+1414423882 source:c:\users\user\desktop\game opengl\souris.cpp
+	<math.h>
+	"affichage_2D.h"
+	"arme.h"
+	"astar.h"
+	"cible.h"
+	"coffre.h"
+	"collision.h"
+	"destruction.h"
+	"distance.h"
+	"fermeture.h"
+	"inventaire.h"
+	"menu.h"
+	"objet.h"
+	"particule.h"
+	"raccourci.h"
+	"sdlglutils.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+	"vecteur.h"
+
+1399373621 source:c:\users\user\desktop\game opengl\texte.cpp
+	<iostream>
+	<string>
+	<sstream>
+	<SDL_ttf.h>
+	<SDL_rotozoom.h>
+	"affichage_2D.h"
+	"define.h"
+	"texture.h"
+	"variable.h"
+
+1413907957 source:c:\users\user\desktop\game opengl\texture.cpp
+	"sdlglutils.h"
+	<string>
+	<SDL_rotozoom.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	"variable.h"
+
+1414433435 source:c:\users\user\desktop\game opengl\variable.cpp
+	<iostream>
+	<map>
+	<math.h>
+	"define.h"
+	"item.h"
+	"neige.h"
+	"objet.h"
+	"variable.h"
+	"sdlglutils.h"
+	"terrain.h"
+	"texture.h"
+	"texte.h"
+
+1370875352 source:c:\users\user\desktop\game opengl 2.0\affichage_2d.cpp
+	<GL/gl.h>
+	<GL/glu.h>
+	"define.h"
+	"variable.h"
+
+1350928384 c:\users\user\desktop\game opengl 2.0\rectangle.h
+
+1350926836 c:\users\user\desktop\game opengl 2.0\camera_2d.h
+	"souris.h"
+
+1372791888 c:\users\user\desktop\game opengl 2.0\souris.h
+	"variable.h"
+	<SDL.h>
+
+1372961662 c:\users\user\desktop\game opengl 2.0\variable.h
+	<SDL.h>
+	<GL/gl.h>
+	<iostream>
+	<string>
+	<list>
+	<map>
+	"objet.h"
+
+1364388992 c:\users\user\desktop\game opengl 2.0\texte.h
+	<SDL.h>
+	<string>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1372688274 c:\users\user\desktop\game opengl 2.0\define.h
+
+1372690542 source:c:\users\user\desktop\game opengl 2.0\affichage_3d.cpp
+	<cmath>
+	<GL/gl.h>
+	<GL/glu.h>
+	"cible.h"
+	"define.h"
+	"distance.h"
+	"variable.h"
+
+1353323814 c:\users\user\desktop\game opengl 2.0\distance.h
+
+1371816785 source:c:\users\user\desktop\game opengl 2.0\aleatoire.cpp
+	<cstdlib>
+	<math.h>
+
+1371758305 c:\users\user\desktop\game opengl 2.0\aleatoire.h
+
+1366310831 source:c:\users\user\desktop\game opengl 2.0\astar.cpp
+	<iostream>
+	<cmath>
+	<stack>
+	"astar.h"
+	"define.h"
+	"variable.h"
+
+1366310179 c:\users\user\desktop\game opengl 2.0\astar.h
+	<iostream>
+	<cmath>
+	<stack>
+	"GL/gl.h"
+
+1350926404 source:c:\users\user\desktop\game opengl 2.0\camera_2d.cpp
+	"camera_2D.h"
+
+1370816951 source:c:\users\user\desktop\game opengl 2.0\cible.cpp
+	<GL/gl.h>
+	<GL/glu.h>
+	"define.h"
+	"texture.h"
+	"variable.h"
+
+1372329158 source:c:\users\user\desktop\game opengl 2.0\collision.cpp
+	"define.h"
+	"variable.h"
+
+1353274107 source:c:\users\user\desktop\game opengl 2.0\compteurfps.cpp
+	"compteurFPS.h"
+	<stdlib.h>
+	<stdio.h>
+	<SDL.h>
+
+1350932165 c:\users\user\desktop\game opengl 2.0\compteurfps.h
+
+1353323814 source:c:\users\user\desktop\game opengl 2.0\distance.cpp
+	<math.h>
+	"distance.h"
+
+1356438326 source:c:\users\user\desktop\game opengl 2.0\manette.cpp
+	<SDL.h>
+	"manette.h"
+	"variable.h"
+
+1356438391 c:\users\user\desktop\game opengl 2.0\manette.h
+
+1355763663 source:c:\users\user\desktop\game opengl 2.0\particule.cpp
+	<SDL.h>
+	<GL/gl.h>
+	"aleatoire.h"
+	"particule.h"
+
+1353001243 c:\users\user\desktop\game opengl 2.0\particule.h
+
+1350927294 source:c:\users\user\desktop\game opengl 2.0\rectangle.cpp
+	"rectangle.h"
+
+1355309736 source:c:\users\user\desktop\game opengl 2.0\sdlglutils.cpp
+	"sdlglutils.h"
+	<SDL.h>
+	<SDL_image.h>
+	<GL/glu.h>
+	<cstring>
+	<cstdlib>
+
+1353274231 c:\users\user\desktop\game opengl 2.0\sdlglutils.h
+	<GL/gl.h>
+	<SDL.h>
+
+1354277532 source:c:\users\user\desktop\game opengl 2.0\shader.cpp
+	<iostream>
+	<stdlib.h>
+	<stdio.h>
+	<malloc.h>
+	<string>
+	"shader.h"
+
+1364247383 c:\users\user\desktop\game opengl 2.0\shader.h
+	"GL/gl.h"
+
+1372791888 source:c:\users\user\desktop\game opengl 2.0\souris.cpp
+	<math.h>
+	"batiment.h"
+	"cible.h"
+	"collision.h"
+	"objet.h"
+	"sdlglutils.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1364423014 source:c:\users\user\desktop\game opengl 2.0\texte.cpp
+	<sstream>
+	<SDL_ttf.h>
+	"affichage_2D.h"
+	"define.h"
+	"texture.h"
+	"variable.h"
+
+1370871546 c:\users\user\desktop\game opengl 2.0\affichage_2d.h
+
+1371565384 c:\users\user\desktop\game opengl 2.0\texture.h
+	<string>
+	<SDL.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1371808970 source:c:\users\user\desktop\game opengl 2.0\texture.cpp
+	"sdlglutils.h"
+	<string>
+	<SDL_rotozoom.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	"variable.h"
+
+1372961971 source:c:\users\user\desktop\game opengl 2.0\variable.cpp
+	<iostream>
+	<map>
+	<math.h>
+	"batiment.h"
+	"define.h"
+	"objet.h"
+	"variable.h"
+	"sdlglutils.h"
+	"terrain.h"
+	"texture.h"
+	"texte.h"
+
+1372962430 source:c:\users\user\desktop\game opengl 2.0\main.cpp
+	<SDL.h>
+	<SDL_ttf.h>
+	<SDL_rotozoom.h>
+	<SDL_mixer.h>
+	<SDL_image.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<math.h>
+	<cstdlib>
+	<iostream>
+	<list>
+	<string>
+	<sstream>
+	"affichage_2D.h"
+	"affichage_3D.h"
+	"astar.h"
+	"audio.h"
+	"batiment.h"
+	"boussole.h"
+	"brouillard.h"
+	"carte.h"
+	"chargement.h"
+	"cible.h"
+	"clavier.h"
+	"collision.h"
+	"compteurFPS.h"
+	"define.h"
+	"deplacement.h"
+	"distance.h"
+	"gravite.h"
+	"inventaire.h"
+	"manette.h"
+	"menu.h"
+	"neige.h"
+	"objet.h"
+	"particule.h"
+	"personnage.h"
+	"sauvegarde.h"
+	"sdlglutils.h"
+	"skybox.h"
+	"souris.h"
+	"temps.h"
+	"texte.h"
+	"texture.h"
+	"variable.h"
+	"video.h"
+	"time.h"
+
+1372686812 c:\users\user\desktop\game opengl 2.0\affichage_3d.h
+	<GL/gl.h>
+	<GL/glu.h>
+
+1362605715 c:\users\user\desktop\game opengl 2.0\cible.h
+	<GL/gl.h>
+	<GL/glu.h>
+
+1372078584 c:\users\user\desktop\game opengl 2.0\collision.h
+
+1353261751 c:\users\user\desktop\game opengl 2.0\structure.h
+	<GL/gl.h>
+
+1228530734 c:\program files (x86)\codeblocks\mingw\include\gl\glext.h
+	<windows.h>
+
+1228530732 c:\program files (x86)\codeblocks\mingw\include\windows.h
+	<winresrc.h>
+	<stdarg.h>
+	<windef.h>
+	<wincon.h>
+	<winbase.h>
+	<wingdi.h>
+	<winuser.h>
+	<winnls.h>
+	<winver.h>
+	<winnetwk.h>
+	<winreg.h>
+	<winsvc.h>
+	<cderr.h>
+	<dde.h>
+	<ddeml.h>
+	<dlgs.h>
+	<imm.h>
+	<lzexpand.h>
+	<mmsystem.h>
+	<nb30.h>
+	<rpc.h>
+	<shellapi.h>
+	<winperf.h>
+	<commdlg.h>
+	<winspool.h>
+	<winsock2.h>
+	<winsock.h>
+	<ole2.h>
+
+1228530732 c:\program files (x86)\codeblocks\mingw\include\winresrc.h
+	<winuser.h>
+	<winnt.h>
+	<winver.h>
+	<dde.h>
+	<dlgs.h>
+	<commctrl.h>
+
+1228530734 c:\program files (x86)\codeblocks\mingw\include\winuser.h
+
+1228530732 c:\program files (x86)\codeblocks\mingw\include\winnt.h
+	<winerror.h>
+	<string.h>
+	<basetsd.h>
+	<pshpack4.h>
+	<poppack.h>
+
+1228530732 c:\program files (x86)\codeblocks\mingw\include\winerror.h
+
+1228530712 c:\program files (x86)\codeblocks\mingw\include\basetsd.h
+
+1228530724 c:\program files (x86)\codeblocks\mingw\include\pshpack4.h
+
+1228530724 c:\program files (x86)\codeblocks\mingw\include\poppack.h
+
+1228530734 c:\program files (x86)\codeblocks\mingw\include\winver.h
+
+1228530714 c:\program files (x86)\codeblocks\mingw\include\dde.h
+
+1228530714 c:\program files (x86)\codeblocks\mingw\include\dlgs.h
+
+1228530714 c:\program files (x86)\codeblocks\mingw\include\commctrl.h
+	<prsht.h>
+
+1228530724 c:\program files (x86)\codeblocks\mingw\include\prsht.h
+
+1228530732 c:\program files (x86)\codeblocks\mingw\include\windef.h
+	<winnt.h>
+
+1228530732 c:\program files (x86)\codeblocks\mingw\include\wincon.h
+
+1228530730 c:\program files (x86)\codeblocks\mingw\include\winbase.h
+
+1228530732 c:\program files (x86)\codeblocks\mingw\include\wingdi.h
+
+1228530732 c:\program files (x86)\codeblocks\mingw\include\winnls.h
+
+1228530732 c:\program files (x86)\codeblocks\mingw\include\winnetwk.h
+
+1228530732 c:\program files (x86)\codeblocks\mingw\include\winreg.h
+
+1228530734 c:\program files (x86)\codeblocks\mingw\include\winsvc.h
+
+1228530712 c:\program files (x86)\codeblocks\mingw\include\cderr.h
+
+1228530714 c:\program files (x86)\codeblocks\mingw\include\ddeml.h
+
+1228530716 c:\program files (x86)\codeblocks\mingw\include\imm.h
+
+1228530720 c:\program files (x86)\codeblocks\mingw\include\lzexpand.h
+
+1228530722 c:\program files (x86)\codeblocks\mingw\include\mmsystem.h
+
+1228530722 c:\program files (x86)\codeblocks\mingw\include\nb30.h
+
+1228530726 c:\program files (x86)\codeblocks\mingw\include\rpc.h
+	<windows.h>
+	<rpcdce.h>
+	<rpcnsi.h>
+	<rpcnterr.h>
+	<winerror.h>
+	<excpt.h>
+
+1228530726 c:\program files (x86)\codeblocks\mingw\include\rpcdce.h
+	<basetyps.h>
+	<rpcdcep.h>
+
+1228530712 c:\program files (x86)\codeblocks\mingw\include\basetyps.h
+
+1228530728 c:\program files (x86)\codeblocks\mingw\include\rpcdcep.h
+
+1228530728 c:\program files (x86)\codeblocks\mingw\include\rpcnsi.h
+
+1228530728 c:\program files (x86)\codeblocks\mingw\include\rpcnterr.h
+
+1250305076 c:\program files (x86)\codeblocks\mingw\include\excpt.h
+	<_mingw.h>
+	<windef.h>
+
+1228530728 c:\program files (x86)\codeblocks\mingw\include\shellapi.h
+	<pshpack2.h>
+	<poppack.h>
+
+1228530724 c:\program files (x86)\codeblocks\mingw\include\pshpack2.h
+
+1228530732 c:\program files (x86)\codeblocks\mingw\include\winperf.h
+
+1228530714 c:\program files (x86)\codeblocks\mingw\include\commdlg.h
+	<unknwn.h>
+	<prsht.h>
+
+1228530730 c:\program files (x86)\codeblocks\mingw\include\unknwn.h
+	<windows.h>
+	<objfwd.h>
+	<wtypes.h>
+
+1228530724 c:\program files (x86)\codeblocks\mingw\include\objfwd.h
+	<basetyps.h>
+
+1228530734 c:\program files (x86)\codeblocks\mingw\include\wtypes.h
+	<rpc.h>
+	<rpcndr.h>
+
+1228530728 c:\program files (x86)\codeblocks\mingw\include\rpcndr.h
+	<rpcnsip.h>
+	<objfwd.h>
+
+1228530728 c:\program files (x86)\codeblocks\mingw\include\rpcnsip.h
+
+1228530734 c:\program files (x86)\codeblocks\mingw\include\winspool.h
+
+1228530734 c:\program files (x86)\codeblocks\mingw\include\winsock2.h
+	<windows.h>
+
+1228530732 c:\program files (x86)\codeblocks\mingw\include\winsock.h
+	<windows.h>
+	<mswsock.h>
+
+1228530722 c:\program files (x86)\codeblocks\mingw\include\mswsock.h
+
+1228530724 c:\program files (x86)\codeblocks\mingw\include\ole2.h
+	<winerror.h>
+	<objbase.h>
+	<olectlid.h>
+	<oleauto.h>
+	<oleidl.h>
+
+1228530724 c:\program files (x86)\codeblocks\mingw\include\objbase.h
+	<rpc.h>
+	<rpcndr.h>
+	<stdlib.h>
+	<basetyps.h>
+	<wtypes.h>
+	<unknwn.h>
+	<objidl.h>
+	<cguid.h>
+
+1228530724 c:\program files (x86)\codeblocks\mingw\include\objidl.h
+	<objfwd.h>
+
+1228530712 c:\program files (x86)\codeblocks\mingw\include\cguid.h
+
+1228530724 c:\program files (x86)\codeblocks\mingw\include\olectlid.h
+
+1228530724 c:\program files (x86)\codeblocks\mingw\include\oleauto.h
+	<oaidl.h>
+
+1228530722 c:\program files (x86)\codeblocks\mingw\include\oaidl.h
+	<windows.h>
+	<ole2.h>
+
+1228530724 c:\program files (x86)\codeblocks\mingw\include\oleidl.h
+	<objfwd.h>
+
+1283853708 c:\program files (x86)\codeblocks\mingw\include\gl\glew.h
+	<stddef.h>
+	<inttypes.h>
+	<stdint.h>
+	<inttypes.h>
+	<OpenGL/glu.h>
+	<GL/glu.h>
+
+1344243548 source:c:\users\user\desktop\game opengl 2.0\glew.c
+	<GL/glew.h>
+	<GL/wglew.h>
+	<GL/glxew.h>
+	<dlfcn.h>
+	<stdio.h>
+	<stdlib.h>
+	<stdlib.h>
+	<string.h>
+	<AvailabilityMacros.h>
+	<dlfcn.h>
+	<mach-o/dyld.h>
+
+1344245012 c:\program files (x86)\codeblocks\mingw\include\gl\wglew.h
+	<windows.h>
+
+1344245012 c:\program files (x86)\codeblocks\mingw\include\gl\glxew.h
+	<X11/Xlib.h>
+	<X11/Xutil.h>
+	<X11/Xmd.h>
+	<GL/glew.h>
+
+1372670688 source:c:\users\user\desktop\game opengl 2.0\brouillard.cpp
+	"GL/gl.h"
+	"brouillard.h"
+	"define.h"
+
+1356269679 c:\users\user\desktop\game opengl 2.0\brouillard.h
+
+1371312145 source:c:\users\user\desktop\game opengl 2.0\clavier.cpp
+	"clavier.h"
+	"batiment.h"
+	"sauvegarde.h"
+	"terrain.h"
+	"variable.h"
+
+1356269000 c:\users\user\desktop\game opengl 2.0\clavier.h
+
+1355160854 source:c:\users\user\desktop\game opengl 2.0\joueur.cpp
+	"joueur.h"
+
+1355407870 c:\users\user\desktop\game opengl 2.0\joueur.h
+
+1364250499 source:c:\users\user\desktop\game opengl 2.0\audio.cpp
+	<SDL_mixer.h>
+	"audio.h"
+
+1364250519 c:\users\user\desktop\game opengl 2.0\audio.h
+	"GL/gl.h"
+
+1358950028 c:\users\user\desktop\game opengl 2.0\neige.h
+
+1372961568 source:c:\users\user\desktop\game opengl 2.0\neige.cpp
+	"GL/gl.h"
+	<cstdlib>
+	<math.h>
+	"define.h"
+	"distance.h"
+	"neige.h"
+	"variable.h"
+
+1372856137 source:c:\users\user\desktop\game opengl 2.0\inventaire.cpp
+	"affichage_2D.h"
+	"batiment.h"
+	"carte.h"
+	"distance.h"
+	"inventaire.h"
+	"objet.h"
+	"portail.h"
+	"souris.h"
+	"terrain.h"
+	"texte.h"
+	"texture.h"
+	"variable.h"
+
+1372332790 c:\users\user\desktop\game opengl 2.0\inventaire.h
+
+1372260575 source:c:\users\user\desktop\game opengl 2.0\gravite.cpp
+	"define.h"
+	"variable.h"
+
+1356268860 c:\users\user\desktop\game opengl 2.0\gravite.h
+
+1366045120 source:c:\users\user\desktop\game opengl 2.0\boussole.cpp
+	"variable.h"
+
+1356293180 c:\users\user\desktop\game opengl 2.0\boussole.h
+
+1358647312 source:c:\users\user\desktop\game opengl 2.0\video.cpp
+	"define.h"
+	"variable.h"
+
+1356437655 c:\users\user\desktop\game opengl 2.0\video.h
+
+1372944177 c:\users\user\desktop\game opengl 2.0\terrain.h
+	<SDL.h>
+
+1372945259 source:c:\users\user\desktop\game opengl 2.0\terrain.cpp
+	<SDL.h>
+	<fstream>
+	<SDL_rotozoom.h>
+	"affichage_2D.h"
+	"affichage_3D.h"
+	"aleatoire.h"
+	"souris.h"
+	"texte.h"
+	"sdlglutils.h"
+	"texture.h"
+	"variable.h"
+
+1356695877 source:c:\users\user\desktop\game opengl 2.0\deplacement.cpp
+	<math.h>
+	"variable.h"
+
+1356544018 c:\users\user\desktop\game opengl 2.0\deplacement.h
+
+1372081994 c:\users\user\desktop\game opengl 2.0\objet.h
+
+1372686581 source:c:\users\user\desktop\game opengl 2.0\objet.cpp
+	<iostream>
+	<math.h>
+	<GL/gl.h>
+	"affichage_3D.h"
+	"collision.h"
+	"distance.h"
+	"objet.h"
+	"personnage.h"
+	"variable.h"
+
+1371914277 source:c:\users\user\desktop\game opengl 2.0\carte.cpp
+	"affichage_2D.h"
+	"aleatoire.h"
+	"distance.h"
+	"inventaire.h"
+	"sdlglutils.h"
+	"terrain.h"
+	"texture.h"
+	"variable.h"
+
+1371913526 c:\users\user\desktop\game opengl 2.0\carte.h
+
+1365789244 c:\users\user\desktop\game opengl 2.0\menu.h
+
+1372962803 source:c:\users\user\desktop\game opengl 2.0\menu.cpp
+	"GL/gl.h"
+	"affichage_2D.h"
+	"chargement.h"
+	"clavier.h"
+	"sauvegarde.h"
+	"souris.h"
+	"temps.h"
+	"texte.h"
+	"variable.h"
+
+1366312967 source:c:\users\user\desktop\game opengl 2.0\canalisation.cpp
+	<list>
+	<stack>
+	"astar.h"
+	"affichage_3D.h"
+	"cible.h"
+	"objet.h"
+	"variable.h"
+
+1366311898 c:\users\user\desktop\game opengl 2.0\canalisation.h
+	<iostream>
+	<string>
+	<map>
+	<list>
+	<GL/gl.h>
+
+1372961686 source:c:\users\user\desktop\game opengl 2.0\batiment.cpp
+	<SDL_rotozoom.h>
+	<fstream>
+	"affichage_3D.h"
+	"cible.h"
+	"souris.h"
+	"texte.h"
+	"texture.h"
+	"variable.h"
+	"sdlglutils.h"
+
+1372961686 c:\users\user\desktop\game opengl 2.0\batiment.h
+
+1365086179 c:\users\user\desktop\game opengl 2.0\route.h
+
+1368751944 source:c:\users\user\desktop\game opengl 2.0\route.cpp
+	"affichage_3D.h"
+	"canalisation.h"
+	"cible.h"
+	"define.h"
+	"route.h"
+	"souris.h"
+	"variable.h"
+
+1365524166 source:c:\users\user\desktop\game opengl 2.0\argent.cpp
+	<GL/gl.h>
+	"cible.h"
+	"variable.h"
+
+1363349262 c:\users\user\desktop\game opengl 2.0\argent.h
+
+1371560988 c:\users\user\desktop\game opengl 2.0\habitant.h
+
+1372075804 source:c:\users\user\desktop\game opengl 2.0\habitant.cpp
+	<GL/gl.h>
+	"affichage_3D.h"
+	"personnage.h"
+	"variable.h"
+
+1372089789 c:\users\user\desktop\game opengl 2.0\temps.h
+
+1372090229 source:c:\users\user\desktop\game opengl 2.0\temps.cpp
+	<iostream>
+	<string>
+	<sstream>
+	"variable.h"
+
+1372961446 c:\users\user\desktop\game opengl 2.0\sauvegarde.h
+
+1372963172 source:c:\users\user\desktop\game opengl 2.0\sauvegarde.cpp
+	<fstream>
+	<sstream>
+	<SDL_rotozoom.h>
+	"objet.h"
+	"sdlglutils.h"
+	"terrain.h"
+	"texte.h"
+	"variable.h"
+
+1364423764 source:c:\users\user\desktop\game opengl 2.0\eau.cpp
+	"affichage_3D.h"
+	"canalisation.h"
+	"cible.h"
+	"souris.h"
+	"variable.h"
+
+1364223947 c:\users\user\desktop\game opengl 2.0\eau.h
+
+1364666509 c:\users\user\desktop\game opengl 2.0\situation.h
+
+1364776104 source:c:\users\user\desktop\game opengl 2.0\situation.cpp
+	"texte.h"
+	"variable.h"
+
+1368883619 c:\users\user\desktop\game opengl 2.0\budget.h
+
+1368884462 source:c:\users\user\desktop\game opengl 2.0\budget.cpp
+	"affichage_2D.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1368889834 c:\users\user\desktop\game opengl 2.0\simulation.h
+
+1368895283 source:c:\users\user\desktop\game opengl 2.0\simulation.cpp
+	<GL/gl.h>
+	"affichage_2D.h"
+	"clavier.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1368885127 c:\users\user\desktop\game opengl 2.0\selection.h
+
+1368886024 source:c:\users\user\desktop\game opengl 2.0\selection.cpp
+	"GL/gl.h"
+	"affichage_2D.h"
+	"clavier.h"
+	"sauvegarde.h"
+	"souris.h"
+	"temps.h"
+	"texte.h"
+	"variable.h"
+
+1250305080 c:\program files (x86)\codeblocks\mingw\include\time.h
+	<_mingw.h>
+	<stddef.h>
+
+1370877188 c:\users\user\desktop\game opengl 2.0\personnage.h
+
+1370877212 source:c:\users\user\desktop\game opengl 2.0\personnage.cpp
+	<GL/gl.h>
+	"objet.h"
+	"variable.h"
+
+1370875352 source:c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\affichage_2d.cpp
+	<GL/gl.h>
+	<GL/glu.h>
+	"define.h"
+	"variable.h"
+
+1370864135 c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\define.h
+
+1371662563 c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\variable.h
+	<SDL.h>
+	<GL/gl.h>
+	<iostream>
+	<string>
+	<list>
+	<map>
+	"objet.h"
+
+1370878479 c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\objet.h
+
+1371815647 source:c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\affichage_3d.cpp
+	<cmath>
+	<GL/gl.h>
+	<GL/glu.h>
+	"cible.h"
+	"define.h"
+	"distance.h"
+	"variable.h"
+
+1362605715 c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\cible.h
+	<GL/gl.h>
+	<GL/glu.h>
+
+1353323814 c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\distance.h
+
+1366310831 source:c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\astar.cpp
+	<iostream>
+	<cmath>
+	<stack>
+	"astar.h"
+	"define.h"
+	"variable.h"
+
+1366310179 c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\astar.h
+	<iostream>
+	<cmath>
+	<stack>
+	"GL/gl.h"
+
+1364250499 source:c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\audio.cpp
+	<SDL_mixer.h>
+	"audio.h"
+
+1364250519 c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\audio.h
+	"GL/gl.h"
+
+1371562410 source:c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\batiment.cpp
+	<SDL_rotozoom.h>
+	<fstream>
+	"affichage_3D.h"
+	"cible.h"
+	"souris.h"
+	"texte.h"
+	"texture.h"
+	"variable.h"
+	"sdlglutils.h"
+
+1370871546 c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\affichage_3d.h
+	<GL/gl.h>
+	<GL/glu.h>
+
+1365789052 c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\souris.h
+	"variable.h"
+	<SDL.h>
+
+1364388992 c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\texte.h
+	<SDL.h>
+	<string>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1371565384 c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\texture.h
+	<string>
+	<SDL.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1353274231 c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\sdlglutils.h
+	<GL/gl.h>
+	<SDL.h>
+
+1366045120 source:c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\boussole.cpp
+	"variable.h"
+
+1366999237 source:c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\brouillard.cpp
+	"GL/gl.h"
+	"brouillard.h"
+	"define.h"
+
+1356269679 c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\brouillard.h
+
+1371764183 source:c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\carte.cpp
+	"affichage_2D.h"
+	"aleatoire.h"
+	"distance.h"
+	"inventaire.h"
+	"sdlglutils.h"
+	"terrain.h"
+	"texture.h"
+	"variable.h"
+
+1370871546 c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\affichage_2d.h
+
+1371758305 c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\aleatoire.h
+
+1371660949 c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\inventaire.h
+
+1370117993 c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\terrain.h
+	<SDL.h>
+
+1370816951 source:c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\cible.cpp
+	<GL/gl.h>
+	<GL/glu.h>
+	"define.h"
+	"texture.h"
+	"variable.h"
+
+1371312145 source:c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\clavier.cpp
+	"clavier.h"
+	"batiment.h"
+	"sauvegarde.h"
+	"terrain.h"
+	"variable.h"
+
+1356269000 c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\clavier.h
+
+1371562410 c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\batiment.h
+
+1366230222 c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\sauvegarde.h
+
+1371381895 source:c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\collision.cpp
+	"define.h"
+	"variable.h"
+
+1353274107 source:c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\compteurfps.cpp
+	"compteurFPS.h"
+	<stdlib.h>
+	<stdio.h>
+	<SDL.h>
+
+1350932165 c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\compteurfps.h
+
+1356695877 source:c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\deplacement.cpp
+	<math.h>
+	"variable.h"
+
+1353323814 source:c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\distance.cpp
+	<math.h>
+	"distance.h"
+
+1370815849 source:c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\gravite.cpp
+	"define.h"
+	"variable.h"
+
+1371560988 source:c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\habitant.cpp
+	<GL/gl.h>
+	"affichage_3D.h"
+	"personnage.h"
+	"variable.h"
+
+1370877188 c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\personnage.h
+
+1371662563 source:c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\inventaire.cpp
+	"affichage_2D.h"
+	"batiment.h"
+	"carte.h"
+	"distance.h"
+	"inventaire.h"
+	"objet.h"
+	"souris.h"
+	"terrain.h"
+	"texte.h"
+	"texture.h"
+	"variable.h"
+
+1371573247 c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\carte.h
+
+1371661613 source:c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\main.cpp
+	<SDL.h>
+	<SDL_ttf.h>
+	<SDL_rotozoom.h>
+	<SDL_mixer.h>
+	<SDL_image.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<math.h>
+	<cstdlib>
+	<iostream>
+	<list>
+	<string>
+	<sstream>
+	"affichage_2D.h"
+	"affichage_3D.h"
+	"astar.h"
+	"audio.h"
+	"batiment.h"
+	"boussole.h"
+	"brouillard.h"
+	"carte.h"
+	"cible.h"
+	"clavier.h"
+	"collision.h"
+	"compteurFPS.h"
+	"define.h"
+	"deplacement.h"
+	"distance.h"
+	"gravite.h"
+	"habitant.h"
+	"inventaire.h"
+	"manette.h"
+	"menu.h"
+	"neige.h"
+	"objet.h"
+	"particule.h"
+	"sauvegarde.h"
+	"sdlglutils.h"
+	"souris.h"
+	"temps.h"
+	"texte.h"
+	"texture.h"
+	"variable.h"
+	"video.h"
+	"time.h"
+
+1356293180 c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\boussole.h
+
+1359553792 c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\collision.h
+
+1356544018 c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\deplacement.h
+
+1356268860 c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\gravite.h
+
+1371560988 c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\habitant.h
+
+1356438391 c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\manette.h
+
+1365789244 c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\menu.h
+
+1358950028 c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\neige.h
+
+1353001243 c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\particule.h
+
+1364000620 c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\temps.h
+
+1356437655 c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\video.h
+
+1356438326 source:c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\manette.cpp
+	<SDL.h>
+	"manette.h"
+	"variable.h"
+
+1371381201 source:c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\menu.cpp
+	"GL/gl.h"
+	"affichage_2D.h"
+	"clavier.h"
+	"sauvegarde.h"
+	"souris.h"
+	"temps.h"
+	"texte.h"
+	"variable.h"
+
+1364250727 source:c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\neige.cpp
+	"GL/gl.h"
+	<cstdlib>
+	<math.h>
+	"define.h"
+	"distance.h"
+	"neige.h"
+	"variable.h"
+
+1371313623 source:c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\objet.cpp
+	<iostream>
+	<math.h>
+	<GL/gl.h>
+	"distance.h"
+	"objet.h"
+	"variable.h"
+
+1355763663 source:c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\particule.cpp
+	<SDL.h>
+	<GL/gl.h>
+	"aleatoire.h"
+	"particule.h"
+
+1370877212 source:c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\personnage.cpp
+	<GL/gl.h>
+	"objet.h"
+	"variable.h"
+
+1371758946 source:c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\sauvegarde.cpp
+	<fstream>
+	<sstream>
+	<SDL_rotozoom.h>
+	"objet.h"
+	"sdlglutils.h"
+	"terrain.h"
+	"texte.h"
+	"variable.h"
+
+1355309736 source:c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\sdlglutils.cpp
+	"sdlglutils.h"
+	<SDL.h>
+	<SDL_image.h>
+	<GL/glu.h>
+	<cstring>
+	<cstdlib>
+
+1371562630 source:c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\souris.cpp
+	<math.h>
+	"batiment.h"
+	"cible.h"
+	"objet.h"
+	"sdlglutils.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1371562641 source:c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\temps.cpp
+	<iostream>
+	<string>
+	<sstream>
+	"variable.h"
+
+1371815527 source:c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\terrain.cpp
+	<SDL.h>
+	<fstream>
+	<SDL_rotozoom.h>
+	"affichage_2D.h"
+	"affichage_3D.h"
+	"aleatoire.h"
+	"souris.h"
+	"texte.h"
+	"sdlglutils.h"
+	"texture.h"
+	"variable.h"
+
+1364423014 source:c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\texte.cpp
+	<sstream>
+	<SDL_ttf.h>
+	"affichage_2D.h"
+	"define.h"
+	"texture.h"
+	"variable.h"
+
+1371808970 source:c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\texture.cpp
+	"sdlglutils.h"
+	<string>
+	<SDL_rotozoom.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	"variable.h"
+
+1371660419 source:c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\variable.cpp
+	<iostream>
+	<map>
+	<math.h>
+	"batiment.h"
+	"define.h"
+	"objet.h"
+	"variable.h"
+	"sdlglutils.h"
+	"terrain.h"
+	"texture.h"
+	"texte.h"
+
+1358647312 source:c:\users\user\desktop\data\sauvegardes game opengl 2.0\0613\210613 1614\video.cpp
+	"define.h"
+	"variable.h"
+
+1370875352 source:c:\users\user\desktop\210613 1614\affichage_2d.cpp
+	<GL/gl.h>
+	<GL/glu.h>
+	"define.h"
+	"variable.h"
+
+1370864135 c:\users\user\desktop\210613 1614\define.h
+
+1371842778 c:\users\user\desktop\210613 1614\variable.h
+	<SDL.h>
+	<GL/gl.h>
+	<iostream>
+	<string>
+	<list>
+	<map>
+	"objet.h"
+
+1370878479 c:\users\user\desktop\210613 1614\objet.h
+
+1371843718 source:c:\users\user\desktop\210613 1614\affichage_3d.cpp
+	<cmath>
+	<GL/gl.h>
+	<GL/glu.h>
+	"cible.h"
+	"define.h"
+	"distance.h"
+	"variable.h"
+
+1362605715 c:\users\user\desktop\210613 1614\cible.h
+	<GL/gl.h>
+	<GL/glu.h>
+
+1353323814 c:\users\user\desktop\210613 1614\distance.h
+
+1371816785 source:c:\users\user\desktop\210613 1614\aleatoire.cpp
+	<cstdlib>
+	<math.h>
+
+1366310831 source:c:\users\user\desktop\210613 1614\astar.cpp
+	<iostream>
+	<cmath>
+	<stack>
+	"astar.h"
+	"define.h"
+	"variable.h"
+
+1366310179 c:\users\user\desktop\210613 1614\astar.h
+	<iostream>
+	<cmath>
+	<stack>
+	"GL/gl.h"
+
+1364250499 source:c:\users\user\desktop\210613 1614\audio.cpp
+	<SDL_mixer.h>
+	"audio.h"
+
+1364250519 c:\users\user\desktop\210613 1614\audio.h
+	"GL/gl.h"
+
+1371562410 source:c:\users\user\desktop\210613 1614\batiment.cpp
+	<SDL_rotozoom.h>
+	<fstream>
+	"affichage_3D.h"
+	"cible.h"
+	"souris.h"
+	"texte.h"
+	"texture.h"
+	"variable.h"
+	"sdlglutils.h"
+
+1370871546 c:\users\user\desktop\210613 1614\affichage_3d.h
+	<GL/gl.h>
+	<GL/glu.h>
+
+1365789052 c:\users\user\desktop\210613 1614\souris.h
+	"variable.h"
+	<SDL.h>
+
+1364388992 c:\users\user\desktop\210613 1614\texte.h
+	<SDL.h>
+	<string>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1371565384 c:\users\user\desktop\210613 1614\texture.h
+	<string>
+	<SDL.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1353274231 c:\users\user\desktop\210613 1614\sdlglutils.h
+	<GL/gl.h>
+	<SDL.h>
+
+1366045120 source:c:\users\user\desktop\210613 1614\boussole.cpp
+	"variable.h"
+
+1366999237 source:c:\users\user\desktop\210613 1614\brouillard.cpp
+	"GL/gl.h"
+	"brouillard.h"
+	"define.h"
+
+1356269679 c:\users\user\desktop\210613 1614\brouillard.h
+
+1371764183 source:c:\users\user\desktop\210613 1614\carte.cpp
+	"affichage_2D.h"
+	"aleatoire.h"
+	"distance.h"
+	"inventaire.h"
+	"sdlglutils.h"
+	"terrain.h"
+	"texture.h"
+	"variable.h"
+
+1370871546 c:\users\user\desktop\210613 1614\affichage_2d.h
+
+1371758305 c:\users\user\desktop\210613 1614\aleatoire.h
+
+1371660949 c:\users\user\desktop\210613 1614\inventaire.h
+
+1370117993 c:\users\user\desktop\210613 1614\terrain.h
+	<SDL.h>
+
+1370816951 source:c:\users\user\desktop\210613 1614\cible.cpp
+	<GL/gl.h>
+	<GL/glu.h>
+	"define.h"
+	"texture.h"
+	"variable.h"
+
+1371312145 source:c:\users\user\desktop\210613 1614\clavier.cpp
+	"clavier.h"
+	"batiment.h"
+	"sauvegarde.h"
+	"terrain.h"
+	"variable.h"
+
+1356269000 c:\users\user\desktop\210613 1614\clavier.h
+
+1371562410 c:\users\user\desktop\210613 1614\batiment.h
+
+1366230222 c:\users\user\desktop\210613 1614\sauvegarde.h
+
+1371381895 source:c:\users\user\desktop\210613 1614\collision.cpp
+	"define.h"
+	"variable.h"
+
+1353274107 source:c:\users\user\desktop\210613 1614\compteurfps.cpp
+	"compteurFPS.h"
+	<stdlib.h>
+	<stdio.h>
+	<SDL.h>
+
+1350932165 c:\users\user\desktop\210613 1614\compteurfps.h
+
+1356695877 source:c:\users\user\desktop\210613 1614\deplacement.cpp
+	<math.h>
+	"variable.h"
+
+1353323814 source:c:\users\user\desktop\210613 1614\distance.cpp
+	<math.h>
+	"distance.h"
+
+1370815849 source:c:\users\user\desktop\210613 1614\gravite.cpp
+	"define.h"
+	"variable.h"
+
+1371560988 source:c:\users\user\desktop\210613 1614\habitant.cpp
+	<GL/gl.h>
+	"affichage_3D.h"
+	"personnage.h"
+	"variable.h"
+
+1370877188 c:\users\user\desktop\210613 1614\personnage.h
+
+1371662563 source:c:\users\user\desktop\210613 1614\inventaire.cpp
+	"affichage_2D.h"
+	"batiment.h"
+	"carte.h"
+	"distance.h"
+	"inventaire.h"
+	"objet.h"
+	"souris.h"
+	"terrain.h"
+	"texte.h"
+	"texture.h"
+	"variable.h"
+
+1371573247 c:\users\user\desktop\210613 1614\carte.h
+
+1371843224 source:c:\users\user\desktop\210613 1614\main.cpp
+	<SDL.h>
+	<SDL_ttf.h>
+	<SDL_rotozoom.h>
+	<SDL_mixer.h>
+	<SDL_image.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<math.h>
+	<cstdlib>
+	<iostream>
+	<list>
+	<string>
+	<sstream>
+	"affichage_2D.h"
+	"affichage_3D.h"
+	"astar.h"
+	"audio.h"
+	"batiment.h"
+	"boussole.h"
+	"brouillard.h"
+	"carte.h"
+	"chargement.h"
+	"cible.h"
+	"clavier.h"
+	"collision.h"
+	"compteurFPS.h"
+	"define.h"
+	"deplacement.h"
+	"distance.h"
+	"gravite.h"
+	"habitant.h"
+	"inventaire.h"
+	"manette.h"
+	"menu.h"
+	"neige.h"
+	"objet.h"
+	"particule.h"
+	"sauvegarde.h"
+	"sdlglutils.h"
+	"souris.h"
+	"temps.h"
+	"texte.h"
+	"texture.h"
+	"variable.h"
+	"video.h"
+	"time.h"
+
+1356293180 c:\users\user\desktop\210613 1614\boussole.h
+
+1359553792 c:\users\user\desktop\210613 1614\collision.h
+
+1356544018 c:\users\user\desktop\210613 1614\deplacement.h
+
+1356268860 c:\users\user\desktop\210613 1614\gravite.h
+
+1371560988 c:\users\user\desktop\210613 1614\habitant.h
+
+1356438391 c:\users\user\desktop\210613 1614\manette.h
+
+1365789244 c:\users\user\desktop\210613 1614\menu.h
+
+1358950028 c:\users\user\desktop\210613 1614\neige.h
+
+1353001243 c:\users\user\desktop\210613 1614\particule.h
+
+1364000620 c:\users\user\desktop\210613 1614\temps.h
+
+1356437655 c:\users\user\desktop\210613 1614\video.h
+
+1356438326 source:c:\users\user\desktop\210613 1614\manette.cpp
+	<SDL.h>
+	"manette.h"
+	"variable.h"
+
+1371843333 source:c:\users\user\desktop\210613 1614\menu.cpp
+	"GL/gl.h"
+	"affichage_2D.h"
+	"clavier.h"
+	"sauvegarde.h"
+	"souris.h"
+	"temps.h"
+	"texte.h"
+	"variable.h"
+
+1364250727 source:c:\users\user\desktop\210613 1614\neige.cpp
+	"GL/gl.h"
+	<cstdlib>
+	<math.h>
+	"define.h"
+	"distance.h"
+	"neige.h"
+	"variable.h"
+
+1371313623 source:c:\users\user\desktop\210613 1614\objet.cpp
+	<iostream>
+	<math.h>
+	<GL/gl.h>
+	"distance.h"
+	"objet.h"
+	"variable.h"
+
+1355763663 source:c:\users\user\desktop\210613 1614\particule.cpp
+	<SDL.h>
+	<GL/gl.h>
+	"aleatoire.h"
+	"particule.h"
+
+1370877212 source:c:\users\user\desktop\210613 1614\personnage.cpp
+	<GL/gl.h>
+	"objet.h"
+	"variable.h"
+
+1371843660 source:c:\users\user\desktop\210613 1614\sauvegarde.cpp
+	<fstream>
+	<sstream>
+	<SDL_rotozoom.h>
+	"objet.h"
+	"sdlglutils.h"
+	"terrain.h"
+	"texte.h"
+	"variable.h"
+
+1355309736 source:c:\users\user\desktop\210613 1614\sdlglutils.cpp
+	"sdlglutils.h"
+	<SDL.h>
+	<SDL_image.h>
+	<GL/glu.h>
+	<cstring>
+	<cstdlib>
+
+1371562630 source:c:\users\user\desktop\210613 1614\souris.cpp
+	<math.h>
+	"batiment.h"
+	"cible.h"
+	"objet.h"
+	"sdlglutils.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1371562641 source:c:\users\user\desktop\210613 1614\temps.cpp
+	<iostream>
+	<string>
+	<sstream>
+	"variable.h"
+
+1371843583 source:c:\users\user\desktop\210613 1614\terrain.cpp
+	<SDL.h>
+	<fstream>
+	<SDL_rotozoom.h>
+	"affichage_2D.h"
+	"affichage_3D.h"
+	"aleatoire.h"
+	"souris.h"
+	"texte.h"
+	"sdlglutils.h"
+	"texture.h"
+	"variable.h"
+
+1364423014 source:c:\users\user\desktop\210613 1614\texte.cpp
+	<sstream>
+	<SDL_ttf.h>
+	"affichage_2D.h"
+	"define.h"
+	"texture.h"
+	"variable.h"
+
+1371808970 source:c:\users\user\desktop\210613 1614\texture.cpp
+	"sdlglutils.h"
+	<string>
+	<SDL_rotozoom.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	"variable.h"
+
+1371660419 source:c:\users\user\desktop\210613 1614\variable.cpp
+	<iostream>
+	<map>
+	<math.h>
+	"batiment.h"
+	"define.h"
+	"objet.h"
+	"variable.h"
+	"sdlglutils.h"
+	"terrain.h"
+	"texture.h"
+	"texte.h"
+
+1358647312 source:c:\users\user\desktop\210613 1614\video.cpp
+	"define.h"
+	"variable.h"
+
+1371842532 c:\users\user\desktop\210613 1614\chargement.h
+
+1371842608 source:c:\users\user\desktop\210613 1614\chargement.cpp
+	"GL/gl.h"
+	"affichage_2D.h"
+	"clavier.h"
+	"sauvegarde.h"
+	"souris.h"
+	"temps.h"
+	"terrain.h"
+	"texte.h"
+	"variable.h"
+
+1372963237 source:c:\users\user\desktop\game opengl 2.0\chargement.cpp
+	<fstream>
+	"GL/gl.h"
+	"affichage_2D.h"
+	"clavier.h"
+	"sauvegarde.h"
+	"souris.h"
+	"temps.h"
+	"terrain.h"
+	"texte.h"
+	"variable.h"
+
+1372962430 c:\users\user\desktop\game opengl 2.0\chargement.h
+
+1372672268 c:\users\user\desktop\game opengl 2.0\skybox.h
+
+1372672896 source:c:\users\user\desktop\game opengl 2.0\skybox.cpp
+	<GL/gl.h>
+	<GL/glu.h>
+	"cible.h"
+	"define.h"
+	"distance.h"
+	"texture.h"
+	"variable.h"
+
+1372856123 c:\users\user\desktop\game opengl 2.0\portail.h
+
+1372858989 source:c:\users\user\desktop\game opengl 2.0\portail.cpp
+	"affichage_2D.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1381337404 source:c:\users\user\desktop\game opengl 2.1\affichage_2d.cpp
+	<GL/gl.h>
+	<GL/glu.h>
+	"define.h"
+	"variable.h"
+
+1381333972 c:\users\user\desktop\game opengl 2.1\define.h
+
+1381573990 c:\users\user\desktop\game opengl 2.1\variable.h
+	<SDL.h>
+	<GL/gl.h>
+	<iostream>
+	<string>
+	<list>
+	<map>
+	"carte.h"
+	"coffre.h"
+	"item.h"
+	"objet.h"
+	"terrain.h"
+	"tresor.h"
+
+1381590025 c:\users\user\desktop\game opengl 2.1\objet.h
+	<string>
+
+1380144658 source:c:\users\user\desktop\game opengl 2.1\affichage_3d.cpp
+	<cmath>
+	<GL/gl.h>
+	<GL/glu.h>
+	"cible.h"
+	"define.h"
+	"distance.h"
+	"variable.h"
+
+1381419575 c:\users\user\desktop\game opengl 2.1\cible.h
+	<GL/gl.h>
+	<GL/glu.h>
+
+1353323814 c:\users\user\desktop\game opengl 2.1\distance.h
+
+1381409897 source:c:\users\user\desktop\game opengl 2.1\aleatoire.cpp
+	<cstdlib>
+	<math.h>
+
+1366310831 source:c:\users\user\desktop\game opengl 2.1\astar.cpp
+	<iostream>
+	<cmath>
+	<stack>
+	"astar.h"
+	"define.h"
+	"variable.h"
+
+1366310179 c:\users\user\desktop\game opengl 2.1\astar.h
+	<iostream>
+	<cmath>
+	<stack>
+	"GL/gl.h"
+
+1364250499 source:c:\users\user\desktop\game opengl 2.1\audio.cpp
+	<SDL_mixer.h>
+	"audio.h"
+
+1364250519 c:\users\user\desktop\game opengl 2.1\audio.h
+	"GL/gl.h"
+
+1375712754 source:c:\users\user\desktop\game opengl 2.1\batiment.cpp
+	<SDL_rotozoom.h>
+	<fstream>
+	"affichage_3D.h"
+	"cible.h"
+	"souris.h"
+	"texte.h"
+	"texture.h"
+	"variable.h"
+	"sdlglutils.h"
+
+1378042860 c:\users\user\desktop\game opengl 2.1\affichage_3d.h
+	<GL/gl.h>
+	<GL/glu.h>
+
+1372791888 c:\users\user\desktop\game opengl 2.1\souris.h
+	"variable.h"
+	<SDL.h>
+
+1377855473 c:\users\user\desktop\game opengl 2.1\texte.h
+	<SDL.h>
+	<string>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1375711807 c:\users\user\desktop\game opengl 2.1\texture.h
+	<string>
+	<SDL.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1353274231 c:\users\user\desktop\game opengl 2.1\sdlglutils.h
+	<GL/gl.h>
+	<SDL.h>
+
+1375136142 source:c:\users\user\desktop\game opengl 2.1\boussole.cpp
+	"define.h"
+	"variable.h"
+
+1380110289 source:c:\users\user\desktop\game opengl 2.1\brouillard.cpp
+	"GL/gl.h"
+	"brouillard.h"
+	"define.h"
+	"variable.h"
+
+1379806893 c:\users\user\desktop\game opengl 2.1\brouillard.h
+
+1380191023 source:c:\users\user\desktop\game opengl 2.1\carte.cpp
+	"affichage_2D.h"
+	"aleatoire.h"
+	"distance.h"
+	"inventaire.h"
+	"sdlglutils.h"
+	"souris.h"
+	"terrain.h"
+	"texte.h"
+	"texture.h"
+	"variable.h"
+
+1381337404 c:\users\user\desktop\game opengl 2.1\affichage_2d.h
+
+1381409897 c:\users\user\desktop\game opengl 2.1\aleatoire.h
+
+1375912482 c:\users\user\desktop\game opengl 2.1\inventaire.h
+
+1380022560 c:\users\user\desktop\game opengl 2.1\terrain.h
+	<SDL.h>
+	"define.h"
+
+1381588626 source:c:\users\user\desktop\game opengl 2.1\chargement.cpp
+	<fstream>
+	"GL/gl.h"
+	"affichage_2D.h"
+	"clavier.h"
+	"define.h"
+	"sauvegarde.h"
+	"souris.h"
+	"temps.h"
+	"terrain.h"
+	"texte.h"
+	"texture.h"
+	"variable.h"
+
+1356269000 c:\users\user\desktop\game opengl 2.1\clavier.h
+
+1375697254 c:\users\user\desktop\game opengl 2.1\sauvegarde.h
+
+1375913063 c:\users\user\desktop\game opengl 2.1\temps.h
+
+1381421192 source:c:\users\user\desktop\game opengl 2.1\cible.cpp
+	<GL/gl.h>
+	<GL/glu.h>
+	<math.h>
+	"define.h"
+	"distance.h"
+	"texture.h"
+	"variable.h"
+
+1381589456 source:c:\users\user\desktop\game opengl 2.1\clavier.cpp
+	"cible.h"
+	"clavier.h"
+	"sauvegarde.h"
+	"terrain.h"
+	"variable.h"
+
+1375712713 c:\users\user\desktop\game opengl 2.1\batiment.h
+
+1378574424 source:c:\users\user\desktop\game opengl 2.1\collision.cpp
+	"define.h"
+	"variable.h"
+
+1353274107 source:c:\users\user\desktop\game opengl 2.1\compteurfps.cpp
+	"compteurFPS.h"
+	<stdlib.h>
+	<stdio.h>
+	<SDL.h>
+
+1350932165 c:\users\user\desktop\game opengl 2.1\compteurfps.h
+
+1380141515 source:c:\users\user\desktop\game opengl 2.1\deplacement.cpp
+	<math.h>
+	"variable.h"
+
+1353323814 source:c:\users\user\desktop\game opengl 2.1\distance.cpp
+	<math.h>
+	"distance.h"
+
+1378574424 source:c:\users\user\desktop\game opengl 2.1\gravite.cpp
+	"affichage_3D.h"
+	"define.h"
+	"variable.h"
+
+1381170947 source:c:\users\user\desktop\game opengl 2.1\inventaire.cpp
+	"affichage_2D.h"
+	"boutique.h"
+	"carte.h"
+	"distance.h"
+	"equipe.h"
+	"inventaire.h"
+	"objet.h"
+	"portail.h"
+	"souris.h"
+	"terrain.h"
+	"texte.h"
+	"texture.h"
+	"tresor.h"
+	"variable.h"
+
+1377382113 c:\users\user\desktop\game opengl 2.1\carte.h
+	<string>
+
+1372856123 c:\users\user\desktop\game opengl 2.1\portail.h
+
+1381587831 source:c:\users\user\desktop\game opengl 2.1\main.cpp
+	<SDL.h>
+	<SDL_ttf.h>
+	<SDL_rotozoom.h>
+	<SDL_mixer.h>
+	<SDL_image.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<GL/glext.h>
+	<math.h>
+	<cstdlib>
+	<iostream>
+	<list>
+	<string>
+	<sstream>
+	<noise/noise.h>
+	"affichage_2D.h"
+	"affichage_3D.h"
+	"aleatoire.h"
+	"astar.h"
+	"audio.h"
+	"boussole.h"
+	"brouillard.h"
+	"carte.h"
+	"chargement.h"
+	"cible.h"
+	"clavier.h"
+	"coffre.h"
+	"collision.h"
+	"compteurFPS.h"
+	"define.h"
+	"deplacement.h"
+	"distance.h"
+	"frustum.h"
+	"gravite.h"
+	"inventaire.h"
+	"manette.h"
+	"menu.h"
+	"objet.h"
+	"particule.h"
+	"personnage.h"
+	"sauvegarde.h"
+	"sdlglutils.h"
+	"simplexNoise.h"
+	"skybox.h"
+	"souris.h"
+	"temps.h"
+	"terrain.h"
+	"texte.h"
+	"texture.h"
+	"tresor.h"
+	"variable.h"
+	"video.h"
+	"SDL_Thread.h"
+	"time.h"
+
+1356293180 c:\users\user\desktop\game opengl 2.1\boussole.h
+
+1376229088 c:\users\user\desktop\game opengl 2.1\chargement.h
+
+1372078584 c:\users\user\desktop\game opengl 2.1\collision.h
+
+1356544018 c:\users\user\desktop\game opengl 2.1\deplacement.h
+
+1356268860 c:\users\user\desktop\game opengl 2.1\gravite.h
+
+1356438391 c:\users\user\desktop\game opengl 2.1\manette.h
+
+1375703227 c:\users\user\desktop\game opengl 2.1\menu.h
+
+1358950028 c:\users\user\desktop\game opengl 2.1\neige.h
+
+1353001243 c:\users\user\desktop\game opengl 2.1\particule.h
+
+1370877188 c:\users\user\desktop\game opengl 2.1\personnage.h
+
+1376356299 c:\users\user\desktop\game opengl 2.1\skybox.h
+	<SDL.h>
+
+1356437655 c:\users\user\desktop\game opengl 2.1\video.h
+
+1356438326 source:c:\users\user\desktop\game opengl 2.1\manette.cpp
+	<SDL.h>
+	"manette.h"
+	"variable.h"
+
+1381574037 source:c:\users\user\desktop\game opengl 2.1\menu.cpp
+	"GL/gl.h"
+	"affichage_2D.h"
+	"brouillard.h"
+	"chargement.h"
+	"clavier.h"
+	"sauvegarde.h"
+	"skybox.h"
+	"souris.h"
+	"temps.h"
+	"texte.h"
+	"texture.h"
+	"variable.h"
+
+1372961568 source:c:\users\user\desktop\game opengl 2.1\neige.cpp
+	"GL/gl.h"
+	<cstdlib>
+	<math.h>
+	"define.h"
+	"distance.h"
+	"neige.h"
+	"variable.h"
+
+1381591460 source:c:\users\user\desktop\game opengl 2.1\objet.cpp
+	<iostream>
+	<math.h>
+	<GL/gl.h>
+	"affichage_3D.h"
+	"aleatoire.h"
+	"cible.h"
+	"collision.h"
+	"distance.h"
+	"objet.h"
+	"personnage.h"
+	"sauvegarde.h"
+	"texte.h"
+	"variable.h"
+
+1381409964 source:c:\users\user\desktop\game opengl 2.1\particule.cpp
+	<SDL.h>
+	<GL/gl.h>
+	"aleatoire.h"
+	"particule.h"
+
+1370877212 source:c:\users\user\desktop\game opengl 2.1\personnage.cpp
+	<GL/gl.h>
+	"objet.h"
+	"variable.h"
+
+1375964492 source:c:\users\user\desktop\game opengl 2.1\portail.cpp
+	"affichage_2D.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1375970920 source:c:\users\user\desktop\game opengl 2.1\sauvegarde.cpp
+	<fstream>
+	<sstream>
+	<SDL_rotozoom.h>
+	"objet.h"
+	"sdlglutils.h"
+	"terrain.h"
+	"texte.h"
+	"variable.h"
+
+1355309736 source:c:\users\user\desktop\game opengl 2.1\sdlglutils.cpp
+	"sdlglutils.h"
+	<SDL.h>
+	<SDL_image.h>
+	<GL/glu.h>
+	<cstring>
+	<cstdlib>
+
+1380058914 source:c:\users\user\desktop\game opengl 2.1\skybox.cpp
+	<SDL.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<SDL_rotozoom.h>
+	"affichage_3D.h"
+	"aleatoire.h"
+	"cible.h"
+	"define.h"
+	"distance.h"
+	"sdlglutils.h"
+	"texture.h"
+	"variable.h"
+
+1381588478 source:c:\users\user\desktop\game opengl 2.1\souris.cpp
+	<math.h>
+	"cible.h"
+	"collision.h"
+	"distance.h"
+	"objet.h"
+	"sdlglutils.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1375913063 source:c:\users\user\desktop\game opengl 2.1\temps.cpp
+	<iostream>
+	<string>
+	<sstream>
+	"variable.h"
+
+1381407935 source:c:\users\user\desktop\game opengl 2.1\terrain.cpp
+	<SDL.h>
+	<fstream>
+	<SDL_rotozoom.h>
+	"affichage_2D.h"
+	"affichage_3D.h"
+	"aleatoire.h"
+	"souris.h"
+	"texte.h"
+	"sdlglutils.h"
+	"simplexNoise.h"
+	"texture.h"
+	"variable.h"
+	"time.h"
+
+1377871389 source:c:\users\user\desktop\game opengl 2.1\texte.cpp
+	<iostream>
+	<string>
+	<sstream>
+	<SDL_ttf.h>
+	<SDL_rotozoom.h>
+	"affichage_2D.h"
+	"define.h"
+	"texture.h"
+	"variable.h"
+
+1380144610 source:c:\users\user\desktop\game opengl 2.1\texture.cpp
+	"sdlglutils.h"
+	<string>
+	<SDL_rotozoom.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	"variable.h"
+
+1380154019 source:c:\users\user\desktop\game opengl 2.1\variable.cpp
+	<iostream>
+	<map>
+	<math.h>
+	"define.h"
+	"item.h"
+	"objet.h"
+	"variable.h"
+	"sdlglutils.h"
+	"terrain.h"
+	"texture.h"
+	"texte.h"
+
+1375710845 source:c:\users\user\desktop\game opengl 2.1\video.cpp
+	"define.h"
+	"variable.h"
+
+1103756668 c:\program files (x86)\codeblocks\mingw\include\noise\noise.h
+	"module/module.h"
+	"model/model.h"
+	"misc.h"
+
+1103670316 c:\program files (x86)\codeblocks\mingw\include\noise\module\module.h
+	"add.h"
+	"abs.h"
+	"billow.h"
+	"blend.h"
+	"cache.h"
+	"checkerboard.h"
+	"clamp.h"
+	"const.h"
+	"curve.h"
+	"cylinders.h"
+	"displace.h"
+	"exponent.h"
+	"invert.h"
+	"max.h"
+	"min.h"
+	"multiply.h"
+	"perlin.h"
+	"power.h"
+	"ridgedmulti.h"
+	"rotatepoint.h"
+	"scalebias.h"
+	"scalepoint.h"
+	"select.h"
+	"spheres.h"
+	"terrace.h"
+	"translatepoint.h"
+	"turbulence.h"
+	"voronoi.h"
+
+1103735918 c:\program files (x86)\codeblocks\mingw\include\noise\module\add.h
+	"modulebase.h"
+
+1157043394 c:\program files (x86)\codeblocks\mingw\include\noise\module\modulebase.h
+	<stdlib.h>
+	<assert.h>
+	<math.h>
+	"../basictypes.h"
+	"../exception.h"
+	"../noisegen.h"
+
+1250308674 c:\program files (x86)\codeblocks\mingw\include\assert.h
+	<_mingw.h>
+
+1103670442 c:\program files (x86)\codeblocks\mingw\include\noise\basictypes.h
+
+1104173836 c:\program files (x86)\codeblocks\mingw\include\noise\exception.h
+
+1103670470 c:\program files (x86)\codeblocks\mingw\include\noise\noisegen.h
+	<math.h>
+	"basictypes.h"
+
+1103733936 c:\program files (x86)\codeblocks\mingw\include\noise\module\abs.h
+	"modulebase.h"
+
+1104171702 c:\program files (x86)\codeblocks\mingw\include\noise\module\billow.h
+	"modulebase.h"
+
+1104171722 c:\program files (x86)\codeblocks\mingw\include\noise\module\blend.h
+	"modulebase.h"
+
+1103733954 c:\program files (x86)\codeblocks\mingw\include\noise\module\cache.h
+	"modulebase.h"
+
+1103670254 c:\program files (x86)\codeblocks\mingw\include\noise\module\checkerboard.h
+	"modulebase.h"
+
+1104171742 c:\program files (x86)\codeblocks\mingw\include\noise\module\clamp.h
+	"modulebase.h"
+
+1103670266 c:\program files (x86)\codeblocks\mingw\include\noise\module\const.h
+	"modulebase.h"
+
+1104171766 c:\program files (x86)\codeblocks\mingw\include\noise\module\curve.h
+	"modulebase.h"
+
+1103670282 c:\program files (x86)\codeblocks\mingw\include\noise\module\cylinders.h
+	"modulebase.h"
+
+1104171796 c:\program files (x86)\codeblocks\mingw\include\noise\module\displace.h
+	"modulebase.h"
+
+1103756408 c:\program files (x86)\codeblocks\mingw\include\noise\module\exponent.h
+	"modulebase.h"
+
+1103740168 c:\program files (x86)\codeblocks\mingw\include\noise\module\invert.h
+	"modulebase.h"
+
+1103735732 c:\program files (x86)\codeblocks\mingw\include\noise\module\max.h
+	"modulebase.h"
+
+1103735742 c:\program files (x86)\codeblocks\mingw\include\noise\module\min.h
+	"modulebase.h"
+
+1103735934 c:\program files (x86)\codeblocks\mingw\include\noise\module\multiply.h
+	"modulebase.h"
+
+1104171830 c:\program files (x86)\codeblocks\mingw\include\noise\module\perlin.h
+	"modulebase.h"
+
+1103740154 c:\program files (x86)\codeblocks\mingw\include\noise\module\power.h
+	"modulebase.h"
+
+1104171842 c:\program files (x86)\codeblocks\mingw\include\noise\module\ridgedmulti.h
+	"modulebase.h"
+
+1103740134 c:\program files (x86)\codeblocks\mingw\include\noise\module\rotatepoint.h
+	"modulebase.h"
+
+1103741018 c:\program files (x86)\codeblocks\mingw\include\noise\module\scalebias.h
+	"modulebase.h"
+
+1103742324 c:\program files (x86)\codeblocks\mingw\include\noise\module\scalepoint.h
+	"modulebase.h"
+
+1104172712 c:\program files (x86)\codeblocks\mingw\include\noise\module\select.h
+	"modulebase.h"
+
+1103670586 c:\program files (x86)\codeblocks\mingw\include\noise\module\spheres.h
+	"modulebase.h"
+
+1104171910 c:\program files (x86)\codeblocks\mingw\include\noise\module\terrace.h
+	"modulebase.h"
+
+1103747362 c:\program files (x86)\codeblocks\mingw\include\noise\module\translatepoint.h
+	"modulebase.h"
+
+1103756144 c:\program files (x86)\codeblocks\mingw\include\noise\module\turbulence.h
+	"perlin.h"
+
+1103755566 c:\program files (x86)\codeblocks\mingw\include\noise\module\voronoi.h
+	"modulebase.h"
+
+1103670620 c:\program files (x86)\codeblocks\mingw\include\noise\model\model.h
+	"cylinder.h"
+	"line.h"
+	"plane.h"
+	"sphere.h"
+
+1103820858 c:\program files (x86)\codeblocks\mingw\include\noise\model\cylinder.h
+	<assert.h>
+	<math.h>
+	<stdlib.h>
+	"../module/modulebase.h"
+
+1103821418 c:\program files (x86)\codeblocks\mingw\include\noise\model\line.h
+	<assert.h>
+	<math.h>
+	<stdlib.h>
+	"../module/modulebase.h"
+
+1103820848 c:\program files (x86)\codeblocks\mingw\include\noise\model\plane.h
+	<assert.h>
+	"../module/modulebase.h"
+
+1103820830 c:\program files (x86)\codeblocks\mingw\include\noise\model\sphere.h
+	<assert.h>
+	"../module/modulebase.h"
+
+1103670460 c:\program files (x86)\codeblocks\mingw\include\noise\misc.h
+
+1381337404 source:c:\users\user\desktop\game opengl 2.1\boutique.cpp
+	"affichage_2D.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1381335410 c:\users\user\desktop\game opengl 2.1\boutique.h
+
+1381336695 c:\users\user\desktop\game opengl 2.1\item.h
+
+1381588478 source:c:\users\user\desktop\game opengl 2.1\item.cpp
+	"define.h"
+	"variable.h"
+
+1375455217 source:c:\users\user\desktop\game opengl 2.1\equipe.cpp
+	"affichage_2D.h"
+	"define.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1374585416 c:\users\user\desktop\game opengl 2.1\equipe.h
+
+1377136214 c:\users\user\desktop\game opengl 2.1\tresor.h
+
+1377164615 source:c:\users\user\desktop\game opengl 2.1\tresor.cpp
+	<math.h>
+	"affichage_2D.h"
+	"cible.h"
+	"distance.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1377775026 c:\users\user\desktop\game opengl 2.1\coffre.h
+
+1381591509 source:c:\users\user\desktop\game opengl 2.1\coffre.cpp
+	"affichage_2D.h"
+	"cible.h"
+	"inventaire.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1379894866 source:c:\users\user\desktop\game opengl 2.1\simplexnoise.cpp
+	<math.h>
+	"simplexNoise.h"
+	"variable.h"
+
+1379894924 c:\users\user\desktop\game opengl 2.1\simplexnoise.h
+
+1376386982 source:c:\users\user\desktop\200913 1202\affichage_2d.cpp
+	<GL/gl.h>
+	<GL/glu.h>
+	"define.h"
+	"variable.h"
+
+1379806948 c:\users\user\desktop\200913 1202\define.h
+
+1379806837 c:\users\user\desktop\200913 1202\variable.h
+	<SDL.h>
+	<GL/gl.h>
+	<iostream>
+	<string>
+	<list>
+	<map>
+	"carte.h"
+	"coffre.h"
+	"item.h"
+	"objet.h"
+	"terrain.h"
+	"tresor.h"
+
+1377382113 c:\users\user\desktop\200913 1202\carte.h
+	<string>
+
+1377775026 c:\users\user\desktop\200913 1202\coffre.h
+
+1375455243 c:\users\user\desktop\200913 1202\item.h
+
+1377854358 c:\users\user\desktop\200913 1202\objet.h
+	<string>
+
+1377136214 c:\users\user\desktop\200913 1202\tresor.h
+
+1379806957 source:c:\users\user\desktop\200913 1202\affichage_3d.cpp
+	<cmath>
+	<GL/gl.h>
+	<GL/glu.h>
+	"cible.h"
+	"define.h"
+	"distance.h"
+	"variable.h"
+
+1377106114 c:\users\user\desktop\200913 1202\cible.h
+	<GL/gl.h>
+	<GL/glu.h>
+
+1353323814 c:\users\user\desktop\200913 1202\distance.h
+
+1374082701 source:c:\users\user\desktop\200913 1202\aleatoire.cpp
+	<cstdlib>
+	<math.h>
+
+1366310831 source:c:\users\user\desktop\200913 1202\astar.cpp
+	<iostream>
+	<cmath>
+	<stack>
+	"astar.h"
+	"define.h"
+	"variable.h"
+
+1366310179 c:\users\user\desktop\200913 1202\astar.h
+	<iostream>
+	<cmath>
+	<stack>
+	"GL/gl.h"
+
+1364250499 source:c:\users\user\desktop\200913 1202\audio.cpp
+	<SDL_mixer.h>
+	"audio.h"
+
+1364250519 c:\users\user\desktop\200913 1202\audio.h
+	"GL/gl.h"
+
+1375136142 source:c:\users\user\desktop\200913 1202\boussole.cpp
+	"define.h"
+	"variable.h"
+
+1374496740 source:c:\users\user\desktop\200913 1202\boutique.cpp
+	"affichage_2D.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1376386536 c:\users\user\desktop\200913 1202\affichage_2d.h
+
+1372791888 c:\users\user\desktop\200913 1202\souris.h
+	"variable.h"
+	<SDL.h>
+
+1377855473 c:\users\user\desktop\200913 1202\texte.h
+	<SDL.h>
+	<string>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1379806893 source:c:\users\user\desktop\200913 1202\brouillard.cpp
+	"GL/gl.h"
+	"brouillard.h"
+	"define.h"
+	"variable.h"
+
+1379806893 c:\users\user\desktop\200913 1202\brouillard.h
+
+1377384097 source:c:\users\user\desktop\200913 1202\carte.cpp
+	"affichage_2D.h"
+	"aleatoire.h"
+	"distance.h"
+	"inventaire.h"
+	"sdlglutils.h"
+	"souris.h"
+	"terrain.h"
+	"texte.h"
+	"texture.h"
+	"variable.h"
+
+1374082701 c:\users\user\desktop\200913 1202\aleatoire.h
+
+1375912482 c:\users\user\desktop\200913 1202\inventaire.h
+
+1353274231 c:\users\user\desktop\200913 1202\sdlglutils.h
+	<GL/gl.h>
+	<SDL.h>
+
+1379805969 c:\users\user\desktop\200913 1202\terrain.h
+	<SDL.h>
+	"define.h"
+
+1375711807 c:\users\user\desktop\200913 1202\texture.h
+	<string>
+	<SDL.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1379807424 source:c:\users\user\desktop\200913 1202\chargement.cpp
+	<fstream>
+	"GL/gl.h"
+	"affichage_2D.h"
+	"clavier.h"
+	"define.h"
+	"sauvegarde.h"
+	"souris.h"
+	"temps.h"
+	"terrain.h"
+	"texte.h"
+	"texture.h"
+	"variable.h"
+
+1356269000 c:\users\user\desktop\200913 1202\clavier.h
+
+1375697254 c:\users\user\desktop\200913 1202\sauvegarde.h
+
+1375913063 c:\users\user\desktop\200913 1202\temps.h
+
+1377108381 source:c:\users\user\desktop\200913 1202\cible.cpp
+	<GL/gl.h>
+	<GL/glu.h>
+	"define.h"
+	"texture.h"
+	"variable.h"
+
+1377774946 source:c:\users\user\desktop\200913 1202\clavier.cpp
+	"cible.h"
+	"clavier.h"
+	"sauvegarde.h"
+	"terrain.h"
+	"variable.h"
+
+1377870752 source:c:\users\user\desktop\200913 1202\coffre.cpp
+	"affichage_2D.h"
+	"cible.h"
+	"inventaire.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1378574424 source:c:\users\user\desktop\200913 1202\collision.cpp
+	"define.h"
+	"variable.h"
+
+1353274107 source:c:\users\user\desktop\200913 1202\compteurfps.cpp
+	"compteurFPS.h"
+	<stdlib.h>
+	<stdio.h>
+	<SDL.h>
+
+1350932165 c:\users\user\desktop\200913 1202\compteurfps.h
+
+1377858641 source:c:\users\user\desktop\200913 1202\deplacement.cpp
+	<math.h>
+	"variable.h"
+
+1353323814 source:c:\users\user\desktop\200913 1202\distance.cpp
+	<math.h>
+	"distance.h"
+
+1375455217 source:c:\users\user\desktop\200913 1202\equipe.cpp
+	"affichage_2D.h"
+	"define.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1378574424 source:c:\users\user\desktop\200913 1202\gravite.cpp
+	"affichage_3D.h"
+	"define.h"
+	"variable.h"
+
+1378042860 c:\users\user\desktop\200913 1202\affichage_3d.h
+	<GL/gl.h>
+	<GL/glu.h>
+
+1377770264 source:c:\users\user\desktop\200913 1202\inventaire.cpp
+	"affichage_2D.h"
+	"boutique.h"
+	"carte.h"
+	"distance.h"
+	"equipe.h"
+	"inventaire.h"
+	"objet.h"
+	"portail.h"
+	"souris.h"
+	"terrain.h"
+	"texte.h"
+	"texture.h"
+	"tresor.h"
+	"variable.h"
+
+1374486495 c:\users\user\desktop\200913 1202\boutique.h
+
+1374585416 c:\users\user\desktop\200913 1202\equipe.h
+
+1372856123 c:\users\user\desktop\200913 1202\portail.h
+
+1375478554 source:c:\users\user\desktop\200913 1202\item.cpp
+	"define.h"
+	"variable.h"
+
+1356438326 source:c:\users\user\desktop\200913 1202\manette.cpp
+	<SDL.h>
+	"manette.h"
+	"variable.h"
+
+1356438391 c:\users\user\desktop\200913 1202\manette.h
+
+1379806948 source:c:\users\user\desktop\200913 1202\menu.cpp
+	"GL/gl.h"
+	"affichage_2D.h"
+	"brouillard.h"
+	"chargement.h"
+	"clavier.h"
+	"sauvegarde.h"
+	"skybox.h"
+	"souris.h"
+	"temps.h"
+	"texte.h"
+	"texture.h"
+	"variable.h"
+
+1376229088 c:\users\user\desktop\200913 1202\chargement.h
+
+1376356299 c:\users\user\desktop\200913 1202\skybox.h
+	<SDL.h>
+
+1377854485 source:c:\users\user\desktop\200913 1202\objet.cpp
+	<iostream>
+	<math.h>
+	<GL/gl.h>
+	"affichage_3D.h"
+	"cible.h"
+	"collision.h"
+	"distance.h"
+	"objet.h"
+	"personnage.h"
+	"sauvegarde.h"
+	"texte.h"
+	"variable.h"
+
+1372078584 c:\users\user\desktop\200913 1202\collision.h
+
+1370877188 c:\users\user\desktop\200913 1202\personnage.h
+
+1355763663 source:c:\users\user\desktop\200913 1202\particule.cpp
+	<SDL.h>
+	<GL/gl.h>
+	"aleatoire.h"
+	"particule.h"
+
+1353001243 c:\users\user\desktop\200913 1202\particule.h
+
+1370877212 source:c:\users\user\desktop\200913 1202\personnage.cpp
+	<GL/gl.h>
+	"objet.h"
+	"variable.h"
+
+1375964492 source:c:\users\user\desktop\200913 1202\portail.cpp
+	"affichage_2D.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1375970920 source:c:\users\user\desktop\200913 1202\sauvegarde.cpp
+	<fstream>
+	<sstream>
+	<SDL_rotozoom.h>
+	"objet.h"
+	"sdlglutils.h"
+	"terrain.h"
+	"texte.h"
+	"variable.h"
+
+1355309736 source:c:\users\user\desktop\200913 1202\sdlglutils.cpp
+	"sdlglutils.h"
+	<SDL.h>
+	<SDL_image.h>
+	<GL/glu.h>
+	<cstring>
+	<cstdlib>
+
+1378998240 source:c:\users\user\desktop\200913 1202\simplexnoise.cpp
+	<math.h>
+	"simplexNoise.h"
+
+1378996028 c:\users\user\desktop\200913 1202\simplexnoise.h
+
+1376439385 source:c:\users\user\desktop\200913 1202\skybox.cpp
+	<SDL.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<SDL_rotozoom.h>
+	"affichage_3D.h"
+	"aleatoire.h"
+	"cible.h"
+	"define.h"
+	"distance.h"
+	"sdlglutils.h"
+	"texture.h"
+	"variable.h"
+
+1377775728 source:c:\users\user\desktop\200913 1202\souris.cpp
+	<math.h>
+	"cible.h"
+	"collision.h"
+	"distance.h"
+	"objet.h"
+	"sdlglutils.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1375913063 source:c:\users\user\desktop\200913 1202\temps.cpp
+	<iostream>
+	<string>
+	<sstream>
+	"variable.h"
+
+1379806574 source:c:\users\user\desktop\200913 1202\terrain.cpp
+	<SDL.h>
+	<fstream>
+	<SDL_rotozoom.h>
+	"affichage_2D.h"
+	"affichage_3D.h"
+	"aleatoire.h"
+	"souris.h"
+	"texte.h"
+	"sdlglutils.h"
+	"texture.h"
+	"variable.h"
+	"time.h"
+
+1377871389 source:c:\users\user\desktop\200913 1202\texte.cpp
+	<iostream>
+	<string>
+	<sstream>
+	<SDL_ttf.h>
+	<SDL_rotozoom.h>
+	"affichage_2D.h"
+	"define.h"
+	"texture.h"
+	"variable.h"
+
+1375711807 source:c:\users\user\desktop\200913 1202\texture.cpp
+	"sdlglutils.h"
+	<string>
+	<SDL_rotozoom.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	"variable.h"
+
+1377164615 source:c:\users\user\desktop\200913 1202\tresor.cpp
+	<math.h>
+	"affichage_2D.h"
+	"cible.h"
+	"distance.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1379806837 source:c:\users\user\desktop\200913 1202\variable.cpp
+	<iostream>
+	<map>
+	<math.h>
+	"define.h"
+	"item.h"
+	"objet.h"
+	"variable.h"
+	"sdlglutils.h"
+	"terrain.h"
+	"texture.h"
+	"texte.h"
+
+1375710845 source:c:\users\user\desktop\200913 1202\video.cpp
+	"define.h"
+	"variable.h"
+
+1379807249 source:c:\users\user\desktop\200913 1202\main.cpp
+	<SDL.h>
+	<SDL_ttf.h>
+	<SDL_rotozoom.h>
+	<SDL_mixer.h>
+	<SDL_image.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<math.h>
+	<cstdlib>
+	<iostream>
+	<list>
+	<string>
+	<sstream>
+	<noise/noise.h>
+	"affichage_2D.h"
+	"affichage_3D.h"
+	"aleatoire.h"
+	"astar.h"
+	"audio.h"
+	"boussole.h"
+	"brouillard.h"
+	"carte.h"
+	"chargement.h"
+	"cible.h"
+	"clavier.h"
+	"coffre.h"
+	"collision.h"
+	"compteurFPS.h"
+	"define.h"
+	"deplacement.h"
+	"distance.h"
+	"frustum.h"
+	"gravite.h"
+	"inventaire.h"
+	"manette.h"
+	"menu.h"
+	"objet.h"
+	"particule.h"
+	"personnage.h"
+	"sauvegarde.h"
+	"sdlglutils.h"
+	"simplexNoise.h"
+	"skybox.h"
+	"souris.h"
+	"temps.h"
+	"terrain.h"
+	"texte.h"
+	"texture.h"
+	"tresor.h"
+	"variable.h"
+	"video.h"
+	"SDL_Thread.h"
+	"time.h"
+
+1356293180 c:\users\user\desktop\200913 1202\boussole.h
+
+1356544018 c:\users\user\desktop\200913 1202\deplacement.h
+
+1356268860 c:\users\user\desktop\200913 1202\gravite.h
+
+1375703227 c:\users\user\desktop\200913 1202\menu.h
+
+1356437655 c:\users\user\desktop\200913 1202\video.h
+
+1379808135 source:c:\users\user\desktop\200913 1202\frustum.cpp
+	<cmath>
+	"variable.h"
+	"distance.h"
+	<GL/gl.h>
+
+1379807132 c:\users\user\desktop\200913 1202\frustum.h
+
+1381591802 source:c:\users\user\desktop\game opengl 2.1\frustum.cpp
+	<cmath>
+	"variable.h"
+	"distance.h"
+	<GL/gl.h>
+
+1379807132 c:\users\user\desktop\game opengl 2.1\frustum.h
+
+1410938656 c:\users\user\desktop\game opengl\carte.h
+
+1399370486 c:\users\user\desktop\game opengl\coffre.h
+	"menu.h"
+
+1411890677 c:\users\user\desktop\game opengl\item.h
+	"GL/gl.h"
+
+1414423293 c:\users\user\desktop\game opengl\objet.h
+	"menu.h"
+
+1412325609 c:\users\user\desktop\game opengl\terrain.h
+	<SDL.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	"define.h"
+
+1377136214 c:\users\user\desktop\game opengl\tresor.h
+
+1414423740 source:c:\users\user\desktop\game opengl\audio.cpp
+	"distance.h"
+	"variable.h"
+
+1414423625 c:\users\user\desktop\game opengl\audio.h
+	<SDL_mixer.h>
+	<GL/gl.h>
+
+1411054204 source:c:\users\user\desktop\game opengl\boussole.cpp
+	"affichage_2D.h"
+	"variable.h"
+
+1388773694 source:c:\users\user\desktop\game opengl\boutique.cpp
+	"affichage_2D.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1413572923 source:c:\users\user\desktop\game opengl\brouillard.cpp
+	"GL/gl.h"
+	"variable.h"
+
+1403589826 c:\users\user\desktop\game opengl\brouillard.h
+
+1413371735 source:c:\users\user\desktop\game opengl\carte.cpp
+	"affichage_2D.h"
+	"aleatoire.h"
+	"distance.h"
+	"inventaire.h"
+	"sauvegarde.h"
+	"sdlglutils.h"
+	"souris.h"
+	"terrain.h"
+	"texte.h"
+	"texture.h"
+	"variable.h"
+
+1412536758 c:\users\user\desktop\game opengl\inventaire.h
+
+1414433556 source:c:\users\user\desktop\game opengl\chargement.cpp
+	<fstream>
+	"GL/gl.h"
+	"affichage_2D.h"
+	"caisse.h"
+	"clavier.h"
+	"customisationArmure.h"
+	"define.h"
+	"distance.h"
+	"portail.h"
+	"puzzle.h"
+	"sauvegarde.h"
+	"skybox.h"
+	"souris.h"
+	"temps.h"
+	"terrain.h"
+	"texte.h"
+	"texture.h"
+	"variable.h"
+	"vegetation.h"
+
+1391719779 c:\users\user\desktop\game opengl\clavier.h
+
+1411890677 c:\users\user\desktop\game opengl\sauvegarde.h
+	<string>
+
+1392993425 c:\users\user\desktop\game opengl\temps.h
+
+1413707094 source:c:\users\user\desktop\game opengl\clavier.cpp
+	"affichage_2D.h"
+	"arme.h"
+	"cible.h"
+	"clavier.h"
+	"coffre.h"
+	"menu.h"
+	"sauvegarde.h"
+	"terrain.h"
+	"texte.h"
+	"variable.h"
+
+1411890974 source:c:\users\user\desktop\game opengl\coffre.cpp
+	"affichage_2D.h"
+	"affichage_3D.h"
+	"cible.h"
+	"distance.h"
+	"inventaire.h"
+	"menu.h"
+	"raccourci.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1413717282 source:c:\users\user\desktop\game opengl\deplacement.cpp
+	<math.h>
+	"distance.h"
+	"variable.h"
+
+1392636556 source:c:\users\user\desktop\game opengl\equipe.cpp
+	"affichage_2D.h"
+	"define.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1395781977 source:c:\users\user\desktop\game opengl\frustum.cpp
+	<cmath>
+	"variable.h"
+	"distance.h"
+	<GL/gl.h>
+
+1414433588 source:c:\users\user\desktop\game opengl\gravite.cpp
+	"affichage_3D.h"
+	"define.h"
+	"variable.h"
+
+1414423882 source:c:\users\user\desktop\game opengl\inventaire.cpp
+	"affichage_2D.h"
+	"arme.h"
+	"carte.h"
+	"defense.h"
+	"distance.h"
+	"inventaire.h"
+	"menu.h"
+	"objet.h"
+	"portail.h"
+	"projectile.h"
+	"souris.h"
+	"terrain.h"
+	"texte.h"
+	"texture.h"
+	"variable.h"
+	"vision.h"
+
+1381331810 c:\users\user\desktop\game opengl\boutique.h
+
+1374585416 c:\users\user\desktop\game opengl\equipe.h
+
+1413893850 c:\users\user\desktop\game opengl\portail.h
+
+1413882553 source:c:\users\user\desktop\game opengl\item.cpp
+	"define.h"
+	"texte.h"
+	"variable.h"
+
+1413735933 source:c:\users\user\desktop\game opengl\menu.cpp
+	"GL/gl.h"
+	"affichage_2D.h"
+	"affichage_3D.h"
+	"brouillard.h"
+	"chargement.h"
+	"clavier.h"
+	"joueur.h"
+	"inventaire.h"
+	"objectif.h"
+	"sauvegarde.h"
+	"skybox.h"
+	"souris.h"
+	"temps.h"
+	"texte.h"
+	"texture.h"
+	"variable.h"
+	"time.h"
+
+1411890677 c:\users\user\desktop\game opengl\chargement.h
+
+1376352699 c:\users\user\desktop\game opengl\skybox.h
+	<SDL.h>
+
+1414423625 source:c:\users\user\desktop\game opengl\objet.cpp
+	<iostream>
+	<math.h>
+	<GL/gl.h>
+	"audio.h"
+	"affichage_3D.h"
+	"aleatoire.h"
+	"aStar.h"
+	"cible.h"
+	"collision.h"
+	"distance.h"
+	"explosion.h"
+	"modele.h"
+	"objet.h"
+	"objetAffichage.h"
+	"particule.h"
+	"personnage.h"
+	"raccourci.h"
+	"sauvegarde.h"
+	"texte.h"
+	"variable.h"
+	"vecteur.h"
+	"vegetation.h"
+	<stdio.h>
+	<stdlib.h>
+
+1404159440 c:\users\user\desktop\game opengl\personnage.h
+
+1406889954 source:c:\users\user\desktop\game opengl\personnage.cpp
+	<GL/gl.h>
+	"objet.h"
+	"variable.h"
+
+1413893850 source:c:\users\user\desktop\game opengl\portail.cpp
+	"affichage_2D.h"
+	"distance.h"
+	"puzzle.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1413893370 source:c:\users\user\desktop\game opengl\sauvegarde.cpp
+	<fstream>
+	<sstream>
+	<time.h>
+	<SDL_rotozoom.h>
+	"objet.h"
+	"sdlglutils.h"
+	"terrain.h"
+	"texte.h"
+	"variable.h"
+
+1379891266 source:c:\users\user\desktop\game opengl\simplexnoise.cpp
+	<math.h>
+	"simplexNoise.h"
+	"variable.h"
+
+1379891324 c:\users\user\desktop\game opengl\simplexnoise.h
+
+1403585574 source:c:\users\user\desktop\game opengl\skybox.cpp
+	<SDL.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<SDL_rotozoom.h>
+	"affichage_3D.h"
+	"aleatoire.h"
+	"cible.h"
+	"define.h"
+	"distance.h"
+	"sdlglutils.h"
+	"texture.h"
+	"variable.h"
+
+1396335233 source:c:\users\user\desktop\game opengl\temps.cpp
+	<iostream>
+	<string>
+	<sstream>
+	"variable.h"
+
+1413465749 source:c:\users\user\desktop\game opengl\terrain.cpp
+	<SDL.h>
+	<fstream>
+	<SDL_rotozoom.h>
+	"affichage_2D.h"
+	"affichage_3D.h"
+	"aleatoire.h"
+	"caisse.h"
+	"distance.h"
+	"portail.h"
+	"puzzle.h"
+	"souris.h"
+	"texte.h"
+	"sdlglutils.h"
+	"simplexNoise.h"
+	"texture.h"
+	"variable.h"
+	"vegetation.h"
+	"time.h"
+
+1410368564 source:c:\users\user\desktop\game opengl\tresor.cpp
+	<math.h>
+	"affichage_2D.h"
+	"cible.h"
+	"distance.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1414425582 source:c:\users\user\desktop\game opengl\video.cpp
+	"define.h"
+	"variable.h"
+
+1356289580 c:\users\user\desktop\game opengl\boussole.h
+
+1413717282 c:\users\user\desktop\game opengl\deplacement.h
+
+1379803532 c:\users\user\desktop\game opengl\frustum.h
+
+1356265260 c:\users\user\desktop\game opengl\gravite.h
+
+1411841041 c:\users\user\desktop\game opengl\menu.h
+	<string>
+	<GL/gl.h>
+
+1356434055 c:\users\user\desktop\game opengl\video.h
+
+1325738640 c:\program files (x86)\codeblocks\mingw\include\sdl_opengl.h
+	"SDL_config.h"
+	<windows.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<gl.h>
+	<glu.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<windows.h>
+	<stddef.h>
+
+1381861226 c:\users\user\desktop\game opengl\extension.h
+	<SDL_opengl.h>
+	<GL/glext.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1381860997 source:c:\users\user\desktop\game opengl\extension.cpp
+	<SDL_opengl.h>
+	<GL/glext.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<SDL.h>
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\glm.hpp
+	"core/_fixes.hpp"
+	<cmath>
+	<climits>
+	<cfloat>
+	<limits>
+	<cstdio>
+	"core/setup.hpp"
+	"./core/_detail.hpp"
+	"./core/_vectorize.hpp"
+	"./core/type.hpp"
+	"./core/func_trigonometric.hpp"
+	"./core/func_exponential.hpp"
+	"./core/func_common.hpp"
+	"./core/func_packing.hpp"
+	"./core/func_geometric.hpp"
+	"./core/func_matrix.hpp"
+	"./core/func_vector_relational.hpp"
+	"./core/func_integer.hpp"
+	"./core/func_noise.hpp"
+	"./core/_swizzle.hpp"
+
+1374835560 c:\program files (x86)\codeblocks\mingw\include\glm\core\_fixes.hpp
+	<cmath>
+
+1376342329 c:\program files (x86)\codeblocks\mingw\include\glm\core\setup.hpp
+	<intrin.h>
+	<immintrin.h>
+	<immintrin.h>
+	<smmintrin.h>
+	<pmmintrin.h>
+	<emmintrin.h>
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\core\_detail.hpp
+	"setup.hpp"
+	<cassert>
+	<cstdint>
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\core\_vectorize.hpp
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\core\type.hpp
+	"type_half.hpp"
+	"type_float.hpp"
+	"type_int.hpp"
+	"type_gentype.hpp"
+	"type_vec1.hpp"
+	"type_vec2.hpp"
+	"type_vec3.hpp"
+	"type_vec4.hpp"
+	"type_mat2x2.hpp"
+	"type_mat2x3.hpp"
+	"type_mat2x4.hpp"
+	"type_mat3x2.hpp"
+	"type_mat3x3.hpp"
+	"type_mat3x4.hpp"
+	"type_mat4x2.hpp"
+	"type_mat4x3.hpp"
+	"type_mat4x4.hpp"
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\core\type_half.hpp
+	<cstdlib>
+	"type_half.inl"
+
+1376342329 c:\program files (x86)\codeblocks\mingw\include\glm\core\type_half.inl
+	"_detail.hpp"
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\core\type_float.hpp
+	"type_half.hpp"
+	"setup.hpp"
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\core\type_int.hpp
+	"setup.hpp"
+	"_detail.hpp"
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\core\type_gentype.hpp
+	"type_size.hpp"
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\core\type_size.hpp
+	<cstdlib>
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\core\type_vec1.hpp
+	"type_vec.hpp"
+	"type_float.hpp"
+	"type_int.hpp"
+	"type_size.hpp"
+	"_swizzle.hpp"
+	"type_vec1.inl"
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\core\type_vec.hpp
+	"type_gentype.hpp"
+
+1376342329 c:\program files (x86)\codeblocks\mingw\include\glm\core\_swizzle.hpp
+	"_swizzle_func.hpp"
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\core\_swizzle_func.hpp
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\core\type_vec1.inl
+
+1376342329 c:\program files (x86)\codeblocks\mingw\include\glm\core\type_vec2.hpp
+	"type_vec.hpp"
+	"type_float.hpp"
+	"type_int.hpp"
+	"type_size.hpp"
+	"_swizzle.hpp"
+	"type_vec2.inl"
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\core\type_vec2.inl
+
+1376342329 c:\program files (x86)\codeblocks\mingw\include\glm\core\type_vec3.hpp
+	"type_vec.hpp"
+	"type_float.hpp"
+	"type_int.hpp"
+	"type_size.hpp"
+	"_swizzle.hpp"
+	"type_vec3.inl"
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\core\type_vec3.inl
+
+1376342329 c:\program files (x86)\codeblocks\mingw\include\glm\core\type_vec4.hpp
+	"type_vec.hpp"
+	"type_float.hpp"
+	"type_int.hpp"
+	"type_size.hpp"
+	"_swizzle.hpp"
+	"type_vec4.inl"
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\core\type_vec4.inl
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\core\type_mat2x2.hpp
+	"type_mat.hpp"
+	"type_mat2x2.inl"
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\core\type_mat.hpp
+	"type_gentype.hpp"
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\core\type_mat2x2.inl
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\core\type_mat2x3.hpp
+	"type_mat.hpp"
+	"type_mat2x3.inl"
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\core\type_mat2x3.inl
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\core\type_mat2x4.hpp
+	"type_mat.hpp"
+	"type_mat2x4.inl"
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\core\type_mat2x4.inl
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\core\type_mat3x2.hpp
+	"type_mat.hpp"
+	"type_mat3x2.inl"
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\core\type_mat3x2.inl
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\core\type_mat3x3.hpp
+	"type_mat.hpp"
+	"type_mat3x3.inl"
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\core\type_mat3x3.inl
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\core\type_mat3x4.hpp
+	"type_mat.hpp"
+	"type_mat3x4.inl"
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\core\type_mat3x4.inl
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\core\type_mat4x2.hpp
+	"type_mat.hpp"
+	"type_mat4x2.inl"
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\core\type_mat4x2.inl
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\core\type_mat4x3.hpp
+	"type_mat.hpp"
+	"type_mat4x3.inl"
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\core\type_mat4x3.inl
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\core\type_mat4x4.hpp
+	"type_mat.hpp"
+	"type_mat4x4.inl"
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\core\type_mat4x4.inl
+
+1374835560 c:\program files (x86)\codeblocks\mingw\include\glm\core\func_trigonometric.hpp
+	"func_trigonometric.inl"
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\core\func_trigonometric.inl
+
+1374835560 c:\program files (x86)\codeblocks\mingw\include\glm\core\func_exponential.hpp
+	"func_exponential.inl"
+
+1374835560 c:\program files (x86)\codeblocks\mingw\include\glm\core\func_exponential.inl
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\core\func_common.hpp
+	"_fixes.hpp"
+	"func_common.inl"
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\core\func_common.inl
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\core\func_packing.hpp
+	"func_packing.inl"
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\core\func_packing.inl
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\core\func_geometric.hpp
+	"func_geometric.inl"
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\core\func_geometric.inl
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\core\func_matrix.hpp
+	"func_matrix.inl"
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\core\func_matrix.inl
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\core\func_vector_relational.hpp
+	"_detail.hpp"
+	"func_vector_relational.inl"
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\core\func_vector_relational.inl
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\core\func_integer.hpp
+	"func_integer.inl"
+
+1376342329 c:\program files (x86)\codeblocks\mingw\include\glm\core\func_integer.inl
+	<intrin.h>
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\core\func_noise.hpp
+	"func_noise.inl"
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\core\func_noise.inl
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\gtx\transform.hpp
+	"../glm.hpp"
+	"../gtc/matrix_transform.hpp"
+	"transform.inl"
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\gtc\matrix_transform.hpp
+	"../glm.hpp"
+	"matrix_transform.inl"
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\gtc\matrix_transform.inl
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\gtx\transform.inl
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\gtc\type_ptr.hpp
+	"../glm.hpp"
+	"../gtc/half_float.hpp"
+	"../gtc/quaternion.hpp"
+	<cstring>
+	"type_ptr.inl"
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\gtc\half_float.hpp
+	"../glm.hpp"
+	"half_float.inl"
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\gtc\half_float.inl
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\gtc\quaternion.hpp
+	"../glm.hpp"
+	"../gtc/half_float.hpp"
+	"../gtc/constants.hpp"
+	"quaternion.inl"
+
+1374835560 c:\program files (x86)\codeblocks\mingw\include\glm\gtc\constants.hpp
+	"../glm.hpp"
+	"../gtc/half_float.hpp"
+	"constants.inl"
+
+1374835560 c:\program files (x86)\codeblocks\mingw\include\glm\gtc\constants.inl
+
+1376341255 c:\program files (x86)\codeblocks\mingw\include\glm\gtc\quaternion.inl
+	<limits>
+
+1376342329 c:\program files (x86)\codeblocks\mingw\include\glm\gtc\type_ptr.inl
+
+1381860798 source:c:\users\user\desktop\271013 1327\affichage_2d.cpp
+	<SDL_opengl.h>
+	<GL/glext.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	"define.h"
+	"variable.h"
+
+1381859187 c:\users\user\desktop\271013 1327\define.h
+
+1382870936 c:\users\user\desktop\271013 1327\variable.h
+	<SDL.h>
+	<GL/gl.h>
+	<iostream>
+	<string>
+	<list>
+	<map>
+	"carte.h"
+	"coffre.h"
+	"item.h"
+	"objet.h"
+	"terrain.h"
+	"tresor.h"
+
+1377378513 c:\users\user\desktop\271013 1327\carte.h
+	<string>
+
+1377771426 c:\users\user\desktop\271013 1327\coffre.h
+
+1381333095 c:\users\user\desktop\271013 1327\item.h
+
+1382869137 c:\users\user\desktop\271013 1327\objet.h
+	<string>
+
+1382565825 c:\users\user\desktop\271013 1327\terrain.h
+	<SDL.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	"define.h"
+
+1377132614 c:\users\user\desktop\271013 1327\tresor.h
+
+1382867073 source:c:\users\user\desktop\271013 1327\affichage_3d.cpp
+	<cmath>
+	<SDL_opengl.h>
+	<GL/glext.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	"cible.h"
+	"define.h"
+	"distance.h"
+	"variable.h"
+
+1382866037 c:\users\user\desktop\271013 1327\cible.h
+	<GL/gl.h>
+	<GL/glu.h>
+
+1353320214 c:\users\user\desktop\271013 1327\distance.h
+
+1381406297 source:c:\users\user\desktop\271013 1327\aleatoire.cpp
+	<cstdlib>
+	<math.h>
+
+1366307231 source:c:\users\user\desktop\271013 1327\astar.cpp
+	<iostream>
+	<cmath>
+	<stack>
+	"astar.h"
+	"define.h"
+	"variable.h"
+
+1366306579 c:\users\user\desktop\271013 1327\astar.h
+	<iostream>
+	<cmath>
+	<stack>
+	"GL/gl.h"
+
+1364246899 source:c:\users\user\desktop\271013 1327\audio.cpp
+	<SDL_mixer.h>
+	"audio.h"
+
+1364246919 c:\users\user\desktop\271013 1327\audio.h
+	"GL/gl.h"
+
+1375132542 source:c:\users\user\desktop\271013 1327\boussole.cpp
+	"define.h"
+	"variable.h"
+
+1381333804 source:c:\users\user\desktop\271013 1327\boutique.cpp
+	"affichage_2D.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1381333804 c:\users\user\desktop\271013 1327\affichage_2d.h
+
+1372788288 c:\users\user\desktop\271013 1327\souris.h
+	"variable.h"
+	<SDL.h>
+
+1377851873 c:\users\user\desktop\271013 1327\texte.h
+	<SDL.h>
+	<string>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1382224711 source:c:\users\user\desktop\271013 1327\brouillard.cpp
+	"GL/gl.h"
+	"brouillard.h"
+	"define.h"
+	"variable.h"
+
+1379803293 c:\users\user\desktop\271013 1327\brouillard.h
+
+1380187423 source:c:\users\user\desktop\271013 1327\carte.cpp
+	"affichage_2D.h"
+	"aleatoire.h"
+	"distance.h"
+	"inventaire.h"
+	"sdlglutils.h"
+	"souris.h"
+	"terrain.h"
+	"texte.h"
+	"texture.h"
+	"variable.h"
+
+1381406297 c:\users\user\desktop\271013 1327\aleatoire.h
+
+1382038178 c:\users\user\desktop\271013 1327\inventaire.h
+
+1353270631 c:\users\user\desktop\271013 1327\sdlglutils.h
+	<GL/gl.h>
+	<SDL.h>
+
+1375708207 c:\users\user\desktop\271013 1327\texture.h
+	<string>
+	<SDL.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1382866327 source:c:\users\user\desktop\271013 1327\chargement.cpp
+	<fstream>
+	"GL/gl.h"
+	"affichage_2D.h"
+	"clavier.h"
+	"define.h"
+	"sauvegarde.h"
+	"souris.h"
+	"temps.h"
+	"terrain.h"
+	"texte.h"
+	"texture.h"
+	"variable.h"
+
+1356265400 c:\users\user\desktop\271013 1327\clavier.h
+
+1375693654 c:\users\user\desktop\271013 1327\sauvegarde.h
+
+1375909463 c:\users\user\desktop\271013 1327\temps.h
+
+1382866214 source:c:\users\user\desktop\271013 1327\cible.cpp
+	<GL/gl.h>
+	<GL/glu.h>
+	<math.h>
+	"cible.h"
+	"define.h"
+	"distance.h"
+	"texture.h"
+	"variable.h"
+
+1382867535 source:c:\users\user\desktop\271013 1327\clavier.cpp
+	"cible.h"
+	"clavier.h"
+	"sauvegarde.h"
+	"terrain.h"
+	"variable.h"
+
+1381588295 source:c:\users\user\desktop\271013 1327\coffre.cpp
+	"affichage_2D.h"
+	"cible.h"
+	"inventaire.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1382438783 source:c:\users\user\desktop\271013 1327\collision.cpp
+	"define.h"
+	"variable.h"
+
+1353270507 source:c:\users\user\desktop\271013 1327\compteurfps.cpp
+	"compteurFPS.h"
+	<stdlib.h>
+	<stdio.h>
+	<SDL.h>
+
+1350928565 c:\users\user\desktop\271013 1327\compteurfps.h
+
+1382870935 source:c:\users\user\desktop\271013 1327\deplacement.cpp
+	<math.h>
+	"distance.h"
+	"variable.h"
+
+1353320214 source:c:\users\user\desktop\271013 1327\distance.cpp
+	<math.h>
+	"distance.h"
+
+1375451617 source:c:\users\user\desktop\271013 1327\equipe.cpp
+	"affichage_2D.h"
+	"define.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1381860997 source:c:\users\user\desktop\271013 1327\extension.cpp
+	<SDL_opengl.h>
+	<GL/glext.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<SDL.h>
+
+1382876403 source:c:\users\user\desktop\271013 1327\frustum.cpp
+	<cmath>
+	"variable.h"
+	"distance.h"
+	<GL/gl.h>
+
+1378570824 source:c:\users\user\desktop\271013 1327\gravite.cpp
+	"affichage_3D.h"
+	"define.h"
+	"variable.h"
+
+1382866214 c:\users\user\desktop\271013 1327\affichage_3d.h
+	<GL/gl.h>
+	<GL/glu.h>
+
+1382038177 source:c:\users\user\desktop\271013 1327\inventaire.cpp
+	"affichage_2D.h"
+	"boutique.h"
+	"carte.h"
+	"distance.h"
+	"equipe.h"
+	"inventaire.h"
+	"objet.h"
+	"portail.h"
+	"souris.h"
+	"terrain.h"
+	"texte.h"
+	"texture.h"
+	"tresor.h"
+	"variable.h"
+
+1381331810 c:\users\user\desktop\271013 1327\boutique.h
+
+1374581816 c:\users\user\desktop\271013 1327\equipe.h
+
+1382565143 c:\users\user\desktop\271013 1327\portail.h
+
+1382865056 source:c:\users\user\desktop\271013 1327\item.cpp
+	"define.h"
+	"variable.h"
+
+1382868627 source:c:\users\user\desktop\271013 1327\main.cpp
+	<SDL.h>
+	<SDL_ttf.h>
+	<SDL_rotozoom.h>
+	<SDL_mixer.h>
+	<SDL_image.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<math.h>
+	<cstdlib>
+	<iostream>
+	<list>
+	<string>
+	<sstream>
+	<fstream>
+	<noise/noise.h>
+	"affichage_2D.h"
+	"affichage_3D.h"
+	"aleatoire.h"
+	"astar.h"
+	"audio.h"
+	"boussole.h"
+	"brouillard.h"
+	"carte.h"
+	"chargement.h"
+	"cible.h"
+	"clavier.h"
+	"coffre.h"
+	"collision.h"
+	"compteurFPS.h"
+	"define.h"
+	"deplacement.h"
+	"distance.h"
+	"extension.h"
+	"frustum.h"
+	"gravite.h"
+	"inventaire.h"
+	"manette.h"
+	"menu.h"
+	"objet.h"
+	"particule.h"
+	"personnage.h"
+	"portail.h"
+	"sauvegarde.h"
+	"sdlglutils.h"
+	"simplexNoise.h"
+	"skybox.h"
+	"souris.h"
+	"temps.h"
+	"terrain.h"
+	"texte.h"
+	"texture.h"
+	"tresor.h"
+	"variable.h"
+	"video.h"
+	"time.h"
+	<glm/glm.hpp>
+	<glm/gtx/transform.hpp>
+	<glm/gtc/type_ptr.hpp>
+
+1356289580 c:\users\user\desktop\271013 1327\boussole.h
+
+1376225488 c:\users\user\desktop\271013 1327\chargement.h
+
+1382438726 c:\users\user\desktop\271013 1327\collision.h
+
+1382868338 c:\users\user\desktop\271013 1327\deplacement.h
+
+1381861226 c:\users\user\desktop\271013 1327\extension.h
+	<SDL_opengl.h>
+	<GL/glext.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1379803532 c:\users\user\desktop\271013 1327\frustum.h
+
+1356265260 c:\users\user\desktop\271013 1327\gravite.h
+
+1356434791 c:\users\user\desktop\271013 1327\manette.h
+
+1375699627 c:\users\user\desktop\271013 1327\menu.h
+
+1352997643 c:\users\user\desktop\271013 1327\particule.h
+
+1370873588 c:\users\user\desktop\271013 1327\personnage.h
+
+1379891324 c:\users\user\desktop\271013 1327\simplexnoise.h
+
+1376352699 c:\users\user\desktop\271013 1327\skybox.h
+	<SDL.h>
+
+1356434055 c:\users\user\desktop\271013 1327\video.h
+
+1356434726 source:c:\users\user\desktop\271013 1327\manette.cpp
+	<SDL.h>
+	"manette.h"
+	"variable.h"
+
+1382867161 source:c:\users\user\desktop\271013 1327\menu.cpp
+	"GL/gl.h"
+	"affichage_2D.h"
+	"brouillard.h"
+	"chargement.h"
+	"clavier.h"
+	"sauvegarde.h"
+	"skybox.h"
+	"souris.h"
+	"temps.h"
+	"texte.h"
+	"texture.h"
+	"variable.h"
+
+1382869530 source:c:\users\user\desktop\271013 1327\objet.cpp
+	<iostream>
+	<math.h>
+	<GL/gl.h>
+	"affichage_3D.h"
+	"aleatoire.h"
+	"cible.h"
+	"collision.h"
+	"distance.h"
+	"objet.h"
+	"personnage.h"
+	"sauvegarde.h"
+	"texte.h"
+	"variable.h"
+
+1381406364 source:c:\users\user\desktop\271013 1327\particule.cpp
+	<SDL.h>
+	<GL/gl.h>
+	"aleatoire.h"
+	"particule.h"
+
+1370873612 source:c:\users\user\desktop\271013 1327\personnage.cpp
+	<GL/gl.h>
+	"objet.h"
+	"variable.h"
+
+1382568040 source:c:\users\user\desktop\271013 1327\portail.cpp
+	"affichage_2D.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1375967320 source:c:\users\user\desktop\271013 1327\sauvegarde.cpp
+	<fstream>
+	<sstream>
+	<SDL_rotozoom.h>
+	"objet.h"
+	"sdlglutils.h"
+	"terrain.h"
+	"texte.h"
+	"variable.h"
+
+1355306136 source:c:\users\user\desktop\271013 1327\sdlglutils.cpp
+	"sdlglutils.h"
+	<SDL.h>
+	<SDL_image.h>
+	<GL/glu.h>
+	<cstring>
+	<cstdlib>
+
+1379891266 source:c:\users\user\desktop\271013 1327\simplexnoise.cpp
+	<math.h>
+	"simplexNoise.h"
+	"variable.h"
+
+1382279895 source:c:\users\user\desktop\271013 1327\skybox.cpp
+	<SDL.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<SDL_rotozoom.h>
+	"affichage_3D.h"
+	"aleatoire.h"
+	"cible.h"
+	"define.h"
+	"distance.h"
+	"sdlglutils.h"
+	"texture.h"
+	"variable.h"
+
+1382870936 source:c:\users\user\desktop\271013 1327\souris.cpp
+	<math.h>
+	"cible.h"
+	"collision.h"
+	"distance.h"
+	"objet.h"
+	"sdlglutils.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1375909463 source:c:\users\user\desktop\271013 1327\temps.cpp
+	<iostream>
+	<string>
+	<sstream>
+	"variable.h"
+
+1382740266 source:c:\users\user\desktop\271013 1327\terrain.cpp
+	<SDL.h>
+	<fstream>
+	<SDL_rotozoom.h>
+	"affichage_2D.h"
+	"affichage_3D.h"
+	"aleatoire.h"
+	"souris.h"
+	"texte.h"
+	"sdlglutils.h"
+	"simplexNoise.h"
+	"texture.h"
+	"variable.h"
+	"time.h"
+
+1377867789 source:c:\users\user\desktop\271013 1327\texte.cpp
+	<iostream>
+	<string>
+	<sstream>
+	<SDL_ttf.h>
+	<SDL_rotozoom.h>
+	"affichage_2D.h"
+	"define.h"
+	"texture.h"
+	"variable.h"
+
+1380141010 source:c:\users\user\desktop\271013 1327\texture.cpp
+	"sdlglutils.h"
+	<string>
+	<SDL_rotozoom.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	"variable.h"
+
+1377161015 source:c:\users\user\desktop\271013 1327\tresor.cpp
+	<math.h>
+	"affichage_2D.h"
+	"cible.h"
+	"distance.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1382876320 source:c:\users\user\desktop\271013 1327\variable.cpp
+	<iostream>
+	<map>
+	<math.h>
+	"define.h"
+	"item.h"
+	"objet.h"
+	"variable.h"
+	"sdlglutils.h"
+	"terrain.h"
+	"texture.h"
+	"texte.h"
+
+1382537978 source:c:\users\user\desktop\271013 1327\video.cpp
+	"define.h"
+	"variable.h"
+
+1383746205 c:\users\user\desktop\game opengl\fermeture.h
+
+1413717295 source:c:\users\user\desktop\game opengl\fermeture.cpp
+	"variable.h"
+
+1391194315 c:\users\user\desktop\game opengl\creep.h
+
+1391194361 source:c:\users\user\desktop\game opengl\creep.cpp
+	"variable.h"
+
+1394968108 c:\users\user\desktop\game opengl\modele.h
+
+1405586410 source:c:\users\user\desktop\game opengl\modele.cpp
+	<fstream>
+	"texte.h"
+	"texture.h"
+	"variable.h"
+
+1413707276 c:\users\user\desktop\game opengl\arme.h
+
+1413707510 source:c:\users\user\desktop\game opengl\arme.cpp
+	<math.h>
+	"affichage_2D.h"
+	"distance.h"
+	"cible.h"
+	"inventaire.h"
+	"menu.h"
+	"raccourci.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1413657257 c:\users\user\desktop\game opengl\projectile.h
+	<GL/gl.h>
+	<GL/glu.h>
+
+1413657480 source:c:\users\user\desktop\game opengl\projectile.cpp
+	<math.h>
+	"affichage_2D.h"
+	"affichage_3D.h"
+	"angle.h"
+	"collision.h"
+	"distance.h"
+	"explosion.h"
+	"inventaire.h"
+	"objet.h"
+	"particule.h"
+	"projectile.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1384802654 c:\users\user\desktop\game opengl\defense.h
+
+1388867451 source:c:\users\user\desktop\game opengl\defense.cpp
+	"affichage_2D.h"
+	"distance.h"
+	"inventaire.h"
+	"projectile.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1391681024 c:\users\user\desktop\game opengl\typedef.h
+	<SDL_opengl.h>
+	<GL/glext.h>
+
+1413892474 c:\users\user\desktop\game opengl\objetaffichage.h
+
+1413892474 source:c:\users\user\desktop\game opengl\objetaffichage.cpp
+	"affichage_3D.h"
+	"distance.h"
+	"personnage.h"
+	"texte.h"
+	"variable.h"
+
+1389706290 c:\users\user\desktop\game opengl\objetajout.h
+
+1389706290 source:c:\users\user\desktop\game opengl\objetajout.cpp
+	<math.h>
+	"collision.h"
+	"objet.h"
+	"variable.h"
+
+1387106436 source:c:\users\user\desktop\game opengl\1019.cpp
+
+1387105531 source:c:\users\user\desktop\game opengl\321.cpp
+
+1399203778 c:\users\user\desktop\game opengl\vegetation.h
+
+1413711982 source:c:\users\user\desktop\game opengl\vegetation.cpp
+	"affichage_3D.h"
+	"distance.h"
+	"objet.h"
+	"terrain.h"
+	"variable.h"
+
+1394482885 source:c:\users\user\desktop\game opengl\customisation.cpp
+	<math.h>
+	"affichage_2D.h"
+	"arme.h"
+	"inventaire.h"
+	"menu.h"
+	"projectile.h"
+	"sdlglutils.h"
+	"souris.h"
+	"texte.h"
+	"texture.h"
+	"variable.h"
+
+1394483403 c:\users\user\desktop\game opengl\customisation.h
+
+1400698932 source:c:\users\user\desktop\game opengl\fourneau.cpp
+	"affichage_2D.h"
+	"cible.h"
+	"distance.h"
+	"inventaire.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1389213117 c:\users\user\desktop\game opengl\fourneau.h
+
+1395916827 c:\users\user\desktop\game opengl\stationcrafting.h
+
+1411057849 source:c:\users\user\desktop\game opengl\stationcrafting.cpp
+	"affichage_2D.h"
+	"cible.h"
+	"distance.h"
+	"inventaire.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1401038379 source:c:\users\user\desktop\game opengl\echangeminerai.cpp
+	"affichage_2D.h"
+	"cible.h"
+	"inventaire.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1389309634 c:\users\user\desktop\game opengl\echangeminerai.h
+
+1392805713 c:\users\user\desktop\game opengl\customisationarmure.h
+
+1392287253 source:c:\users\user\desktop\game opengl\customisationarmure.cpp
+	"affichage_2D.h"
+	"cible.h"
+	"customisation.h"
+	"distance.h"
+	"inventaire.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1389706290 c:\users\user\desktop\game opengl\objetajout.cpp
+	<math.h>
+	"collision.h"
+	"objet.h"
+	"variable.h"
+
+1389880551 c:\users\user\desktop\game opengl\selectionplanete.h
+
+1400706159 source:c:\users\user\desktop\game opengl\selectionplanete.cpp
+	"affichage_2D.h"
+	"cible.h"
+	"inventaire.h"
+	"sauvegarde.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1412608331 source:c:\users\user\desktop\game opengl\explosion.cpp
+	"distance.h"
+	"objet.h"
+	"variable.h"
+
+1412583657 c:\users\user\desktop\game opengl\explosion.h
+
+1391011571 c:\users\user\desktop\game opengl\vision.h
+
+1400919963 source:c:\users\user\desktop\game opengl\vision.cpp
+	"affichage_2D.h"
+	"inventaire.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1391091185 c:\users\user\desktop\game opengl\cubenoir.h
+
+1411894587 source:c:\users\user\desktop\game opengl\cubenoir.cpp
+	"affichage_3D.h"
+	"cible.h"
+	"variable.h"
+
+1391194729 c:\users\user\desktop\game opengl\telekinesie.h
+
+1391194748 source:c:\users\user\desktop\game opengl\telekinesie.cpp
+	"cible.h"
+	"collision.h"
+	"variable.h"
+
+1412605741 c:\users\user\desktop\game opengl\joueur.h
+
+1412605741 source:c:\users\user\desktop\game opengl\joueur.cpp
+	<string>
+	<sstream>
+	"affichage_2D.h"
+	"distance.h"
+	"menu.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1414432553 source:c:\users\user\desktop\game opengl\destruction.cpp
+	"affichage_3D.h"
+	"caisse.h"
+	"cible.h"
+	"distance.h"
+	"variable.h"
+
+1399114774 c:\users\user\desktop\game opengl\destruction.h
+
+1400920063 source:c:\users\user\desktop\game opengl\armure.cpp
+	"affichage_2D.h"
+	"inventaire.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1393860168 c:\users\user\desktop\game opengl\armure.h
+
+1400920107 source:c:\users\user\desktop\game opengl\chaussure.cpp
+	"affichage_2D.h"
+	"inventaire.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1393860237 c:\users\user\desktop\game opengl\chaussure.h
+
+1394485603 c:\users\user\desktop\game opengl\raccourci.h
+
+1413707130 source:c:\users\user\desktop\game opengl\raccourci.cpp
+	"affichage_2D.h"
+	"souris.h"
+	"terrain.h"
+	"texte.h"
+	"variable.h"
+
+1395050938 c:\users\user\desktop\game opengl\vecteur.h
+
+1395054640 source:c:\users\user\desktop\game opengl\vecteur.cpp
+	<cmath>
+	"vecteur.h"
+
+1395937680 c:\users\user\desktop\game opengl\fluide.h
+
+1395942204 source:c:\users\user\desktop\game opengl\fluide.cpp
+
+1412587846 c:\users\user\desktop\game opengl\objectif.h
+
+1412588042 source:c:\users\user\desktop\game opengl\objectif.cpp
+	"affichage_2D.h"
+	"texte.h"
+	"variable.h"
+
+1255768050 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl.h
+	"SDL_main.h"
+	"SDL_stdinc.h"
+	"SDL_audio.h"
+	"SDL_cdrom.h"
+	"SDL_cpuinfo.h"
+	"SDL_endian.h"
+	"SDL_error.h"
+	"SDL_events.h"
+	"SDL_loadso.h"
+	"SDL_mutex.h"
+	"SDL_rwops.h"
+	"SDL_thread.h"
+	"SDL_timer.h"
+	"SDL_video.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255768050 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl_main.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255768050 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl_stdinc.h
+	"SDL_config.h"
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdlib.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
+	<inttypes.h>
+	<stdint.h>
+	<ctype.h>
+	<iconv.h>
+	"begin_code.h"
+	<alloca.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	"close_code.h"
+
+1255768064 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl_config.h
+	"SDL_platform.h"
+	<stdarg.h>
+
+1255768050 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl_platform.h
+
+1326114594 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl_config_win32.h
+	"SDL_platform.h"
+
+1255768050 c:\program files (x86)\codeblocks\mingw\include\sdl\begin_code.h
+
+1255768050 c:\program files (x86)\codeblocks\mingw\include\sdl\close_code.h
+
+1255768050 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl_audio.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_endian.h"
+	"SDL_mutex.h"
+	"SDL_thread.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255768050 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl_error.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255768050 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl_endian.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255768050 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl_mutex.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255768050 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl_thread.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_mutex.h"
+	"begin_code.h"
+	<process.h>
+	"close_code.h"
+
+1255768050 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl_rwops.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255768050 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl_cdrom.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255768050 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl_cpuinfo.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255768050 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl_events.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_active.h"
+	"SDL_keyboard.h"
+	"SDL_mouse.h"
+	"SDL_joystick.h"
+	"SDL_quit.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255768050 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl_active.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255768050 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl_keyboard.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_keysym.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255768050 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl_keysym.h
+
+1255768050 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl_mouse.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255768050 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl_video.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255768050 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl_joystick.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255768050 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl_quit.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+
+1255768050 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl_loadso.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255768050 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl_timer.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255768050 c:\program files (x86)\codeblocks\mingw\include\sdl\sdl_version.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1326110994 c:\program files (x86)\codeblocks\mingw\include\sdl_config_win32.h
+	"SDL_platform.h"
+
+1400336649 c:\users\user\desktop\game opengl\radio.h
+
+1411057834 source:c:\users\user\desktop\game opengl\radio.cpp
+	"affichage_2D.h"
+	"distance.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1399742266 source:c:\users\user\desktop\game opengl milky way\astar.cpp
+	<cmath>
+	"affichage_3D.h"
+	"distance.h"
+	"variable.h"
+
+1400319332 c:\users\user\desktop\game opengl milky way\affichage_3d.h
+	<GL/gl.h>
+	<GL/glu.h>
+
+1388097030 c:\users\user\desktop\game opengl milky way\distance.h
+
+1403181538 c:\users\user\desktop\game opengl milky way\variable.h
+	<SDL.h>
+	<GL/gl.h>
+	<iostream>
+	<string>
+	<list>
+	<map>
+	<time.h>
+	<SDL_mixer.h>
+	"carte.h"
+	"coffre.h"
+	"creep.h"
+	"cubeNoir.h"
+	"item.h"
+	"menu.h"
+	"modele.h"
+	"objet.h"
+	"projectile.h"
+	"selectionPlanete.h"
+	"terrain.h"
+	"tresor.h"
+
+1389726669 c:\users\user\desktop\game opengl milky way\carte.h
+	<string>
+
+1399374086 c:\users\user\desktop\game opengl milky way\coffre.h
+	"menu.h"
+
+1398602401 c:\users\user\desktop\game opengl milky way\menu.h
+	<string>
+	<GL/gl.h>
+
+1391194315 c:\users\user\desktop\game opengl milky way\creep.h
+
+1391091185 c:\users\user\desktop\game opengl milky way\cubenoir.h
+
+1399460191 c:\users\user\desktop\game opengl milky way\item.h
+	"GL/gl.h"
+
+1394971708 c:\users\user\desktop\game opengl milky way\modele.h
+
+1401216574 c:\users\user\desktop\game opengl milky way\objet.h
+	"menu.h"
+
+1399798408 c:\users\user\desktop\game opengl milky way\projectile.h
+	<GL/gl.h>
+	<GL/glu.h>
+
+1389880551 c:\users\user\desktop\game opengl milky way\selectionplanete.h
+
+1399802604 c:\users\user\desktop\game opengl milky way\terrain.h
+	<SDL.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	"define.h"
+
+1392636433 c:\users\user\desktop\game opengl milky way\define.h
+
+1377136214 c:\users\user\desktop\game opengl milky way\tresor.h
+
+1400573797 source:c:\users\user\desktop\game opengl milky way\affichage_2d.cpp
+	"distance.h"
+	"texte.h"
+	"variable.h"
+	"vecteur.h"
+	<math.h>
+
+1399300068 c:\users\user\desktop\game opengl milky way\texte.h
+	<SDL.h>
+	<string>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1395054538 c:\users\user\desktop\game opengl milky way\vecteur.h
+
+1403181513 source:c:\users\user\desktop\game opengl milky way\affichage_3d.cpp
+	<cmath>
+	<GL/gl.h>
+	<GL/glu.h>
+	"affichage_2D.h"
+	"affichage_3D.h"
+	"astar.h"
+	"chargement.h"
+	"cible.h"
+	"coffre.h"
+	"define.h"
+	"destruction.h"
+	"distance.h"
+	"echangeMinerai.h"
+	"fourneau.h"
+	"frustum.h"
+	"menu.h"
+	"objetAffichage.h"
+	"particule.h"
+	"radio.h"
+	"sauvegarde.h"
+	"selectionPlanete.h"
+	"skybox.h"
+	"souris.h"
+	"stationCrafting.h"
+	"texte.h"
+	"telekinesie.h"
+	"variable.h"
+	"vegetation.h"
+	"vecteur.h"
+
+1400573797 c:\users\user\desktop\game opengl milky way\affichage_2d.h
+
+1397478421 c:\users\user\desktop\game opengl milky way\astar.h
+
+1401786512 c:\users\user\desktop\game opengl milky way\chargement.h
+
+1395668775 c:\users\user\desktop\game opengl milky way\cible.h
+	<GL/gl.h>
+	<GL/glu.h>
+
+1399118374 c:\users\user\desktop\game opengl milky way\destruction.h
+
+1389309634 c:\users\user\desktop\game opengl milky way\echangeminerai.h
+
+1389213117 c:\users\user\desktop\game opengl milky way\fourneau.h
+
+1379807132 c:\users\user\desktop\game opengl milky way\frustum.h
+
+1401037347 c:\users\user\desktop\game opengl milky way\objetaffichage.h
+
+1401115149 c:\users\user\desktop\game opengl milky way\particule.h
+
+1400336649 c:\users\user\desktop\game opengl milky way\radio.h
+
+1401786831 c:\users\user\desktop\game opengl milky way\sauvegarde.h
+	<string>
+
+1376356299 c:\users\user\desktop\game opengl milky way\skybox.h
+	<SDL.h>
+
+1392890083 c:\users\user\desktop\game opengl milky way\souris.h
+	"variable.h"
+	<SDL.h>
+
+1395916827 c:\users\user\desktop\game opengl milky way\stationcrafting.h
+
+1391194729 c:\users\user\desktop\game opengl milky way\telekinesie.h
+
+1399207378 c:\users\user\desktop\game opengl milky way\vegetation.h
+
+1390576365 source:c:\users\user\desktop\game opengl milky way\aleatoire.cpp
+	<cstdlib>
+	<math.h>
+
+1401204119 source:c:\users\user\desktop\game opengl milky way\arme.cpp
+	<math.h>
+	"affichage_2D.h"
+	"cible.h"
+	"inventaire.h"
+	"menu.h"
+	"raccourci.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1401280937 c:\users\user\desktop\game opengl milky way\inventaire.h
+
+1394489203 c:\users\user\desktop\game opengl milky way\raccourci.h
+
+1400920063 source:c:\users\user\desktop\game opengl milky way\armure.cpp
+	"affichage_2D.h"
+	"inventaire.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1401436789 source:c:\users\user\desktop\game opengl milky way\audio.cpp
+	<SDL_mixer.h>
+	"variable.h"
+
+1392636682 source:c:\users\user\desktop\game opengl milky way\boussole.cpp
+	"affichage_2D.h"
+	"define.h"
+	"variable.h"
+
+1386167313 source:c:\users\user\desktop\game opengl milky way\brouillard.cpp
+	"GL/gl.h"
+	"brouillard.h"
+	"define.h"
+	"variable.h"
+
+1379806893 c:\users\user\desktop\game opengl milky way\brouillard.h
+
+1389726333 source:c:\users\user\desktop\game opengl milky way\carte.cpp
+	"affichage_2D.h"
+	"aleatoire.h"
+	"distance.h"
+	"inventaire.h"
+	"sauvegarde.h"
+	"sdlglutils.h"
+	"souris.h"
+	"terrain.h"
+	"texte.h"
+	"texture.h"
+	"variable.h"
+	"time.h"
+
+1390576365 c:\users\user\desktop\game opengl milky way\aleatoire.h
+
+1353274231 c:\users\user\desktop\game opengl milky way\sdlglutils.h
+	<GL/gl.h>
+	<SDL.h>
+
+1375711807 c:\users\user\desktop\game opengl milky way\texture.h
+	<string>
+	<SDL.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1403287170 source:c:\users\user\desktop\game opengl milky way\chargement.cpp
+	<fstream>
+	"GL/gl.h"
+	"affichage_2D.h"
+	"armure.h"
+	"chaussure.h"
+	"clavier.h"
+	"customisationArmure.h"
+	"define.h"
+	"distance.h"
+	"sauvegarde.h"
+	"skybox.h"
+	"souris.h"
+	"temps.h"
+	"terrain.h"
+	"texte.h"
+	"texture.h"
+	"variable.h"
+	"vegetation.h"
+
+1393860168 c:\users\user\desktop\game opengl milky way\armure.h
+
+1393860237 c:\users\user\desktop\game opengl milky way\chaussure.h
+
+1391723379 c:\users\user\desktop\game opengl milky way\clavier.h
+
+1392809313 c:\users\user\desktop\game opengl milky way\customisationarmure.h
+
+1392997025 c:\users\user\desktop\game opengl milky way\temps.h
+
+1400920107 source:c:\users\user\desktop\game opengl milky way\chaussure.cpp
+	"affichage_2D.h"
+	"inventaire.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1399216327 source:c:\users\user\desktop\game opengl milky way\cible.cpp
+	<GL/gl.h>
+	<GL/glu.h>
+	<math.h>
+	"cible.h"
+	"define.h"
+	"distance.h"
+	"texture.h"
+	"variable.h"
+	"vecteur.h"
+
+1403181570 source:c:\users\user\desktop\game opengl milky way\clavier.cpp
+	"affichage_2D.h"
+	"cible.h"
+	"clavier.h"
+	"coffre.h"
+	"menu.h"
+	"sauvegarde.h"
+	"terrain.h"
+	"texte.h"
+	"variable.h"
+
+1400698913 source:c:\users\user\desktop\game opengl milky way\coffre.cpp
+	"affichage_2D.h"
+	"affichage_3D.h"
+	"cible.h"
+	"distance.h"
+	"inventaire.h"
+	"menu.h"
+	"raccourci.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1399810365 source:c:\users\user\desktop\game opengl milky way\collision.cpp
+	"define.h"
+	"explosion.h"
+	"objet.h"
+	"variable.h"
+
+1390135493 c:\users\user\desktop\game opengl milky way\explosion.h
+
+1353274107 source:c:\users\user\desktop\game opengl milky way\compteurfps.cpp
+	"compteurFPS.h"
+	<stdlib.h>
+	<stdio.h>
+	<SDL.h>
+
+1350932165 c:\users\user\desktop\game opengl milky way\compteurfps.h
+
+1391194361 source:c:\users\user\desktop\game opengl milky way\creep.cpp
+	"variable.h"
+
+1399277149 source:c:\users\user\desktop\game opengl milky way\cubenoir.cpp
+	"affichage_3D.h"
+	"cible.h"
+	"variable.h"
+
+1382874535 source:c:\users\user\desktop\game opengl milky way\deplacement.cpp
+	<math.h>
+	"distance.h"
+	"variable.h"
+
+1402230935 source:c:\users\user\desktop\game opengl milky way\destruction.cpp
+	"affichage_3D.h"
+	"cible.h"
+	"distance.h"
+	"variable.h"
+
+1388097030 source:c:\users\user\desktop\game opengl milky way\distance.cpp
+	<math.h>
+	"distance.h"
+
+1401038379 source:c:\users\user\desktop\game opengl milky way\echangeminerai.cpp
+	"affichage_2D.h"
+	"cible.h"
+	"inventaire.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1392636556 source:c:\users\user\desktop\game opengl milky way\equipe.cpp
+	"affichage_2D.h"
+	"define.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1390326563 source:c:\users\user\desktop\game opengl milky way\explosion.cpp
+	"distance.h"
+	"objet.h"
+	"variable.h"
+
+1381864597 source:c:\users\user\desktop\game opengl milky way\extension.cpp
+	<SDL_opengl.h>
+	<GL/glext.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<SDL.h>
+
+1399374832 source:c:\users\user\desktop\game opengl milky way\fermeture.cpp
+	"variable.h"
+
+1395945804 source:c:\users\user\desktop\game opengl milky way\fluide.cpp
+
+1400698932 source:c:\users\user\desktop\game opengl milky way\fourneau.cpp
+	"affichage_2D.h"
+	"cible.h"
+	"distance.h"
+	"inventaire.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1395785577 source:c:\users\user\desktop\game opengl milky way\frustum.cpp
+	<cmath>
+	"variable.h"
+	"distance.h"
+	<GL/gl.h>
+
+1394449683 source:c:\users\user\desktop\game opengl milky way\gravite.cpp
+	"affichage_3D.h"
+	"define.h"
+	"variable.h"
+
+1401280978 source:c:\users\user\desktop\game opengl milky way\inventaire.cpp
+	"affichage_2D.h"
+	"arme.h"
+	"armure.h"
+	"carte.h"
+	"chaussure.h"
+	"defense.h"
+	"distance.h"
+	"equipe.h"
+	"inventaire.h"
+	"menu.h"
+	"objectif.h"
+	"objet.h"
+	"portail.h"
+	"projectile.h"
+	"radio.h"
+	"souris.h"
+	"terrain.h"
+	"texte.h"
+	"texture.h"
+	"tresor.h"
+	"variable.h"
+	"vision.h"
+
+1394617794 c:\users\user\desktop\game opengl milky way\arme.h
+
+1384806254 c:\users\user\desktop\game opengl milky way\defense.h
+
+1374585416 c:\users\user\desktop\game opengl milky way\equipe.h
+
+1399455299 c:\users\user\desktop\game opengl milky way\objectif.h
+
+1382568743 c:\users\user\desktop\game opengl milky way\portail.h
+
+1391015171 c:\users\user\desktop\game opengl milky way\vision.h
+
+1400965003 source:c:\users\user\desktop\game opengl milky way\item.cpp
+	"define.h"
+	"variable.h"
+
+1401983628 source:c:\users\user\desktop\game opengl milky way\joueur.cpp
+	<string>
+	<sstream>
+	"affichage_2D.h"
+	"distance.h"
+	"menu.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1403281538 source:c:\users\user\desktop\game opengl milky way\main.cpp
+	<SDL_opengl.h>
+	<GL/glext.h>
+	<SDL.h>
+	<SDL_ttf.h>
+	<SDL_rotozoom.h>
+	<SDL_mixer.h>
+	<SDL_image.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<math.h>
+	<cstdlib>
+	<iostream>
+	<list>
+	<string>
+	<sstream>
+	<fstream>
+	"affichage_2D.h"
+	"affichage_3D.h"
+	"aleatoire.h"
+	"arme.h"
+	"armure.h"
+	"aStar.h"
+	"audio.h"
+	"boussole.h"
+	"brouillard.h"
+	"carte.h"
+	"chargement.h"
+	"cible.h"
+	"clavier.h"
+	"coffre.h"
+	"collision.h"
+	"compteurFPS.h"
+	"creep.h"
+	"cubeNoir.h"
+	"define.h"
+	"deplacement.h"
+	"destruction.h"
+	"distance.h"
+	"echangeMinerai.h"
+	"explosion.h"
+	"extension.h"
+	"fermeture.h"
+	"fluide.h"
+	"fourneau.h"
+	"frustum.h"
+	"gravite.h"
+	"inventaire.h"
+	"joueur.h"
+	"manette.h"
+	"menu.h"
+	"modele.h"
+	"objectif.h"
+	"objet.h"
+	"objetAffichage.h"
+	"particule.h"
+	"personnage.h"
+	"portail.h"
+	"projectile.h"
+	"raccourci.h"
+	"radio.h"
+	"sauvegarde.h"
+	"sdlglutils.h"
+	"selectionPlanete.h"
+	"simplexNoise.h"
+	"skybox.h"
+	"souris.h"
+	"stationCrafting.h"
+	"telekinesie.h"
+	"temps.h"
+	"terrain.h"
+	"texte.h"
+	"texture.h"
+	"tresor.h"
+	"typedef.h"
+	"variable.h"
+	"vecteur.h"
+	"vegetation.h"
+	"video.h"
+	"vision.h"
+	"time.h"
+
+1393094017 c:\users\user\desktop\game opengl milky way\audio.h
+
+1356293180 c:\users\user\desktop\game opengl milky way\boussole.h
+
+1387671692 c:\users\user\desktop\game opengl milky way\collision.h
+
+1382871938 c:\users\user\desktop\game opengl milky way\deplacement.h
+
+1381864826 c:\users\user\desktop\game opengl milky way\extension.h
+	<SDL_opengl.h>
+	<GL/glext.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1383749805 c:\users\user\desktop\game opengl milky way\fermeture.h
+
+1395941280 c:\users\user\desktop\game opengl milky way\fluide.h
+
+1356268860 c:\users\user\desktop\game opengl milky way\gravite.h
+
+1399712449 c:\users\user\desktop\game opengl milky way\joueur.h
+
+1356438391 c:\users\user\desktop\game opengl milky way\manette.h
+
+1370877188 c:\users\user\desktop\game opengl milky way\personnage.h
+
+1379894924 c:\users\user\desktop\game opengl milky way\simplexnoise.h
+
+1391684624 c:\users\user\desktop\game opengl milky way\typedef.h
+	<SDL_opengl.h>
+	<GL/glext.h>
+
+1356437655 c:\users\user\desktop\game opengl milky way\video.h
+
+1356438326 source:c:\users\user\desktop\game opengl milky way\manette.cpp
+	<SDL.h>
+	"manette.h"
+	"variable.h"
+
+1401909697 source:c:\users\user\desktop\game opengl milky way\menu.cpp
+	"GL/gl.h"
+	"affichage_2D.h"
+	"affichage_3D.h"
+	"brouillard.h"
+	"chargement.h"
+	"clavier.h"
+	"joueur.h"
+	"sauvegarde.h"
+	"skybox.h"
+	"souris.h"
+	"temps.h"
+	"texte.h"
+	"texture.h"
+	"variable.h"
+	"time.h"
+
+1395133543 source:c:\users\user\desktop\game opengl milky way\modele.cpp
+	<fstream>
+	"texte.h"
+	"texture.h"
+	"variable.h"
+
+1403249923 source:c:\users\user\desktop\game opengl milky way\objectif.cpp
+	"affichage_2D.h"
+	"distance.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1401981852 source:c:\users\user\desktop\game opengl milky way\objet.cpp
+	<iostream>
+	<math.h>
+	<GL/gl.h>
+	"affichage_3D.h"
+	"aleatoire.h"
+	"aStar.h"
+	"cible.h"
+	"collision.h"
+	"distance.h"
+	"explosion.h"
+	"modele.h"
+	"objet.h"
+	"objetAffichage.h"
+	"particule.h"
+	"personnage.h"
+	"raccourci.h"
+	"sauvegarde.h"
+	"texte.h"
+	"variable.h"
+	"vecteur.h"
+	"vegetation.h"
+	<stdio.h>
+	<stdlib.h>
+
+1401981641 source:c:\users\user\desktop\game opengl milky way\objetaffichage.cpp
+	"affichage_3D.h"
+	"distance.h"
+	"texte.h"
+	"variable.h"
+
+1401199453 source:c:\users\user\desktop\game opengl milky way\particule.cpp
+	<SDL.h>
+	<GL/gl.h>
+	<cmath>
+	"affichage_3D.h"
+	"aleatoire.h"
+	"particule.h"
+	"variable.h"
+
+1370877212 source:c:\users\user\desktop\game opengl milky way\personnage.cpp
+	<GL/gl.h>
+	"objet.h"
+	"variable.h"
+
+1389710103 source:c:\users\user\desktop\game opengl milky way\portail.cpp
+	"affichage_2D.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1401440445 source:c:\users\user\desktop\game opengl milky way\projectile.cpp
+	<math.h>
+	"affichage_2D.h"
+	"affichage_3D.h"
+	"collision.h"
+	"distance.h"
+	"explosion.h"
+	"inventaire.h"
+	"objet.h"
+	"particule.h"
+	"projectile.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1399802855 source:c:\users\user\desktop\game opengl milky way\raccourci.cpp
+	"affichage_2D.h"
+	"souris.h"
+	"terrain.h"
+	"texte.h"
+	"variable.h"
+
+1401981712 source:c:\users\user\desktop\game opengl milky way\radio.cpp
+	"affichage_2D.h"
+	"distance.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1401786839 source:c:\users\user\desktop\game opengl milky way\sauvegarde.cpp
+	<fstream>
+	<sstream>
+	<time.h>
+	<SDL_rotozoom.h>
+	"objet.h"
+	"sdlglutils.h"
+	"terrain.h"
+	"texte.h"
+	"variable.h"
+
+1355309736 source:c:\users\user\desktop\game opengl milky way\sdlglutils.cpp
+	"sdlglutils.h"
+	<SDL.h>
+	<SDL_image.h>
+	<GL/glu.h>
+	<cstring>
+	<cstdlib>
+
+1400706159 source:c:\users\user\desktop\game opengl milky way\selectionplanete.cpp
+	"affichage_2D.h"
+	"cible.h"
+	"inventaire.h"
+	"sauvegarde.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1379894866 source:c:\users\user\desktop\game opengl milky way\simplexnoise.cpp
+	<math.h>
+	"simplexNoise.h"
+	"variable.h"
+
+1401981117 source:c:\users\user\desktop\game opengl milky way\skybox.cpp
+	<SDL.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<SDL_rotozoom.h>
+	"affichage_3D.h"
+	"aleatoire.h"
+	"cible.h"
+	"define.h"
+	"distance.h"
+	"sdlglutils.h"
+	"texture.h"
+	"variable.h"
+
+1403181624 source:c:\users\user\desktop\game opengl milky way\souris.cpp
+	<math.h>
+	"affichage_2D.h"
+	"arme.h"
+	"astar.h"
+	"cible.h"
+	"coffre.h"
+	"collision.h"
+	"cubeNoir.h"
+	"destruction.h"
+	"distance.h"
+	"fermeture.h"
+	"inventaire.h"
+	"menu.h"
+	"objet.h"
+	"particule.h"
+	"raccourci.h"
+	"sdlglutils.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+	"vecteur.h"
+
+1400700856 source:c:\users\user\desktop\game opengl milky way\stationcrafting.cpp
+	"affichage_2D.h"
+	"cible.h"
+	"distance.h"
+	"inventaire.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1391194748 source:c:\users\user\desktop\game opengl milky way\telekinesie.cpp
+	"cible.h"
+	"collision.h"
+	"variable.h"
+
+1396338833 source:c:\users\user\desktop\game opengl milky way\temps.cpp
+	<iostream>
+	<string>
+	<sstream>
+	"variable.h"
+
+1403285195 source:c:\users\user\desktop\game opengl milky way\terrain.cpp
+	<SDL.h>
+	<fstream>
+	<SDL_rotozoom.h>
+	"affichage_2D.h"
+	"affichage_3D.h"
+	"aleatoire.h"
+	"souris.h"
+	"texte.h"
+	"sdlglutils.h"
+	"simplexNoise.h"
+	"texture.h"
+	"variable.h"
+	"time.h"
+
+1399377221 source:c:\users\user\desktop\game opengl milky way\texte.cpp
+	<iostream>
+	<string>
+	<sstream>
+	<SDL_ttf.h>
+	<SDL_rotozoom.h>
+	"affichage_2D.h"
+	"define.h"
+	"texture.h"
+	"variable.h"
+
+1380144610 source:c:\users\user\desktop\game opengl milky way\texture.cpp
+	"sdlglutils.h"
+	<string>
+	<SDL_rotozoom.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	"variable.h"
+
+1386337504 source:c:\users\user\desktop\game opengl milky way\tresor.cpp
+	<math.h>
+	"affichage_2D.h"
+	"cible.h"
+	"distance.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1403286249 source:c:\users\user\desktop\game opengl milky way\variable.cpp
+	<iostream>
+	<map>
+	<math.h>
+	"define.h"
+	"item.h"
+	"objet.h"
+	"variable.h"
+	"sdlglutils.h"
+	"terrain.h"
+	"texture.h"
+	"texte.h"
+
+1395058240 source:c:\users\user\desktop\game opengl milky way\vecteur.cpp
+	<cmath>
+	"vecteur.h"
+
+1403286837 source:c:\users\user\desktop\game opengl milky way\vegetation.cpp
+	"affichage_3D.h"
+	"distance.h"
+	"objet.h"
+	"terrain.h"
+	"variable.h"
+
+1398603006 source:c:\users\user\desktop\game opengl milky way\video.cpp
+	"define.h"
+	"variable.h"
+
+1400919963 source:c:\users\user\desktop\game opengl milky way\vision.cpp
+	"affichage_2D.h"
+	"inventaire.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1407662002 source:c:\users\user\desktop\game opengl\batiment.cpp
+	"variable.h"
+
+1403683253 c:\users\user\desktop\game opengl\batiment.h
+
+1405000100 c:\users\user\desktop\game opengl\neige.h
+
+1413572307 source:c:\users\user\desktop\game opengl\neige.cpp
+	"affichage_3D.h"
+	"variable.h"
+
+1405859985 source:c:\users\user\desktop\game opengl\angle.cpp
+	<cmath>
+
+1405855551 c:\users\user\desktop\game opengl\angle.h
+
+1414350645 source:c:\users\user\desktop\game opengl\vague.cpp
+	<sstream>
+	"affichage_2D.h"
+	"audio.h"
+	"distance.h"
+	"objet.h"
+	"texte.h"
+	"variable.h"
+
+1412271705 c:\users\user\desktop\game opengl\vague.h
+
+1409910494 c:\users\user\desktop\game opengl\puzzle.h
+
+1413657797 source:c:\users\user\desktop\game opengl\puzzle.cpp
+	"variable.h"
+
+1413370436 c:\users\user\desktop\game opengl\caisse.h
+
+1414350659 source:c:\users\user\desktop\game opengl\caisse.cpp
+	"texte.h"
+	"variable.h"
+
+1413894566 source:c:\users\user\desktop\game opengl\scenario.cpp
+	"affichage_2D.h"
+	"chargement.h"
+	"clavier.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1411844344 c:\users\user\desktop\game opengl\scenario.h
+
+1412269555 source:c:\users\user\desktop\game opengl\ennemi.cpp
+
+1412534879 source:c:\users\user\desktop\game opengl\hud.cpp
+	<string>
+	"affichage_2D.h"
+	"texte.h"
+	"variable.h"
+
+1412534244 c:\users\user\desktop\game opengl\hud.h
+
+1414424328 source:c:\users\user\desktop\game opengl\apparition.cpp
+	"audio.h"
+	"distance.h"
+	"variable.h"
+
+1413442991 c:\users\user\desktop\game opengl\apparition.h
+
+1520809573 source:e:\voxel\hud.cpp
+	<string>
+	"affichage_2D.h"
+	"texte.h"
+	"variable.h"
+
+1521233693 e:\voxel\affichage_2d.h
+	"variable.h"
+
+1521150257 e:\voxel\texte.h
+	<SDL.h>
+	<string>
+	<GL/gl.h>
+	<GL/glu.h>
+	"variable.h"
+
+1522349924 e:\voxel\variable.h
+	<SDL.h>
+	<GL/gl.h>
+	"World.h"
+
+1520809573 e:\voxel\carte.h
+	"variable.h"
+
+1520809573 e:\voxel\coffre.h
+	"menu.h"
+
+1520809573 e:\voxel\menu.h
+	<string>
+	<GL/gl.h>
+	"variable.h"
+
+1520972431 e:\voxel\item.h
+	"GL/gl.h"
+	"variable.h"
+	"variable.h"
+
+1520973813 e:\voxel\modele.h
+
+1520972379 e:\voxel\objet.h
+
+1520809573 e:\voxel\projectile.h
+	<GL/gl.h>
+	<GL/glu.h>
+
+1522349874 e:\voxel\terrain.h
+	"variable.h"
+	"World.h"
+
+1392632833 e:\voxel\define.h
+
+1520809573 source:e:\voxel\astar.cpp
+	<cmath>
+	"affichage_3D.h"
+	"distance.h"
+	"variable.h"
+
+1522088717 e:\voxel\affichage_3d.h
+	"variable.h"
+
+1388097030 e:\voxel\distance.h
+
+1521233693 source:e:\voxel\affichage_2d.cpp
+	<GL/gl.h>
+	<GL/glu.h>
+	"variable.h"
+
+1521153857 e:\voxel\vecteur.h
+
+1522088723 source:e:\voxel\affichage_3d.cpp
+	<GL/gl.h>
+	<GL/glu.h>
+	"brouillard.h"
+	"variable.h"
+	"vegetation.h"
+
+1520809573 e:\voxel\astar.h
+
+1520809573 e:\voxel\audio.h
+	<SDL_mixer.h>
+	<GL/gl.h>
+	"variable.h"
+
+1521233693 e:\voxel\brouillard.h
+	"variable.h"
+
+1521056112 e:\voxel\chargement.h
+
+1522441007 e:\voxel\cible.h
+	"variable.h"
+
+1520809573 e:\voxel\destruction.h
+
+1521391062 e:\voxel\frustum.h
+
+1520977319 e:\voxel\neige.h
+
+1520809573 e:\voxel\objetaffichage.h
+
+1520809573 e:\voxel\particule.h
+
+1520809573 e:\voxel\portail.h
+
+1522477113 e:\voxel\sauvegarde.h
+	"variable.h"
+
+1521233693 e:\voxel\skybox.h
+	"variable.h"
+
+1521233693 e:\voxel\souris.h
+	"variable.h"
+
+1521233693 e:\voxel\vegetation.h
+
+1413366738 source:e:\voxel\aleatoire.cpp
+	<cstdlib>
+	<math.h>
+
+1405856385 source:e:\voxel\angle.cpp
+	<cmath>
+
+1520809573 source:e:\voxel\apparition.cpp
+	"audio.h"
+	"distance.h"
+	"variable.h"
+
+1520972460 source:e:\voxel\arme.cpp
+	<math.h>
+	"affichage_2D.h"
+	"distance.h"
+	"cible.h"
+	"inventaire.h"
+	"raccourci.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1520809573 e:\voxel\inventaire.h
+
+1520809573 e:\voxel\raccourci.h
+
+1520972608 source:e:\voxel\audio.cpp
+	"distance.h"
+	"variable.h"
+
+1520809573 source:e:\voxel\boussole.cpp
+	"affichage_2D.h"
+	"variable.h"
+
+1521233693 source:e:\voxel\brouillard.cpp
+	"variable.h"
+
+1520809573 source:e:\voxel\caisse.cpp
+	"texte.h"
+	"variable.h"
+
+1520809573 source:e:\voxel\carte.cpp
+	"affichage_2D.h"
+	"aleatoire.h"
+	"distance.h"
+	"inventaire.h"
+	"sauvegarde.h"
+	"sdlglutils.h"
+	"souris.h"
+	"terrain.h"
+	"texte.h"
+	"texture.h"
+	"variable.h"
+
+1390572765 e:\voxel\aleatoire.h
+
+1521372351 e:\voxel\sdlglutils.h
+	<GL/gl.h>
+	<SDL.h>
+
+1522783070 e:\voxel\texture.h
+	<string>
+	<SDL.h>
+	<GL/glu.h>
+
+1521055988 source:e:\voxel\chargement.cpp
+	"texture.h"
+	"variable.h"
+
+1520809573 e:\voxel\caisse.h
+
+1521233693 e:\voxel\clavier.h
+	"variable.h"
+
+1392805713 e:\voxel\customisationarmure.h
+
+1520809573 e:\voxel\puzzle.h
+
+1520809573 e:\voxel\temps.h
+
+1522671419 source:e:\voxel\cible.cpp
+	<math.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	"variable.h"
+
+1522477324 source:e:\voxel\clavier.cpp
+	"sauvegarde.h"
+	"variable.h"
+
+1520809573 e:\voxel\arme.h
+
+1520809573 source:e:\voxel\coffre.cpp
+	"affichage_2D.h"
+	"affichage_3D.h"
+	"cible.h"
+	"distance.h"
+	"inventaire.h"
+	"menu.h"
+	"raccourci.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1522670448 source:e:\voxel\collision.cpp
+	"variable.h"
+
+1520809573 e:\voxel\explosion.h
+	"variable.h"
+
+1353270507 source:e:\voxel\compteurfps.cpp
+	"compteurFPS.h"
+	<stdlib.h>
+	<stdio.h>
+	<SDL.h>
+
+1350924965 e:\voxel\compteurfps.h
+
+1521390618 source:e:\voxel\deplacement.cpp
+	<math.h>
+	"variable.h"
+
+1520974793 source:e:\voxel\destruction.cpp
+	"affichage_3D.h"
+	"cible.h"
+	"distance.h"
+	"variable.h"
+
+1521153857 source:e:\voxel\distance.cpp
+	<math.h>
+	"distance.h"
+
+1412265955 source:e:\voxel\ennemi.cpp
+
+1520973156 source:e:\voxel\explosion.cpp
+	"collision.h"
+	"distance.h"
+	"variable.h"
+
+1381857397 source:e:\voxel\extension.cpp
+	<SDL_opengl.h>
+	<GL/glext.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<SDL.h>
+
+1521233693 source:e:\voxel\fermeture.cpp
+	"variable.h"
+
+1395942204 source:e:\voxel\fluide.cpp
+
+1521391144 source:e:\voxel\frustum.cpp
+	<iostream>
+	<cmath>
+	"variable.h"
+	"distance.h"
+	<GL/gl.h>
+
+1521233693 source:e:\voxel\gravite.cpp
+	"variable.h"
+
+1520809573 source:e:\voxel\inventaire.cpp
+	"affichage_2D.h"
+	"arme.h"
+	"carte.h"
+	"defense.h"
+	"distance.h"
+	"inventaire.h"
+	"menu.h"
+	"objet.h"
+	"portail.h"
+	"projectile.h"
+	"souris.h"
+	"terrain.h"
+	"texte.h"
+	"texture.h"
+	"variable.h"
+	"vision.h"
+
+1384802654 e:\voxel\defense.h
+
+1391011571 e:\voxel\vision.h
+
+1520809573 source:e:\voxel\item.cpp
+	"define.h"
+	"texte.h"
+	"variable.h"
+
+1522486555 source:e:\voxel\joueur.cpp
+	"variable.h"
+
+1522782879 source:e:\voxel\main.cpp
+	<iostream>
+	<ctime>
+	"texture.h"
+	"Display2D.h"
+	"Display3D.h"
+	"Keyboard.h"
+	"Mouse.h"
+	"Player.h"
+	"World.h"
+
+1413439391 e:\voxel\apparition.h
+
+1356289580 e:\voxel\boussole.h
+
+1522670448 e:\voxel\collision.h
+
+1521233693 e:\voxel\deplacement.h
+
+1381857626 e:\voxel\extension.h
+	<SDL_opengl.h>
+	<GL/glext.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1521233693 e:\voxel\fermeture.h
+
+1395937680 e:\voxel\fluide.h
+
+1521233693 e:\voxel\gravite.h
+
+1412530644 e:\voxel\hud.h
+
+1521233693 e:\voxel\joueur.h
+
+1520809573 e:\voxel\manette.h
+	"variable.h"
+
+1520809573 e:\voxel\personnage.h
+
+1411840744 e:\voxel\scenario.h
+
+1522783075 e:\voxel\simplexnoise.h
+
+1391681024 e:\voxel\typedef.h
+	<SDL_opengl.h>
+	<GL/glext.h>
+
+1412268105 e:\voxel\vague.h
+
+1520809573 e:\voxel\video.h
+
+1520809573 source:e:\voxel\manette.cpp
+	<SDL.h>
+	"manette.h"
+	"variable.h"
+
+1520970998 source:e:\voxel\menu.cpp
+	"GL/gl.h"
+	"affichage_2D.h"
+	"affichage_3D.h"
+	"brouillard.h"
+	"chargement.h"
+	"clavier.h"
+	"joueur.h"
+	"inventaire.h"
+	"objectif.h"
+	"sauvegarde.h"
+	"skybox.h"
+	"souris.h"
+	"temps.h"
+	"texte.h"
+	"texture.h"
+	"variable.h"
+	"time.h"
+
+1520809573 e:\voxel\objectif.h
+
+1520809573 source:e:\voxel\modele.cpp
+	<fstream>
+	"texte.h"
+	"texture.h"
+	"variable.h"
+
+1520809573 source:e:\voxel\neige.cpp
+	"affichage_3D.h"
+	"variable.h"
+
+1520809573 source:e:\voxel\objectif.cpp
+	"affichage_2D.h"
+	"texte.h"
+	"variable.h"
+
+1520971885 source:e:\voxel\objet.cpp
+	<iostream>
+	<math.h>
+	<GL/gl.h>
+	"audio.h"
+	"affichage_3D.h"
+	"aleatoire.h"
+	"cible.h"
+	"collision.h"
+	"distance.h"
+	"explosion.h"
+	"modele.h"
+	"objet.h"
+	"objetAffichage.h"
+	"particule.h"
+	"personnage.h"
+	"raccourci.h"
+	"sauvegarde.h"
+	"texte.h"
+	"variable.h"
+	"vecteur.h"
+	"vegetation.h"
+	<stdio.h>
+	<stdlib.h>
+
+1520809573 source:e:\voxel\objetaffichage.cpp
+	"affichage_3D.h"
+	"distance.h"
+	"personnage.h"
+	"texte.h"
+	"variable.h"
+
+1520809573 source:e:\voxel\particule.cpp
+	<SDL.h>
+	<GL/gl.h>
+	<cmath>
+	"affichage_3D.h"
+	"aleatoire.h"
+	"particule.h"
+	"variable.h"
+
+1520973380 source:e:\voxel\personnage.cpp
+	<GL/gl.h>
+	"variable.h"
+
+1520809573 source:e:\voxel\portail.cpp
+	"affichage_2D.h"
+	"distance.h"
+	"puzzle.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1520971969 source:e:\voxel\projectile.cpp
+	<math.h>
+	"affichage_2D.h"
+	"affichage_3D.h"
+	"collision.h"
+	"distance.h"
+	"explosion.h"
+	"inventaire.h"
+	"objet.h"
+	"particule.h"
+	"projectile.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1405851951 e:\voxel\angle.h
+
+1520809573 source:e:\voxel\puzzle.cpp
+	"variable.h"
+
+1520973958 source:e:\voxel\raccourci.cpp
+	"affichage_2D.h"
+	"souris.h"
+	"terrain.h"
+	"texte.h"
+	"variable.h"
+
+1522477379 source:e:\voxel\sauvegarde.cpp
+	<fstream>
+	<string>
+	"World.h"
+
+1520971006 source:e:\voxel\scenario.cpp
+	"affichage_2D.h"
+	"chargement.h"
+	"clavier.h"
+	"souris.h"
+	"texte.h"
+	"variable.h"
+
+1521372403 source:e:\voxel\sdlglutils.cpp
+	"sdlglutils.h"
+	<SDL.h>
+	<SDL_image.h>
+	<GL/glu.h>
+	<cstring>
+	<cstdlib>
+
+1522783082 source:e:\voxel\simplexnoise.cpp
+	<math.h>
+	"simplexNoise.h"
+
+1521233693 source:e:\voxel\skybox.cpp
+	<GL/gl.h>
+	<GL/glu.h>
+	"variable.h"
+
+1521395820 source:e:\voxel\souris.cpp
+	"cible.h"
+	"distance.h"
+	"variable.h"
+
+1520809573 source:e:\voxel\temps.cpp
+	<iostream>
+	<string>
+	<sstream>
+	"variable.h"
+
+1522349851 source:e:\voxel\terrain.cpp
+	<iostream>
+	"distance.h"
+	"simplexNoise.h"
+	"variable.h"
+
+1521150257 source:e:\voxel\texte.cpp
+	<iostream>
+	<string>
+	<sstream>
+	<SDL_ttf.h>
+	<SDL_rotozoom.h>
+	"affichage_2D.h"
+	"define.h"
+	"texture.h"
+	"variable.h"
+
+1522783086 source:e:\voxel\texture.cpp
+	<string>
+	<SDL_rotozoom.h>
+	<GL/glu.h>
+
+1520809573 source:e:\voxel\vague.cpp
+	<sstream>
+	"affichage_2D.h"
+	"audio.h"
+	"distance.h"
+	"objet.h"
+	"texte.h"
+	"variable.h"
+
+1522485225 source:e:\voxel\variable.cpp
+	<time.h>
+	"variable.h"
+
+1521153857 source:e:\voxel\vecteur.cpp
+	<cmath>
+	"vecteur.h"
+
+1521233693 source:e:\voxel\vegetation.cpp
+	"collision.h"
+	"affichage_3D.h"
+	"distance.h"
+	"terrain.h"
+	"variable.h"
+
+1521054659 source:e:\voxel\video.cpp
+	"define.h"
+	"variable.h"
+
+1325738640 e:\bibliothèques et ide\sdl-1.2.15\include\sdl.h
+	"SDL_main.h"
+	"SDL_stdinc.h"
+	"SDL_audio.h"
+	"SDL_cdrom.h"
+	"SDL_cpuinfo.h"
+	"SDL_endian.h"
+	"SDL_error.h"
+	"SDL_events.h"
+	"SDL_loadso.h"
+	"SDL_mutex.h"
+	"SDL_rwops.h"
+	"SDL_thread.h"
+	"SDL_timer.h"
+	"SDL_video.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738640 e:\bibliothèques et ide\sdl-1.2.15\include\sdl_main.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738640 e:\bibliothèques et ide\sdl-1.2.15\include\sdl_stdinc.h
+	"SDL_config.h"
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdlib.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
+	<inttypes.h>
+	<stdint.h>
+	<ctype.h>
+	<iconv.h>
+	"begin_code.h"
+	<alloca.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	"close_code.h"
+
+1326110988 e:\bibliothèques et ide\sdl-1.2.15\include\sdl_config.h
+	"SDL_platform.h"
+	"SDL_config_dreamcast.h"
+	"SDL_config_macos.h"
+	"SDL_config_macosx.h"
+	"SDL_config_symbian.h"
+	"SDL_config_win32.h"
+	"SDL_config_os2.h"
+	"SDL_config_minimal.h"
+
+1325738640 e:\bibliothèques et ide\sdl-1.2.15\include\sdl_platform.h
+
+1326110994 e:\bibliothèques et ide\sdl-1.2.15\include\sdl_config_win32.h
+	"SDL_platform.h"
+
+1326111000 e:\bibliothèques et ide\sdl-1.2.15\include\begin_code.h
+
+1325738640 e:\bibliothèques et ide\sdl-1.2.15\include\close_code.h
+
+1325738640 e:\bibliothèques et ide\sdl-1.2.15\include\sdl_audio.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_endian.h"
+	"SDL_mutex.h"
+	"SDL_thread.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738640 e:\bibliothèques et ide\sdl-1.2.15\include\sdl_error.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738640 e:\bibliothèques et ide\sdl-1.2.15\include\sdl_endian.h
+	"SDL_stdinc.h"
+	<endian.h>
+	"begin_code.h"
+	"close_code.h"
+
+1325738640 e:\bibliothèques et ide\sdl-1.2.15\include\sdl_mutex.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738640 e:\bibliothèques et ide\sdl-1.2.15\include\sdl_thread.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_mutex.h"
+	"begin_code.h"
+	<process.h>
+	"close_code.h"
+
+1325738640 e:\bibliothèques et ide\sdl-1.2.15\include\sdl_rwops.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738640 e:\bibliothèques et ide\sdl-1.2.15\include\sdl_cdrom.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738640 e:\bibliothèques et ide\sdl-1.2.15\include\sdl_cpuinfo.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738640 e:\bibliothèques et ide\sdl-1.2.15\include\sdl_events.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_active.h"
+	"SDL_keyboard.h"
+	"SDL_mouse.h"
+	"SDL_joystick.h"
+	"SDL_quit.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738640 e:\bibliothèques et ide\sdl-1.2.15\include\sdl_active.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738640 e:\bibliothèques et ide\sdl-1.2.15\include\sdl_keyboard.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_keysym.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738640 e:\bibliothèques et ide\sdl-1.2.15\include\sdl_keysym.h
+
+1325738640 e:\bibliothèques et ide\sdl-1.2.15\include\sdl_mouse.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738640 e:\bibliothèques et ide\sdl-1.2.15\include\sdl_video.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738640 e:\bibliothèques et ide\sdl-1.2.15\include\sdl_joystick.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738640 e:\bibliothèques et ide\sdl-1.2.15\include\sdl_quit.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+
+1325738640 e:\bibliothèques et ide\sdl-1.2.15\include\sdl_loadso.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738640 e:\bibliothèques et ide\sdl-1.2.15\include\sdl_timer.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738640 e:\bibliothèques et ide\sdl-1.2.15\include\sdl_version.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738640 e:\bibliothèques et ide\sdl-1.2.15\include\sdl_opengl.h
+	"SDL_config.h"
+	<windows.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<gl.h>
+	<glu.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<windows.h>
+	<stddef.h>
+
+1258242752 e:\bibliothèques et ide\sdl_mixer-1.2.11\include\sdl_mixer.h
+	"SDL_types.h"
+	"SDL_rwops.h"
+	"SDL_audio.h"
+	"SDL_endian.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738640 e:\bibliothèques et ide\sdl-1.2.15\include\sdl_types.h
+	"SDL_stdinc.h"
+
+1103611386 e:\bibliothèques et ide\sdl_gfx\include\sdl_rotozoom.h
+	<math.h>
+	"SDL.h"
+
+1258242678 e:\bibliothèques et ide\sdl_image-1.2.10\include\sdl_image.h
+	"SDL.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255904894 e:\bibliothèques et ide\sdl_ttf-2.0.10\include\sdl_ttf.h
+	"SDL.h"
+	"begin_code.h"
+	"close_code.h"
+
+1520722538 e:\voxel\game_data.h
+
+1520717305 source:e:\voxel\game_data.cpp
+	"game_data.h"
+
+1325742240 e:\voxel\libraries\sdl-1.2.15\include\sdl.h
+	"SDL_main.h"
+	"SDL_stdinc.h"
+	"SDL_audio.h"
+	"SDL_cdrom.h"
+	"SDL_cpuinfo.h"
+	"SDL_endian.h"
+	"SDL_error.h"
+	"SDL_events.h"
+	"SDL_loadso.h"
+	"SDL_mutex.h"
+	"SDL_rwops.h"
+	"SDL_thread.h"
+	"SDL_timer.h"
+	"SDL_video.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 e:\voxel\libraries\sdl-1.2.15\include\sdl_main.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 e:\voxel\libraries\sdl-1.2.15\include\sdl_stdinc.h
+	"SDL_config.h"
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdlib.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
+	<inttypes.h>
+	<stdint.h>
+	<ctype.h>
+	<iconv.h>
+	"begin_code.h"
+	<alloca.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	"close_code.h"
+
+1326114588 e:\voxel\libraries\sdl-1.2.15\include\sdl_config.h
+	"SDL_platform.h"
+	"SDL_config_dreamcast.h"
+	"SDL_config_macos.h"
+	"SDL_config_macosx.h"
+	"SDL_config_symbian.h"
+	"SDL_config_win32.h"
+	"SDL_config_os2.h"
+	"SDL_config_minimal.h"
+
+1325742240 e:\voxel\libraries\sdl-1.2.15\include\sdl_platform.h
+
+1326114594 e:\voxel\libraries\sdl-1.2.15\include\sdl_config_win32.h
+	"SDL_platform.h"
+
+1326114600 e:\voxel\libraries\sdl-1.2.15\include\begin_code.h
+
+1325742240 e:\voxel\libraries\sdl-1.2.15\include\close_code.h
+
+1325742240 e:\voxel\libraries\sdl-1.2.15\include\sdl_audio.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_endian.h"
+	"SDL_mutex.h"
+	"SDL_thread.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 e:\voxel\libraries\sdl-1.2.15\include\sdl_error.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 e:\voxel\libraries\sdl-1.2.15\include\sdl_endian.h
+	"SDL_stdinc.h"
+	<endian.h>
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 e:\voxel\libraries\sdl-1.2.15\include\sdl_mutex.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 e:\voxel\libraries\sdl-1.2.15\include\sdl_thread.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_mutex.h"
+	"begin_code.h"
+	<process.h>
+	"close_code.h"
+
+1325742240 e:\voxel\libraries\sdl-1.2.15\include\sdl_rwops.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 e:\voxel\libraries\sdl-1.2.15\include\sdl_cdrom.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 e:\voxel\libraries\sdl-1.2.15\include\sdl_cpuinfo.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 e:\voxel\libraries\sdl-1.2.15\include\sdl_events.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_active.h"
+	"SDL_keyboard.h"
+	"SDL_mouse.h"
+	"SDL_joystick.h"
+	"SDL_quit.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 e:\voxel\libraries\sdl-1.2.15\include\sdl_active.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 e:\voxel\libraries\sdl-1.2.15\include\sdl_keyboard.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_keysym.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 e:\voxel\libraries\sdl-1.2.15\include\sdl_keysym.h
+
+1325742240 e:\voxel\libraries\sdl-1.2.15\include\sdl_mouse.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 e:\voxel\libraries\sdl-1.2.15\include\sdl_video.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 e:\voxel\libraries\sdl-1.2.15\include\sdl_joystick.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 e:\voxel\libraries\sdl-1.2.15\include\sdl_quit.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+
+1325742240 e:\voxel\libraries\sdl-1.2.15\include\sdl_loadso.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 e:\voxel\libraries\sdl-1.2.15\include\sdl_timer.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 e:\voxel\libraries\sdl-1.2.15\include\sdl_version.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738640 e:\voxel\libraries\sdl-1.2.15\include\sdl_opengl.h
+	"SDL_config.h"
+	<windows.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<gl.h>
+	<glu.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<windows.h>
+	<stddef.h>
+
+1258242752 e:\voxel\libraries\sdl_mixer-1.2.11\include\sdl_mixer.h
+	"SDL_types.h"
+	"SDL_rwops.h"
+	"SDL_audio.h"
+	"SDL_endian.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738640 e:\voxel\libraries\sdl-1.2.15\include\sdl_types.h
+	"SDL_stdinc.h"
+
+1103614986 e:\voxel\libraries\sdl_gfx\include\sdl_rotozoom.h
+	<math.h>
+	"SDL.h"
+
+1258246278 e:\voxel\libraries\sdl_image-1.2.10\include\sdl_image.h
+	"SDL.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255904894 e:\voxel\libraries\sdl_ttf-2.0.10\include\sdl_ttf.h
+	"SDL.h"
+	"begin_code.h"
+	"close_code.h"
+
+1522783098 e:\voxel\mouse.h
+	<SDL.h>
+
+1522782192 source:e:\voxel\mouse.cpp
+	<SDL.h>
+	"Mouse.h"
+	"Player.h"
+	<iostream>
+
+1522783050 e:\voxel\world.h
+	<SDL.h>
+	<GL/glu.h>
+
+1522783089 source:e:\voxel\world.cpp
+	<iostream>
+	<fstream>
+	<cmath>
+	<GL/glu.h>
+	"Mouse.h"
+	"Player.h"
+	"World.h"
+	"simplexNoise.h"
+
+1522781635 source:e:\voxel\display3d.cpp
+	<GL/glu.h>
+	"Display3D.h"
+	"texture.h"
+
+1522783144 e:\voxel\display3d.h
+	"Player.h"
+	"World.h"
+
+1522781359 source:e:\voxel\display2d.cpp
+	<GL/glu.h>
+	"Display2D.h"
+	"texture.h"
+
+1522782936 e:\voxel\display2d.h
+
+1522668900 source:e:\voxel\keyboard.cpp
+	<SDL.h>
+	"Keyboard.h"
+	<iostream>
+
+1522783017 e:\voxel\keyboard.h
+	<SDL.h>
+	"World.h"
+
+1522781898 source:e:\voxel\player.cpp
+	<SDL.h>
+	<cmath>
+	<iostream>
+	"Player.h"
+	"World.h"
+
+1522783012 e:\voxel\player.h
+	"Keyboard.h"
+	"Mouse.h"
+

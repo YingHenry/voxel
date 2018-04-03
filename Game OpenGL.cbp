@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Game OpenGL" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin\Debug\Game OpenGL" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Debug\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-DGLEW_STATIC" />
+					<Add directory="libraries\SDL-1.2.15\include" />
+					<Add directory="libraries\SDL_gfx\include" />
+					<Add directory="libraries\SDL_image-1.2.10\include" />
+					<Add directory="libraries\SDL_mixer-1.2.11\include" />
+					<Add directory="libraries\SDL_ttf-2.0.10\include" />
+				</Compiler>
+				<Linker>
+					<Add library="opengl32" />
+					<Add library="glu32" />
+					<Add library="libraries\SDL-1.2.15\lib\libSDL.dll.a" />
+					<Add library="libraries\SDL-1.2.15\lib\libSDLmain.a" />
+					<Add library="libraries\SDL_gfx\lib\sdlgfx.lib" />
+					<Add library="libraries\SDL_image-1.2.10\lib\SDL_image.lib" />
+					<Add library="libraries\SDL_mixer-1.2.11\lib\SDL_mixer.lib" />
+					<Add library="libraries\SDL_ttf-2.0.10\lib\SDL_ttf.lib" />
+					<Add library="winmm" />
+					<Add library="mingw32" />
+					<Add library="dxguid" />
+					<Add directory="libraries\SDL-1.2.15\lib" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin\Release\Game OpenGL" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Release\" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="C:\Program Files (x86)\CodeBlocks\MinGW\include\noise" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add directory="C:\Program Files (x86)\CodeBlocks\MinGW\lib" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Linker>
+			<Add library="mingw32" />
+			<Add library="libSDL.a" />
+			<Add library="libSDLmain.a" />
+			<Add directory="E:\bibliothèques et IDE\SDL_image-1.2.10\lib" />
+		</Linker>
+		<Unit filename="Display2D.cpp" />
+		<Unit filename="Display2D.h" />
+		<Unit filename="Display3D.cpp" />
+		<Unit filename="Display3D.h" />
+		<Unit filename="Keyboard.cpp" />
+		<Unit filename="Keyboard.h" />
+		<Unit filename="Mouse.cpp" />
+		<Unit filename="Mouse.h" />
+		<Unit filename="Player.cpp" />
+		<Unit filename="Player.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="notes\historique.txt" />
+		<Unit filename="notes\installation.txt" />
+		<Unit filename="sdlglutils.cpp" />
+		<Unit filename="sdlglutils.h" />
+		<Unit filename="simplexNoise.cpp" />
+		<Unit filename="simplexNoise.h" />
+		<Unit filename="texture.cpp" />
+		<Unit filename="texture.h" />
+		<Unit filename="variable.cpp" />
+		<Unit filename="variable.h" />
+		<Unit filename="world.cpp" />
+		<Unit filename="world.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+			<envvars />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
