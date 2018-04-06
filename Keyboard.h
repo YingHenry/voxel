@@ -10,10 +10,11 @@ class Keyboard
 
     Keyboard();
     ~Keyboard();
-    Uint8* getKeysStates();
-    int* getKeys();
+    Uint8* getKeysStates() const;
+    const int* getKeys() const;
 
     private:
+
     Uint8 *m_keysStates;
     int m_keys[6];
 };

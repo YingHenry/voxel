@@ -24,12 +24,12 @@ Keyboard::~Keyboard()
 
 }
 
-Uint8* Keyboard::getKeysStates()
+Uint8* Keyboard::getKeysStates() const
 {
     return m_keysStates;
 }
 
-int* Keyboard::getKeys()
+const int* Keyboard::getKeys() const
 {
     return m_keys;
 }

@@ -80,7 +80,7 @@ void Player::updatePosition(World &world, Keyboard &keyboard)
 
     // déplacements
     Uint8* keysStates = keyboard.getKeysStates();
-    int* keys = keyboard.getKeys();
+    const int* keys = keyboard.getKeys();
 
     if (keysStates[keys[0]])
     {

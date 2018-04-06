@@ -72,14 +72,10 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="notes\historique.txt" />
 		<Unit filename="notes\installation.txt" />
-		<Unit filename="sdlglutils.cpp" />
-		<Unit filename="sdlglutils.h" />
 		<Unit filename="simplexNoise.cpp" />
 		<Unit filename="simplexNoise.h" />
 		<Unit filename="texture.cpp" />
 		<Unit filename="texture.h" />
-		<Unit filename="variable.cpp" />
-		<Unit filename="variable.h" />
 		<Unit filename="world.cpp" />
 		<Unit filename="world.h" />
 		<Extensions>

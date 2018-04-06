@@ -22,7 +22,7 @@ int main(int argc, char *argv[]) {
     atexit(SDL_Quit);
 
     // Fenêtre
-    putenv("SDL_VIDEO_WINDOW_POS=700, 30"); // pour placer la fenêtre en (x,y), "center" pour centrer la fenêtre
+    putenv("SDL_VIDEO_WINDOW_POS=10, 30"); // pour placer la fenêtre en (x,y), "center" pour centrer la fenêtre
     SDL_WM_SetCaption("Voxel", NULL); // titre et icône de la fenêtre
     SDL_SetVideoMode(1024, 768, 32, SDL_OPENGL); // résolution de démarrage
 
