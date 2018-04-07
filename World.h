@@ -16,10 +16,10 @@ struct Position
 
 struct Chunk
 {
-    float *vertex[6];
-    float *coordonneTexture[6];
-    GLubyte *couleur[6];
-    int nombreFace[6];
+    float *vertices[6];
+    float *texturesCoordinates[6];
+    GLubyte *colors[6];
+    int faceCounts[6];
 };
 
 class World

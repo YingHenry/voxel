@@ -30,19 +30,40 @@ void Display2D::init()
 
 void Display2D::crosshair()
 {
-    float x, y, w, h;
-    x = m_width / 2.0f - 17.0f;
-    y = m_height / 2.0f - 17.0f;
-    w = 34.0f;
-    h = 34.0f;
+    float x = m_width / 2.0f - 17.0f;
+    float y = m_height / 2.0f - 17.0f;
+    float w = 34.0f;
+    float h = 34.0f;
 
-    glColor3ub(0, 170, 0);
+    /*
+    1 4
+    2 3
+    */
+
+    GLfloat vertices[] = {
+        x, y + h,
+        x, y,
+        x + w, y,
+        x + w, y + h,
+    };
+
+    GLubyte colors[] = {
+        0, 170, 0,
+        0, 170, 0,
+        0, 170, 0,
+        0, 170, 0,
+    };
+
+    GLfloat textures[] = {
+        0.0f, 1.0f,
+        0.0f, 0.0f,
+        1.0f, 0.0f,
+        1.0f, 1.0f,
+    };
+
+    glVertexPointer(2, GL_FLOAT, 2 * sizeof(GLfloat), vertices);
+    glColorPointer(3, GL_UNSIGNED_BYTE  , 3 * sizeof(GLubyte), colors);
+    glTexCoordPointer(2, GL_FLOAT, 2 * sizeof(GLfloat), textures);
     glBindTexture(GL_TEXTURE_2D, m_textureTarget);
-
-    glBegin(GL_QUADS);
-        glTexCoord2f(0.0f, 1.0f);      glVertex2f(x, y+h);
-        glTexCoord2f(0.0f, 0.0f);      glVertex2f(x, y);
-        glTexCoord2f(1.0f, 0.0f);      glVertex2f(x+w, y);
-        glTexCoord2f(1.0f, 1.0f);      glVertex2f(x+w, y+h);
-    glEnd();
+    glDrawArrays(GL_QUADS, 0, 4);
 }

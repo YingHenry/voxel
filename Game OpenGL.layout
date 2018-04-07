@@ -16,7 +16,7 @@
 	<File name="Keyboard.cpp" open="1" top="0" tabpos="4">
 		<Cursor position="636" topLine="2" />
 	</File>
-	<File name="Keyboard.h" open="1" top="1" tabpos="3">
+	<File name="Keyboard.h" open="1" top="0" tabpos="3">
 		<Cursor position="253" topLine="0" />
 	</File>
 	<File name="Mouse.cpp" open="0" top="0" tabpos="9">
@@ -34,8 +34,8 @@
 	<File name="main.cpp" open="1" top="0" tabpos="2">
 		<Cursor position="770" topLine="0" />
 	</File>
-	<File name="notes\historique.txt" open="1" top="0" tabpos="1">
-		<Cursor position="67340" topLine="3638" />
+	<File name="notes\historique.txt" open="1" top="1" tabpos="1">
+		<Cursor position="67969" topLine="3641" />
 	</File>
 	<File name="notes\installation.txt" open="0" top="0" tabpos="0">
 		<Cursor position="26" topLine="0" />

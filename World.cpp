@@ -48,9 +48,9 @@ Chunk* World::getChunks() const
     return m_chunks;
 }
 
-void World::setChunk(struct Chunk morceau, int index)
+void World::setChunk(struct Chunk chunk, int index)
 {
-    m_chunks[index] = morceau;
+    m_chunks[index] = chunk;
 }
 
 void World::generate()
@@ -348,27 +348,22 @@ struct Chunk World::updateChunk(int chunkIndex)
     int nombreChunkY = 16;
     int tailleChunk = 16;
 
-    struct Chunk morceau;
+    struct Chunk chunk;
 
-
-    for(j = 0; j < 6; j++)
+    for(i = 0; i < 6; i++)
     {
-        morceau.vertex[j] = new float[1];
-        morceau.coordonneTexture[j] = new float[1];
-        morceau.couleur[j] = new GLubyte[1];
-        morceau.nombreFace[j] = 0;
+        chunk.vertices[i] = new float[1];
+        chunk.texturesCoordinates[i] = new float[1];
+        chunk.colors[i] = new GLubyte[1];
+        chunk.faceCounts[i] = 0;
     }
 
     int limitX = 256;
     int limitY = 256;
     int limitZ = 64;
-
-    // ---------------------------------------------------
-
     int x,y,z;
 
-    // on détermine quel morceau il faut mettre à jour
-    //int numeroChunk = 0;
+    // on détermine quel chunk il faut mettre à jour
     int xMin, xMax, yMin, yMax, zMin, zMax;
 
     z = chunkIndex / (nombreChunkX*nombreChunkY);
@@ -388,13 +383,12 @@ struct Chunk World::updateChunk(int chunkIndex)
     // Calcul préalable de la taille des tableaux
     // entre la taille maximale et le nombre de coordonnées rentrées dans le tableau
     // on peut constater un facteur x50
-
-    morceau.nombreFace[0] = 0;
-    morceau.nombreFace[1] = 0;
-    morceau.nombreFace[2] = 0;
-    morceau.nombreFace[3] = 0;
-    morceau.nombreFace[4] = 0;
-    morceau.nombreFace[5] = 0;
+    chunk.faceCounts[0] = 0;
+    chunk.faceCounts[1] = 0;
+    chunk.faceCounts[2] = 0;
+    chunk.faceCounts[3] = 0;
+    chunk.faceCounts[4] = 0;
+    chunk.faceCounts[5] = 0;
 
     for(z = zMin; z < zMax; z++)
     for(y = yMin; y < yMax; y++)
@@ -407,32 +401,32 @@ struct Chunk World::updateChunk(int chunkIndex)
             {
                 if(isBlock(m_blocks[z * limitX * limitY + y * limitX + x+1]) == 0) // si le bloc en x+1 n'existe pas
                 {
-                    morceau.nombreFace[0]++;
+                    chunk.faceCounts[0]++;
                 }
 
                 if(isBlock(m_blocks[z * limitX * limitY + y * limitX + x-1]) == 0) // si le bloc en x-1 n'existe pas
                 {
-                    morceau.nombreFace[1]++;
+                    chunk.faceCounts[1]++;
                 }
 
                 if(isBlock(m_blocks[z * limitX * limitY + (y+1) * limitX + x]) == 0) // si le bloc en y+1 n'existe pas
                 {
-                    morceau.nombreFace[2]++;
+                    chunk.faceCounts[2]++;
                 }
 
                 if(isBlock(m_blocks[z * limitX * limitY + (y-1) * limitX + x]) == 0) // si le bloc en y-1 n'existe pas
                 {
-                    morceau.nombreFace[3]++;
+                    chunk.faceCounts[3]++;
                 }
 
                 if(isBlock(m_blocks[(z+1) * limitX * limitY + y * limitX + x]) == 0) // si le bloc en z+1 n'existe pas
                 {
-                    morceau.nombreFace[4]++;
+                    chunk.faceCounts[4]++;
                 }
 
                 if(isBlock(m_blocks[(z-1) * limitX * limitY + y * limitX + x]) == 0) // si le bloc en z-1 n'existe pas
                 {
-                    morceau.nombreFace[5]++;
+                    chunk.faceCounts[5]++;
                 }
             }
         }
@@ -440,41 +434,38 @@ struct Chunk World::updateChunk(int chunkIndex)
 
     for(j = 0; j < 6; j++)
     {
-        delete [] morceau.vertex[j];
-        morceau.vertex[j] = new float[morceau.nombreFace[j]*4*3];
+        delete [] chunk.vertices[j];
+        chunk.vertices[j] = new float[chunk.faceCounts[j]*4*3];
 
-        delete [] morceau.coordonneTexture[j];
-        morceau.coordonneTexture[j] = new float[morceau.nombreFace[j]*4*2];
+        delete [] chunk.texturesCoordinates[j];
+        chunk.texturesCoordinates[j] = new float[chunk.faceCounts[j]*4*2];
 
-        delete [] morceau.couleur[j];
-        morceau.couleur[j] = new GLubyte[morceau.nombreFace[j]*4*3];
+        delete [] chunk.colors[j];
+        chunk.colors[j] = new GLubyte[chunk.faceCounts[j]*4*3];
     }
 
-    int indice = 0;
-    int indiceCoordonneeTexture = 0;
-    int indiceCouleur = 0;
-
-    int typeBloc;
+    int index = 0;
+    int textureCoordinateIndex = 0;
+    int colorIndex = 0;
+    int blockType;
     int r,g,b;
+    int shadowR;
+    int shadowG;
+    int shadowB;
+    int cubeCount;
 
-    int ombreR;
-    int ombreG;
-    int ombreB;
-
-    int nombreCube;
-
-    morceau.nombreFace[0] = 0;
+    chunk.faceCounts[0] = 0;
 
     for(z = zMin; z < zMax; z++)
     for(y = yMin; y < yMax; y++)
     for(x = xMin; x < xMax; x++)
     {
-        typeBloc = m_blocks[z * limitX * limitY + y * limitX + x];
-        i = typeBloc % 16;
-        j = typeBloc / 16;
+        blockType = m_blocks[z * limitX * limitY + y * limitX + x];
+        i = blockType % 16;
+        j = blockType / 16;
 
         // si ce n'est pas vide ET si ce n'est pas de la végétation
-        if(isBlock(typeBloc) == true)
+        if(isBlock(blockType) == true)
         {
             // on s'assure de ne pas sortir des limites
             if(x + 1 < limitX && y + 1 < limitY && z + 1 < limitZ
@@ -482,607 +473,607 @@ struct Chunk World::updateChunk(int chunkIndex)
             {
                 if(isBlock(m_blocks[z * limitX * limitY + y * limitX + x+1]) == 0) // si le bloc en x+1 n'existe pas
                 {
-                    morceau.nombreFace[0]++;
+                    chunk.faceCounts[0]++;
 
-                    // vertex 1
-                    morceau.vertex[0][indice+0] = x+1;
-                    morceau.vertex[0][indice+1] = y;
-                    morceau.vertex[0][indice+2] = z+1;
+                    // vertices 1
+                    chunk.vertices[0][index+0] = x+1;
+                    chunk.vertices[0][index+1] = y;
+                    chunk.vertices[0][index+2] = z+1;
 
-                    // vertex 2
-                    morceau.vertex[0][indice+3] = x+1;
-                    morceau.vertex[0][indice+4] = y;
-                    morceau.vertex[0][indice+5] = z;
+                    // vertices 2
+                    chunk.vertices[0][index+3] = x+1;
+                    chunk.vertices[0][index+4] = y;
+                    chunk.vertices[0][index+5] = z;
 
-                    // vertex 3
-                    morceau.vertex[0][indice+6] = x+1;
-                    morceau.vertex[0][indice+7] = y+1;
-                    morceau.vertex[0][indice+8] = z;
+                    // vertices 3
+                    chunk.vertices[0][index+6] = x+1;
+                    chunk.vertices[0][index+7] = y+1;
+                    chunk.vertices[0][index+8] = z;
 
-                    // vertex 4
-                    morceau.vertex[0][indice+9] = x+1;
-                    morceau.vertex[0][indice+10] = y+1;
-                    morceau.vertex[0][indice+11] = z+1;
+                    // vertices 4
+                    chunk.vertices[0][index+9] = x+1;
+                    chunk.vertices[0][index+10] = y+1;
+                    chunk.vertices[0][index+11] = z+1;
 
-                    indice += 12;
+                    index += 12;
 
-                    // vertex 1
-                    morceau.coordonneTexture[0][indiceCoordonneeTexture+0] = i*0.0625 + 0.001;
-                    morceau.coordonneTexture[0][indiceCoordonneeTexture+1] = (j+1)*0.0625 - 0.001;
+                    // vertices 1
+                    chunk.texturesCoordinates[0][textureCoordinateIndex+0] = i*0.0625 + 0.001;
+                    chunk.texturesCoordinates[0][textureCoordinateIndex+1] = (j+1)*0.0625 - 0.001;
 
-                    // vertex 2
-                    morceau.coordonneTexture[0][indiceCoordonneeTexture+2] = i*0.0625 + 0.001;
-                    morceau.coordonneTexture[0][indiceCoordonneeTexture+3] = j*0.0625 + 0.001;
+                    // vertices 2
+                    chunk.texturesCoordinates[0][textureCoordinateIndex+2] = i*0.0625 + 0.001;
+                    chunk.texturesCoordinates[0][textureCoordinateIndex+3] = j*0.0625 + 0.001;
 
-                    // vertex 3
-                    morceau.coordonneTexture[0][indiceCoordonneeTexture+4] = (i+1)*0.0625 - 0.001;
-                    morceau.coordonneTexture[0][indiceCoordonneeTexture+5] = j*0.0625 + 0.001;
+                    // vertices 3
+                    chunk.texturesCoordinates[0][textureCoordinateIndex+4] = (i+1)*0.0625 - 0.001;
+                    chunk.texturesCoordinates[0][textureCoordinateIndex+5] = j*0.0625 + 0.001;
 
-                    // vertex 4
-                    morceau.coordonneTexture[0][indiceCoordonneeTexture+6] = (i+1)*0.0625 - 0.001;
-                    morceau.coordonneTexture[0][indiceCoordonneeTexture+7] = (j+1)*0.0625 - 0.001;
-                    indiceCoordonneeTexture += 8;
+                    // vertices 4
+                    chunk.texturesCoordinates[0][textureCoordinateIndex+6] = (i+1)*0.0625 - 0.001;
+                    chunk.texturesCoordinates[0][textureCoordinateIndex+7] = (j+1)*0.0625 - 0.001;
+                    textureCoordinateIndex += 8;
 
                     // Mode sans texture
-                    // chaque vertex a une couleur définie par 3
+                    // chaque vertices a une colors définie par 3
 
-                    blockColor(typeBloc, r,g,b,0,x,y,z);
+                    blockColor(blockType, r,g,b,0,x,y,z);
 
                     // Z
                     // | 1 4
                     // | 2 3
                     // X - - Y
 
-                    // vertex 1
-                    nombreCube = 0;
+                    // vertices 1
+                    cubeCount = 0;
                     if(isBlock(m_blocks[(z+1) * limitX * limitY + (y-0) * limitX + x+1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z+1) * limitX * limitY + (y-1) * limitX + x+1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z+0) * limitX * limitY + (y-1) * limitX + x+1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z+0) * limitX * limitY + (y-0) * limitX + x+1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
-                    blockColorWithShadow(nombreCube, r, g, b, ombreR, ombreG, ombreB);
+                    blockColorWithShadow(cubeCount, r, g, b, shadowR, shadowG, shadowB);
 
-                    morceau.couleur[0][indiceCouleur+0] = ombreR;
-                    morceau.couleur[0][indiceCouleur+1] = ombreG;
-                    morceau.couleur[0][indiceCouleur+2] = ombreB;
+                    chunk.colors[0][colorIndex+0] = shadowR;
+                    chunk.colors[0][colorIndex+1] = shadowG;
+                    chunk.colors[0][colorIndex+2] = shadowB;
 
-                    // vertex 2
-                    nombreCube = 0;
+                    // vertices 2
+                    cubeCount = 0;
                     if(isBlock(m_blocks[(z+0) * limitX * limitY + (y-0) * limitX + x+1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z+0) * limitX * limitY + (y-1) * limitX + x+1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z-1) * limitX * limitY + (y-1) * limitX + x+1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z-1) * limitX * limitY + (y-0) * limitX + x+1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
-                    blockColorWithShadow(nombreCube, r, g, b, ombreR, ombreG, ombreB);
+                    blockColorWithShadow(cubeCount, r, g, b, shadowR, shadowG, shadowB);
 
-                    morceau.couleur[0][indiceCouleur+3] = ombreR;
-                    morceau.couleur[0][indiceCouleur+4] = ombreG;
-                    morceau.couleur[0][indiceCouleur+5] = ombreB;
+                    chunk.colors[0][colorIndex+3] = shadowR;
+                    chunk.colors[0][colorIndex+4] = shadowG;
+                    chunk.colors[0][colorIndex+5] = shadowB;
 
-                    // vertex 3
-                    nombreCube = 0;
+                    // vertices 3
+                    cubeCount = 0;
                     if(isBlock(m_blocks[(z+0) * limitX * limitY + (y+1) * limitX + x+1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z+0) * limitX * limitY + (y-0) * limitX + x+1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z-1) * limitX * limitY + (y-0) * limitX + x+1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z-1) * limitX * limitY + (y+1) * limitX + x+1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
-                    blockColorWithShadow(nombreCube, r, g, b, ombreR, ombreG, ombreB);
+                    blockColorWithShadow(cubeCount, r, g, b, shadowR, shadowG, shadowB);
 
-                    morceau.couleur[0][indiceCouleur+6] = ombreR;
-                    morceau.couleur[0][indiceCouleur+7] = ombreG;
-                    morceau.couleur[0][indiceCouleur+8] = ombreB;
+                    chunk.colors[0][colorIndex+6] = shadowR;
+                    chunk.colors[0][colorIndex+7] = shadowG;
+                    chunk.colors[0][colorIndex+8] = shadowB;
 
-                    // vertex 4
-                    nombreCube = 0;
+                    // vertices 4
+                    cubeCount = 0;
                     if(isBlock(m_blocks[(z+1) * limitX * limitY + (y+1) * limitX + x+1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z+1) * limitX * limitY + (y-0) * limitX + x+1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z+0) * limitX * limitY + (y-0) * limitX + x+1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z+0) * limitX * limitY + (y+1) * limitX + x+1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
-                    blockColorWithShadow(nombreCube, r, g, b, ombreR, ombreG, ombreB);
+                    blockColorWithShadow(cubeCount, r, g, b, shadowR, shadowG, shadowB);
 
-                    morceau.couleur[0][indiceCouleur+9] = ombreR;
-                    morceau.couleur[0][indiceCouleur+10] = ombreG;
-                    morceau.couleur[0][indiceCouleur+11] = ombreB;
+                    chunk.colors[0][colorIndex+9] = shadowR;
+                    chunk.colors[0][colorIndex+10] = shadowG;
+                    chunk.colors[0][colorIndex+11] = shadowB;
 
-                    indiceCouleur += 12;
+                    colorIndex += 12;
 
                 }
             }
         }
     }
 
-    indice = 0;
-    indiceCoordonneeTexture = 0;
-    indiceCouleur = 0;
+    index = 0;
+    textureCoordinateIndex = 0;
+    colorIndex = 0;
 
-    morceau.nombreFace[1] = 0;
+    chunk.faceCounts[1] = 0;
 
     for(z = zMin; z < zMax; z++)
     for(y = yMin; y < yMax; y++)
     for(x = xMin; x < xMax; x++)
     {
-        typeBloc = m_blocks[z * limitX * limitY + y * limitX + x];
-        i = typeBloc % 16;
-        j = typeBloc / 16;
+        blockType = m_blocks[z * limitX * limitY + y * limitX + x];
+        i = blockType % 16;
+        j = blockType / 16;
 
-        if(isBlock(typeBloc) == true)
+        if(isBlock(blockType) == true)
         {
             if(x + 1 < limitX && y + 1 < limitY && z + 1 < limitZ
             && x - 1 >= 0 && y - 1 >= 0 && z - 1 >= 0)
             {
                 if(isBlock(m_blocks[z * limitX * limitY + y * limitX + x-1]) == 0) // si le bloc en x-1 n'existe pas
                 {
-                    morceau.nombreFace[1]++;
+                    chunk.faceCounts[1]++;
 
-                    // vertex 1
-                    morceau.vertex[1][indice+0] = x;
-                    morceau.vertex[1][indice+1] = y+1;
-                    morceau.vertex[1][indice+2] = z+1;
+                    // vertices 1
+                    chunk.vertices[1][index+0] = x;
+                    chunk.vertices[1][index+1] = y+1;
+                    chunk.vertices[1][index+2] = z+1;
 
-                    // vertex 2
-                    morceau.vertex[1][indice+3] = x;
-                    morceau.vertex[1][indice+4] = y+1;
-                    morceau.vertex[1][indice+5] = z;
+                    // vertices 2
+                    chunk.vertices[1][index+3] = x;
+                    chunk.vertices[1][index+4] = y+1;
+                    chunk.vertices[1][index+5] = z;
 
-                    // vertex 3
-                    morceau.vertex[1][indice+6] = x;
-                    morceau.vertex[1][indice+7] = y;
-                    morceau.vertex[1][indice+8] = z;
+                    // vertices 3
+                    chunk.vertices[1][index+6] = x;
+                    chunk.vertices[1][index+7] = y;
+                    chunk.vertices[1][index+8] = z;
 
-                    // vertex 4
-                    morceau.vertex[1][indice+9] = x;
-                    morceau.vertex[1][indice+10] = y;
-                    morceau.vertex[1][indice+11] = z+1;
+                    // vertices 4
+                    chunk.vertices[1][index+9] = x;
+                    chunk.vertices[1][index+10] = y;
+                    chunk.vertices[1][index+11] = z+1;
 
-                    indice += 12;
+                    index += 12;
 
-                    // vertex 1
-                    morceau.coordonneTexture[1][indiceCoordonneeTexture+6] = i*0.0625 + 0.001;
-                    morceau.coordonneTexture[1][indiceCoordonneeTexture+7] = (j+1)*0.0625 - 0.001;
+                    // vertices 1
+                    chunk.texturesCoordinates[1][textureCoordinateIndex+6] = i*0.0625 + 0.001;
+                    chunk.texturesCoordinates[1][textureCoordinateIndex+7] = (j+1)*0.0625 - 0.001;
 
-                    // vertex 2
-                    morceau.coordonneTexture[1][indiceCoordonneeTexture+0] = (i+1)*0.0625 - 0.001;
-                    morceau.coordonneTexture[1][indiceCoordonneeTexture+1] = (j+1)*0.0625 - 0.001;
+                    // vertices 2
+                    chunk.texturesCoordinates[1][textureCoordinateIndex+0] = (i+1)*0.0625 - 0.001;
+                    chunk.texturesCoordinates[1][textureCoordinateIndex+1] = (j+1)*0.0625 - 0.001;
 
-                    // vertex 3
-                    morceau.coordonneTexture[1][indiceCoordonneeTexture+2] = (i+1)*0.0625 - 0.001;
-                    morceau.coordonneTexture[1][indiceCoordonneeTexture+3] = j*0.0625 + 0.001;
+                    // vertices 3
+                    chunk.texturesCoordinates[1][textureCoordinateIndex+2] = (i+1)*0.0625 - 0.001;
+                    chunk.texturesCoordinates[1][textureCoordinateIndex+3] = j*0.0625 + 0.001;
 
-                    // vertex 4
-                    morceau.coordonneTexture[1][indiceCoordonneeTexture+4] = i*0.0625 + 0.001;
-                    morceau.coordonneTexture[1][indiceCoordonneeTexture+5] = j*0.0625 + 0.001;
-                    indiceCoordonneeTexture += 8;
+                    // vertices 4
+                    chunk.texturesCoordinates[1][textureCoordinateIndex+4] = i*0.0625 + 0.001;
+                    chunk.texturesCoordinates[1][textureCoordinateIndex+5] = j*0.0625 + 0.001;
+                    textureCoordinateIndex += 8;
 
-                    blockColor(typeBloc, r,g,b,0,x,y,z);
+                    blockColor(blockType, r,g,b,0,x,y,z);
 
                     // Z
                     // | 1 2
                     // | 4 3
                     // X - - Y
 
-                    // vertex 1
-                    nombreCube = 0;
+                    // vertices 1
+                    cubeCount = 0;
                     if(isBlock(m_blocks[(z+1) * limitX * limitY + (y+1) * limitX + x-1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z+1) * limitX * limitY + y * limitX + x-1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[z * limitX * limitY + y * limitX + x-1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[z * limitX * limitY + (y+1) * limitX + x-1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
-                    blockColorWithShadow(nombreCube, r, g, b, ombreR, ombreG, ombreB);
+                    blockColorWithShadow(cubeCount, r, g, b, shadowR, shadowG, shadowB);
 
-                    morceau.couleur[1][indiceCouleur+0] = ombreR;
-                    morceau.couleur[1][indiceCouleur+1] = ombreG;
-                    morceau.couleur[1][indiceCouleur+2] = ombreB;
+                    chunk.colors[1][colorIndex+0] = shadowR;
+                    chunk.colors[1][colorIndex+1] = shadowG;
+                    chunk.colors[1][colorIndex+2] = shadowB;
 
-                    // vertex 2
-                    nombreCube = 0;
+                    // vertices 2
+                    cubeCount = 0;
                     if(isBlock(m_blocks[(z+0) * limitX * limitY + (y+1) * limitX + x-1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z+0) * limitX * limitY + y * limitX + x-1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z-1) * limitX * limitY + y * limitX + x-1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z-1) * limitX * limitY + (y+1) * limitX + x-1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
-                    blockColorWithShadow(nombreCube, r, g, b, ombreR, ombreG, ombreB);
+                    blockColorWithShadow(cubeCount, r, g, b, shadowR, shadowG, shadowB);
 
-                    morceau.couleur[1][indiceCouleur+3] = ombreR;
-                    morceau.couleur[1][indiceCouleur+4] = ombreG;
-                    morceau.couleur[1][indiceCouleur+5] = ombreB;
+                    chunk.colors[1][colorIndex+3] = shadowR;
+                    chunk.colors[1][colorIndex+4] = shadowG;
+                    chunk.colors[1][colorIndex+5] = shadowB;
 
-                    // vertex 3
-                    nombreCube = 0;
+                    // vertices 3
+                    cubeCount = 0;
                     if(isBlock(m_blocks[z * limitX * limitY + y * limitX + x-1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[z * limitX * limitY + (y-1) * limitX + x-1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z-1) * limitX * limitY + (y-1) * limitX + x-1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z-1) * limitX * limitY + y * limitX + x-1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
-                    blockColorWithShadow(nombreCube, r, g, b, ombreR, ombreG, ombreB);
+                    blockColorWithShadow(cubeCount, r, g, b, shadowR, shadowG, shadowB);
 
-                    morceau.couleur[1][indiceCouleur+6] = ombreR;
-                    morceau.couleur[1][indiceCouleur+7] = ombreG;
-                    morceau.couleur[1][indiceCouleur+8] = ombreB;
+                    chunk.colors[1][colorIndex+6] = shadowR;
+                    chunk.colors[1][colorIndex+7] = shadowG;
+                    chunk.colors[1][colorIndex+8] = shadowB;
 
-                    // vertex 4
-                    nombreCube = 0;
+                    // vertices 4
+                    cubeCount = 0;
                     if(isBlock(m_blocks[(z+1) * limitX * limitY + y * limitX + x-1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z+1) * limitX * limitY + (y-1) * limitX + x-1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z+0) * limitX * limitY + (y-1) * limitX + x-1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z+0) * limitX * limitY + y * limitX + x-1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
-                    blockColorWithShadow(nombreCube, r, g, b, ombreR, ombreG, ombreB);
+                    blockColorWithShadow(cubeCount, r, g, b, shadowR, shadowG, shadowB);
 
-                    morceau.couleur[1][indiceCouleur+9] = ombreR;
-                    morceau.couleur[1][indiceCouleur+10] = ombreG;
-                    morceau.couleur[1][indiceCouleur+11] = ombreB;
+                    chunk.colors[1][colorIndex+9] = shadowR;
+                    chunk.colors[1][colorIndex+10] = shadowG;
+                    chunk.colors[1][colorIndex+11] = shadowB;
 
-                    indiceCouleur += 12;
+                    colorIndex += 12;
                 }
             }
         }
     }
 
 
-    indice = 0;
-    indiceCoordonneeTexture = 0;
-    indiceCouleur = 0;
+    index = 0;
+    textureCoordinateIndex = 0;
+    colorIndex = 0;
 
-    morceau.nombreFace[2] = 0;
+    chunk.faceCounts[2] = 0;
 
     for(z = zMin; z < zMax; z++)
     for(y = yMin; y < yMax; y++)
     for(x = xMin; x < xMax; x++)
     {
-        typeBloc = m_blocks[z * limitX * limitY + y * limitX + x];
-        i = typeBloc % 16;
-        j = typeBloc / 16;
+        blockType = m_blocks[z * limitX * limitY + y * limitX + x];
+        i = blockType % 16;
+        j = blockType / 16;
 
-        if(isBlock(typeBloc) == true)
+        if(isBlock(blockType) == true)
         {
             if(x + 1 < limitX && y + 1 < limitY && z + 1 < limitZ
             && x - 1 >= 0 && y - 1 >= 0 && z - 1 >= 0)
             {
                 if(isBlock(m_blocks[z * limitX * limitY + (y+1) * limitX + x]) == 0) // si le bloc en y+1 n'existe pas
                 {
-                    morceau.nombreFace[2]++;
+                    chunk.faceCounts[2]++;
 
-                    // vertex 1
-                    morceau.vertex[2][indice+0] = x;
-                    morceau.vertex[2][indice+1] = y+1;
-                    morceau.vertex[2][indice+2] = z+1;
+                    // vertices 1
+                    chunk.vertices[2][index+0] = x;
+                    chunk.vertices[2][index+1] = y+1;
+                    chunk.vertices[2][index+2] = z+1;
 
-                    // vertex 2
-                    morceau.vertex[2][indice+3] = x+1;
-                    morceau.vertex[2][indice+4] = y+1;
-                    morceau.vertex[2][indice+5] = z+1;
+                    // vertices 2
+                    chunk.vertices[2][index+3] = x+1;
+                    chunk.vertices[2][index+4] = y+1;
+                    chunk.vertices[2][index+5] = z+1;
 
-                    // vertex 3
-                    morceau.vertex[2][indice+6] = x+1;
-                    morceau.vertex[2][indice+7] = y+1;
-                    morceau.vertex[2][indice+8] = z;
+                    // vertices 3
+                    chunk.vertices[2][index+6] = x+1;
+                    chunk.vertices[2][index+7] = y+1;
+                    chunk.vertices[2][index+8] = z;
 
-                    // vertex 4
-                    morceau.vertex[2][indice+9] = x;
-                    morceau.vertex[2][indice+10] = y+1;
-                    morceau.vertex[2][indice+11] = z;
+                    // vertices 4
+                    chunk.vertices[2][index+9] = x;
+                    chunk.vertices[2][index+10] = y+1;
+                    chunk.vertices[2][index+11] = z;
 
-                    indice += 12;
+                    index += 12;
 
-                    // vertex 1
-                    morceau.coordonneTexture[2][indiceCoordonneeTexture+0] = i*0.0625 + 0.001;
-                    morceau.coordonneTexture[2][indiceCoordonneeTexture+1] = (j+1)*0.0625 - 0.001;
+                    // vertices 1
+                    chunk.texturesCoordinates[2][textureCoordinateIndex+0] = i*0.0625 + 0.001;
+                    chunk.texturesCoordinates[2][textureCoordinateIndex+1] = (j+1)*0.0625 - 0.001;
 
-                    // vertex 2
-                    morceau.coordonneTexture[2][indiceCoordonneeTexture+2] = (i+1)*0.0625 - 0.001;
-                    morceau.coordonneTexture[2][indiceCoordonneeTexture+3] = (j+1)*0.0625 - 0.001;
+                    // vertices 2
+                    chunk.texturesCoordinates[2][textureCoordinateIndex+2] = (i+1)*0.0625 - 0.001;
+                    chunk.texturesCoordinates[2][textureCoordinateIndex+3] = (j+1)*0.0625 - 0.001;
 
-                    // vertex 3
-                    morceau.coordonneTexture[2][indiceCoordonneeTexture+4] = (i+1)*0.0625 - 0.001;
-                    morceau.coordonneTexture[2][indiceCoordonneeTexture+5] = j*0.0625 + 0.001;
+                    // vertices 3
+                    chunk.texturesCoordinates[2][textureCoordinateIndex+4] = (i+1)*0.0625 - 0.001;
+                    chunk.texturesCoordinates[2][textureCoordinateIndex+5] = j*0.0625 + 0.001;
 
-                    // vertex 4
-                    morceau.coordonneTexture[2][indiceCoordonneeTexture+6] = i*0.0625 + 0.001;
-                    morceau.coordonneTexture[2][indiceCoordonneeTexture+7] = j*0.0625 + 0.001;
-                    indiceCoordonneeTexture += 8;
+                    // vertices 4
+                    chunk.texturesCoordinates[2][textureCoordinateIndex+6] = i*0.0625 + 0.001;
+                    chunk.texturesCoordinates[2][textureCoordinateIndex+7] = j*0.0625 + 0.001;
+                    textureCoordinateIndex += 8;
 
-                    blockColor(typeBloc, r,g,b,1,x,y,z);
+                    blockColor(blockType, r,g,b,1,x,y,z);
 
                     // Z
                     // | 1 2
                     // | 4 3
                     // Y - - X
 
-                    // vertex 1
-                    nombreCube = 0;
+                    // vertices 1
+                    cubeCount = 0;
                     if(isBlock(m_blocks[(z+1) * limitX * limitY + (y+1) * limitX + x]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z+1) * limitX * limitY + (y+1) * limitX + x-1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z+0) * limitX * limitY + (y+1) * limitX + x-1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z+0) * limitX * limitY + (y+1) * limitX + x]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
-                    blockColorWithShadow(nombreCube, r, g, b, ombreR, ombreG, ombreB);
+                    blockColorWithShadow(cubeCount, r, g, b, shadowR, shadowG, shadowB);
 
-                    morceau.couleur[2][indiceCouleur+0] = ombreR;
-                    morceau.couleur[2][indiceCouleur+1] = ombreG;
-                    morceau.couleur[2][indiceCouleur+2] = ombreB;
+                    chunk.colors[2][colorIndex+0] = shadowR;
+                    chunk.colors[2][colorIndex+1] = shadowG;
+                    chunk.colors[2][colorIndex+2] = shadowB;
 
-                    // vertex 2
-                    nombreCube = 0;
+                    // vertices 2
+                    cubeCount = 0;
                     if(isBlock(m_blocks[(z+1) * limitX * limitY + (y+1) * limitX + x+1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z+1) * limitX * limitY + (y+1) * limitX + x]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z-0) * limitX * limitY + (y+1) * limitX + x]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z-0) * limitX * limitY + (y+1) * limitX + x+1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
-                    blockColorWithShadow(nombreCube, r, g, b, ombreR, ombreG, ombreB);
+                    blockColorWithShadow(cubeCount, r, g, b, shadowR, shadowG, shadowB);
 
-                    morceau.couleur[2][indiceCouleur+3] = ombreR;
-                    morceau.couleur[2][indiceCouleur+4] = ombreG;
-                    morceau.couleur[2][indiceCouleur+5] = ombreB;
+                    chunk.colors[2][colorIndex+3] = shadowR;
+                    chunk.colors[2][colorIndex+4] = shadowG;
+                    chunk.colors[2][colorIndex+5] = shadowB;
 
-                    // vertex 3
-                    nombreCube = 0;
+                    // vertices 3
+                    cubeCount = 0;
                     if(isBlock(m_blocks[(z+0) * limitX * limitY + (y+1) * limitX + x+1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z+0) * limitX * limitY + (y+1) * limitX + x]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z-1) * limitX * limitY + (y+1) * limitX + x]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z-1) * limitX * limitY + (y+1) * limitX + x+1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
-                    blockColorWithShadow(nombreCube, r, g, b, ombreR, ombreG, ombreB);
+                    blockColorWithShadow(cubeCount, r, g, b, shadowR, shadowG, shadowB);
 
-                    morceau.couleur[2][indiceCouleur+6] = ombreR;
-                    morceau.couleur[2][indiceCouleur+7] = ombreG;
-                    morceau.couleur[2][indiceCouleur+8] = ombreB;
+                    chunk.colors[2][colorIndex+6] = shadowR;
+                    chunk.colors[2][colorIndex+7] = shadowG;
+                    chunk.colors[2][colorIndex+8] = shadowB;
 
-                    // vertex 4
-                    nombreCube = 0;
+                    // vertices 4
+                    cubeCount = 0;
                     if(isBlock(m_blocks[(z+0) * limitX * limitY + (y+1) * limitX + x+0]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z+0) * limitX * limitY + (y+1) * limitX + x-1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z-1) * limitX * limitY + (y+1) * limitX + x-1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z-1) * limitX * limitY + (y+1) * limitX + x]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
-                    blockColorWithShadow(nombreCube, r, g, b, ombreR, ombreG, ombreB);
+                    blockColorWithShadow(cubeCount, r, g, b, shadowR, shadowG, shadowB);
 
-                    morceau.couleur[2][indiceCouleur+9] = ombreR;
-                    morceau.couleur[2][indiceCouleur+10] = ombreG;
-                    morceau.couleur[2][indiceCouleur+11] = ombreB;
+                    chunk.colors[2][colorIndex+9] = shadowR;
+                    chunk.colors[2][colorIndex+10] = shadowG;
+                    chunk.colors[2][colorIndex+11] = shadowB;
 
-                    indiceCouleur += 12;
+                    colorIndex += 12;
 
                 }
             }
         }
     }
 
-    indice = 0;
-    indiceCoordonneeTexture = 0;
-    indiceCouleur = 0;
+    index = 0;
+    textureCoordinateIndex = 0;
+    colorIndex = 0;
 
-    morceau.nombreFace[3] = 0;
+    chunk.faceCounts[3] = 0;
 
     for(z = zMin; z < zMax; z++)
     for(y = yMin; y < yMax; y++)
     for(x = xMin; x < xMax; x++)
     {
-        typeBloc = m_blocks[z * limitX * limitY + y * limitX + x];
-        i = typeBloc % 16;
-        j = typeBloc / 16;
+        blockType = m_blocks[z * limitX * limitY + y * limitX + x];
+        i = blockType % 16;
+        j = blockType / 16;
 
-        if(isBlock(typeBloc) == true)
+        if(isBlock(blockType) == true)
         {
             if(x + 1 < limitX && y + 1 < limitY && z + 1 < limitZ
             && x - 1 >= 0 && y - 1 >= 0 && z - 1 >= 0)
             {
                 if(isBlock(m_blocks[z * limitX * limitY + (y-1) * limitX + x]) == 0) // si le bloc en y-1 n'existe pas
                 {
-                    morceau.nombreFace[3]++;
+                    chunk.faceCounts[3]++;
 
-                    // vertex 1
-                    morceau.vertex[3][indice+0] = x;
-                    morceau.vertex[3][indice+1] = y;
-                    morceau.vertex[3][indice+2] = z+1;
+                    // vertices 1
+                    chunk.vertices[3][index+0] = x;
+                    chunk.vertices[3][index+1] = y;
+                    chunk.vertices[3][index+2] = z+1;
 
-                    // vertex 2
-                    morceau.vertex[3][indice+3] = x;
-                    morceau.vertex[3][indice+4] = y;
-                    morceau.vertex[3][indice+5] = z;
+                    // vertices 2
+                    chunk.vertices[3][index+3] = x;
+                    chunk.vertices[3][index+4] = y;
+                    chunk.vertices[3][index+5] = z;
 
-                    // vertex 3
-                    morceau.vertex[3][indice+6] = x+1;
-                    morceau.vertex[3][indice+7] = y;
-                    morceau.vertex[3][indice+8] = z;
+                    // vertices 3
+                    chunk.vertices[3][index+6] = x+1;
+                    chunk.vertices[3][index+7] = y;
+                    chunk.vertices[3][index+8] = z;
 
-                    // vertex 4
-                    morceau.vertex[3][indice+9] = x+1;
-                    morceau.vertex[3][indice+10] = y;
-                    morceau.vertex[3][indice+11] = z+1;
+                    // vertices 4
+                    chunk.vertices[3][index+9] = x+1;
+                    chunk.vertices[3][index+10] = y;
+                    chunk.vertices[3][index+11] = z+1;
 
-                    indice += 12;
+                    index += 12;
 
-                    // vertex 1
-                    morceau.coordonneTexture[3][indiceCoordonneeTexture+0] = i*0.0625 + 0.001;
-                    morceau.coordonneTexture[3][indiceCoordonneeTexture+1] = (j+1)*0.0625 - 0.001;
+                    // vertices 1
+                    chunk.texturesCoordinates[3][textureCoordinateIndex+0] = i*0.0625 + 0.001;
+                    chunk.texturesCoordinates[3][textureCoordinateIndex+1] = (j+1)*0.0625 - 0.001;
 
-                    // vertex 2
-                    morceau.coordonneTexture[3][indiceCoordonneeTexture+2] = i*0.0625 + 0.001;
-                    morceau.coordonneTexture[3][indiceCoordonneeTexture+3] = j*0.0625 + 0.001;
+                    // vertices 2
+                    chunk.texturesCoordinates[3][textureCoordinateIndex+2] = i*0.0625 + 0.001;
+                    chunk.texturesCoordinates[3][textureCoordinateIndex+3] = j*0.0625 + 0.001;
 
-                    // vertex 3
-                    morceau.coordonneTexture[3][indiceCoordonneeTexture+4] = (i+1)*0.0625 - 0.001;
-                    morceau.coordonneTexture[3][indiceCoordonneeTexture+5] = j*0.0625 + 0.001;
+                    // vertices 3
+                    chunk.texturesCoordinates[3][textureCoordinateIndex+4] = (i+1)*0.0625 - 0.001;
+                    chunk.texturesCoordinates[3][textureCoordinateIndex+5] = j*0.0625 + 0.001;
 
-                    // vertex 4
-                    morceau.coordonneTexture[3][indiceCoordonneeTexture+6] = (i+1)*0.0625 - 0.001;
-                    morceau.coordonneTexture[3][indiceCoordonneeTexture+7] = (j+1)*0.0625 - 0.001;
-                    indiceCoordonneeTexture += 8;
+                    // vertices 4
+                    chunk.texturesCoordinates[3][textureCoordinateIndex+6] = (i+1)*0.0625 - 0.001;
+                    chunk.texturesCoordinates[3][textureCoordinateIndex+7] = (j+1)*0.0625 - 0.001;
+                    textureCoordinateIndex += 8;
 
 
-                    blockColor(typeBloc, r,g,b,1,x,y,z);
+                    blockColor(blockType, r,g,b,1,x,y,z);
 
                     // Z
                     // | 1 4
                     // | 2 3
                     // Y - - X
 
-                    // vertex 1
-                    nombreCube = 0;
+                    // vertices 1
+                    cubeCount = 0;
                     if(isBlock(m_blocks[(z+1) * limitX * limitY + (y-1) * limitX + x]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z+1) * limitX * limitY + (y-1) * limitX + x-1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z+0) * limitX * limitY + (y-1) * limitX + x-1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z+0) * limitX * limitY + (y-1) * limitX + x]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
-                    blockColorWithShadow(nombreCube, r, g, b, ombreR, ombreG, ombreB);
+                    blockColorWithShadow(cubeCount, r, g, b, shadowR, shadowG, shadowB);
 
-                    morceau.couleur[3][indiceCouleur+0] = ombreR;
-                    morceau.couleur[3][indiceCouleur+1] = ombreG;
-                    morceau.couleur[3][indiceCouleur+2] = ombreB;
+                    chunk.colors[3][colorIndex+0] = shadowR;
+                    chunk.colors[3][colorIndex+1] = shadowG;
+                    chunk.colors[3][colorIndex+2] = shadowB;
 
-                    // vertex 2
-                    nombreCube = 0;
+                    // vertices 2
+                    cubeCount = 0;
                     if(isBlock(m_blocks[(z+0) * limitX * limitY + (y-1) * limitX + x]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z+0) * limitX * limitY + (y-1) * limitX + x-1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z-1) * limitX * limitY + (y-1) * limitX + x-1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z-1) * limitX * limitY + (y-1) * limitX + x]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
-                    blockColorWithShadow(nombreCube, r, g, b, ombreR, ombreG, ombreB);
+                    blockColorWithShadow(cubeCount, r, g, b, shadowR, shadowG, shadowB);
 
-                    morceau.couleur[3][indiceCouleur+3] = ombreR;
-                    morceau.couleur[3][indiceCouleur+4] = ombreG;
-                    morceau.couleur[3][indiceCouleur+5] = ombreB;
+                    chunk.colors[3][colorIndex+3] = shadowR;
+                    chunk.colors[3][colorIndex+4] = shadowG;
+                    chunk.colors[3][colorIndex+5] = shadowB;
 
-                    // vertex 3
-                    nombreCube = 0;
+                    // vertices 3
+                    cubeCount = 0;
                     if(isBlock(m_blocks[(z+0) * limitX * limitY + (y-1) * limitX + x+1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z+0) * limitX * limitY + (y-1) * limitX + x]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z-1) * limitX * limitY + (y-1) * limitX + x]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z-1) * limitX * limitY + (y-1) * limitX + x+1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
-                    blockColorWithShadow(nombreCube, r, g, b, ombreR, ombreG, ombreB);
+                    blockColorWithShadow(cubeCount, r, g, b, shadowR, shadowG, shadowB);
 
-                    morceau.couleur[3][indiceCouleur+6] = ombreR;
-                    morceau.couleur[3][indiceCouleur+7] = ombreG;
-                    morceau.couleur[3][indiceCouleur+8] = ombreB;
+                    chunk.colors[3][colorIndex+6] = shadowR;
+                    chunk.colors[3][colorIndex+7] = shadowG;
+                    chunk.colors[3][colorIndex+8] = shadowB;
 
-                    // vertex 4
-                    nombreCube = 0;
+                    // vertices 4
+                    cubeCount = 0;
                     if(isBlock(m_blocks[(z+1) * limitX * limitY + (y-1) * limitX + x+1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z+1) * limitX * limitY + (y-1) * limitX + x]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z+0) * limitX * limitY + (y-1) * limitX + x]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z+0) * limitX * limitY + (y-1) * limitX + x+1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
-                    blockColorWithShadow(nombreCube, r, g, b, ombreR, ombreG, ombreB);
+                    blockColorWithShadow(cubeCount, r, g, b, shadowR, shadowG, shadowB);
 
-                    morceau.couleur[3][indiceCouleur+9] = ombreR;
-                    morceau.couleur[3][indiceCouleur+10] = ombreG;
-                    morceau.couleur[3][indiceCouleur+11] = ombreB;
+                    chunk.colors[3][colorIndex+9] = shadowR;
+                    chunk.colors[3][colorIndex+10] = shadowG;
+                    chunk.colors[3][colorIndex+11] = shadowB;
 
-                    indiceCouleur += 12;
+                    colorIndex += 12;
 
                 }
             }
@@ -1090,69 +1081,69 @@ struct Chunk World::updateChunk(int chunkIndex)
     }
 
 
-    indice = 0;
-    indiceCoordonneeTexture = 0;
-    indiceCouleur = 0;
+    index = 0;
+    textureCoordinateIndex = 0;
+    colorIndex = 0;
 
-    morceau.nombreFace[4] = 0;
+    chunk.faceCounts[4] = 0;
 
     for(z = zMin; z < zMax; z++)
     for(y = yMin; y < yMax; y++)
     for(x = xMin; x < xMax; x++)
     {
-        typeBloc = m_blocks[z * limitX * limitY + y * limitX + x];
-        i = typeBloc % 16;
-        j = typeBloc / 16;
+        blockType = m_blocks[z * limitX * limitY + y * limitX + x];
+        i = blockType % 16;
+        j = blockType / 16;
 
-        if(isBlock(typeBloc) == true)
+        if(isBlock(blockType) == true)
         {
             if(x + 1 < limitX && y + 1 < limitY && z + 1 < limitZ
             && x - 1 >= 0 && y - 1 >= 0 && z - 1 >= 0)
             {
                 if(isBlock(m_blocks[(z+1) * limitX * limitY + y * limitX + x]) == 0) // si le bloc en z+1 n'existe pas
                 {
-                    morceau.nombreFace[4]++;
+                    chunk.faceCounts[4]++;
 
-                    // vertex 1
-                    morceau.vertex[4][indice+0] = x;
-                    morceau.vertex[4][indice+1] = y+1;
-                    morceau.vertex[4][indice+2] = z+1;
+                    // vertices 1
+                    chunk.vertices[4][index+0] = x;
+                    chunk.vertices[4][index+1] = y+1;
+                    chunk.vertices[4][index+2] = z+1;
 
-                    // vertex 2
-                    morceau.vertex[4][indice+3] = x;
-                    morceau.vertex[4][indice+4] = y;
-                    morceau.vertex[4][indice+5] = z+1;
+                    // vertices 2
+                    chunk.vertices[4][index+3] = x;
+                    chunk.vertices[4][index+4] = y;
+                    chunk.vertices[4][index+5] = z+1;
 
-                    // vertex 3
-                    morceau.vertex[4][indice+6] = x+1;
-                    morceau.vertex[4][indice+7] = y;
-                    morceau.vertex[4][indice+8] = z+1;
+                    // vertices 3
+                    chunk.vertices[4][index+6] = x+1;
+                    chunk.vertices[4][index+7] = y;
+                    chunk.vertices[4][index+8] = z+1;
 
-                    // vertex 4
-                    morceau.vertex[4][indice+9] = x+1;
-                    morceau.vertex[4][indice+10] = y+1;
-                    morceau.vertex[4][indice+11] = z+1;
+                    // vertices 4
+                    chunk.vertices[4][index+9] = x+1;
+                    chunk.vertices[4][index+10] = y+1;
+                    chunk.vertices[4][index+11] = z+1;
 
-                    indice += 12;
+                    index += 12;
 
-                    // vertex 1
-                    morceau.coordonneTexture[4][indiceCoordonneeTexture+0] = i*0.0625 + 0.001;
-                    morceau.coordonneTexture[4][indiceCoordonneeTexture+1] = (j+1)*0.0625 - 0.001;
+                    // vertices 1
+                    chunk.texturesCoordinates[4][textureCoordinateIndex+0] = i*0.0625 + 0.001;
+                    chunk.texturesCoordinates[4][textureCoordinateIndex+1] = (j+1)*0.0625 - 0.001;
 
-                    // vertex 2
-                    morceau.coordonneTexture[4][indiceCoordonneeTexture+2] = i*0.0625 + 0.001;
-                    morceau.coordonneTexture[4][indiceCoordonneeTexture+3] = j*0.0625 + 0.001;
+                    // vertices 2
+                    chunk.texturesCoordinates[4][textureCoordinateIndex+2] = i*0.0625 + 0.001;
+                    chunk.texturesCoordinates[4][textureCoordinateIndex+3] = j*0.0625 + 0.001;
 
-                    // vertex 3
-                    morceau.coordonneTexture[4][indiceCoordonneeTexture+4] = (i+1)*0.0625 - 0.001;
-                    morceau.coordonneTexture[4][indiceCoordonneeTexture+5] = j*0.0625 + 0.001;
+                    // vertices 3
+                    chunk.texturesCoordinates[4][textureCoordinateIndex+4] = (i+1)*0.0625 - 0.001;
+                    chunk.texturesCoordinates[4][textureCoordinateIndex+5] = j*0.0625 + 0.001;
 
-                    // vertex 4
-                    morceau.coordonneTexture[4][indiceCoordonneeTexture+6] = (i+1)*0.0625 - 0.001;
-                    morceau.coordonneTexture[4][indiceCoordonneeTexture+7] = (j+1)*0.0625 - 0.001;
-                    indiceCoordonneeTexture += 8;
+                    // vertices 4
+                    chunk.texturesCoordinates[4][textureCoordinateIndex+6] = (i+1)*0.0625 - 0.001;
+                    chunk.texturesCoordinates[4][textureCoordinateIndex+7] = (j+1)*0.0625 - 0.001;
+                    textureCoordinateIndex += 8;
 
-                    blockColor(typeBloc, r,g,b,2,x,y,z);
+                    blockColor(blockType, r,g,b,2,x,y,z);
 
                     colorLimit(r, g, b);
 
@@ -1161,249 +1152,249 @@ struct Chunk World::updateChunk(int chunkIndex)
                     // | 2 3
                     // Z - - X
 
-                    // vertex 1
-                    nombreCube = 0;
+                    // vertices 1
+                    cubeCount = 0;
                     if(isBlock(m_blocks[(z+1) * limitX * limitY + (y+1) * limitX + x]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z+1) * limitX * limitY + (y+1) * limitX + x-1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z+1) * limitX * limitY + y * limitX + x-1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z+1) * limitX * limitY + y * limitX + x]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
-                    blockColorWithShadow(nombreCube, r, g, b, ombreR, ombreG, ombreB);
+                    blockColorWithShadow(cubeCount, r, g, b, shadowR, shadowG, shadowB);
 
-                    morceau.couleur[4][indiceCouleur+0] = ombreR;
-                    morceau.couleur[4][indiceCouleur+1] = ombreG;
-                    morceau.couleur[4][indiceCouleur+2] = ombreB;
+                    chunk.colors[4][colorIndex+0] = shadowR;
+                    chunk.colors[4][colorIndex+1] = shadowG;
+                    chunk.colors[4][colorIndex+2] = shadowB;
 
-                    // vertex 2
-                    nombreCube = 0;
+                    // vertices 2
+                    cubeCount = 0;
                     if(isBlock(m_blocks[(z+1) * limitX * limitY + y * limitX + x]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z+1) * limitX * limitY + y * limitX + x-1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z+1) * limitX * limitY + (y-1) * limitX + x-1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z+1) * limitX * limitY + (y-1) * limitX + x]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
-                    blockColorWithShadow(nombreCube, r, g, b, ombreR, ombreG, ombreB);
+                    blockColorWithShadow(cubeCount, r, g, b, shadowR, shadowG, shadowB);
 
-                    morceau.couleur[4][indiceCouleur+3] = ombreR;
-                    morceau.couleur[4][indiceCouleur+4] = ombreG;
-                    morceau.couleur[4][indiceCouleur+5] = ombreB;
+                    chunk.colors[4][colorIndex+3] = shadowR;
+                    chunk.colors[4][colorIndex+4] = shadowG;
+                    chunk.colors[4][colorIndex+5] = shadowB;
 
-                    // vertex 3
-                    nombreCube = 0;
+                    // vertices 3
+                    cubeCount = 0;
                     if(isBlock(m_blocks[(z+1) * limitX * limitY + y * limitX + x+1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z+1) * limitX * limitY + y * limitX + x]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z+1) * limitX * limitY + (y-1) * limitX + x]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z+1) * limitX * limitY + (y-1) * limitX + x+1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
-                    blockColorWithShadow(nombreCube, r, g, b, ombreR, ombreG, ombreB);
+                    blockColorWithShadow(cubeCount, r, g, b, shadowR, shadowG, shadowB);
 
-                    morceau.couleur[4][indiceCouleur+6] = ombreR;
-                    morceau.couleur[4][indiceCouleur+7] = ombreG;
-                    morceau.couleur[4][indiceCouleur+8] = ombreB;
+                    chunk.colors[4][colorIndex+6] = shadowR;
+                    chunk.colors[4][colorIndex+7] = shadowG;
+                    chunk.colors[4][colorIndex+8] = shadowB;
 
-                    // vertex 4
-                    nombreCube = 0;
+                    // vertices 4
+                    cubeCount = 0;
                     if(isBlock(m_blocks[(z+1) * limitX * limitY + (y+1) * limitX + x+1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z+1) * limitX * limitY + (y+1) * limitX + x]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z+1) * limitX * limitY + y * limitX + x]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z+1) * limitX * limitY + y * limitX + x+1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
-                    blockColorWithShadow(nombreCube, r, g, b, ombreR, ombreG, ombreB);
+                    blockColorWithShadow(cubeCount, r, g, b, shadowR, shadowG, shadowB);
 
-                    morceau.couleur[4][indiceCouleur+9] = ombreR;
-                    morceau.couleur[4][indiceCouleur+10] = ombreG;
-                    morceau.couleur[4][indiceCouleur+11] = ombreB;
+                    chunk.colors[4][colorIndex+9] = shadowR;
+                    chunk.colors[4][colorIndex+10] = shadowG;
+                    chunk.colors[4][colorIndex+11] = shadowB;
 
-                    indiceCouleur += 12;
+                    colorIndex += 12;
 
                 }
             }
         }
     }
 
-    indice = 0;
-    indiceCoordonneeTexture = 0;
-    indiceCouleur = 0;
+    index = 0;
+    textureCoordinateIndex = 0;
+    colorIndex = 0;
 
-    morceau.nombreFace[5] = 0;
+    chunk.faceCounts[5] = 0;
 
     for(z = zMin; z < zMax; z++)
     for(y = yMin; y < yMax; y++)
     for(x = xMin; x < xMax; x++)
     {
-        typeBloc = m_blocks[z * limitX * limitY + y * limitX + x];
-        i = typeBloc % 16;
-        j = typeBloc / 16;
+        blockType = m_blocks[z * limitX * limitY + y * limitX + x];
+        i = blockType % 16;
+        j = blockType / 16;
 
-        if(isBlock(typeBloc) == true)
+        if(isBlock(blockType) == true)
         {
             if(x + 1 < limitX && y + 1 < limitY && z + 1 < limitZ
             && x - 1 >= 0 && y - 1 >= 0 && z - 1 >= 0)
             {
                 if(isBlock(m_blocks[(z-1) * limitX * limitY + y * limitX + x]) == 0) // si le bloc en z-1 n'existe pas
                 {
-                    morceau.nombreFace[5]++;
+                    chunk.faceCounts[5]++;
 
-                    // vertex 1
-                    morceau.vertex[5][indice+0] = x;
-                    morceau.vertex[5][indice+1] = y+1;
-                    morceau.vertex[5][indice+2] = z;
+                    // vertices 1
+                    chunk.vertices[5][index+0] = x;
+                    chunk.vertices[5][index+1] = y+1;
+                    chunk.vertices[5][index+2] = z;
 
-                    // vertex 2
-                    morceau.vertex[5][indice+3] = x+1;
-                    morceau.vertex[5][indice+4] = y+1;
-                    morceau.vertex[5][indice+5] = z;
+                    // vertices 2
+                    chunk.vertices[5][index+3] = x+1;
+                    chunk.vertices[5][index+4] = y+1;
+                    chunk.vertices[5][index+5] = z;
 
-                    // vertex 3
-                    morceau.vertex[5][indice+6] = x+1;
-                    morceau.vertex[5][indice+7] = y;
-                    morceau.vertex[5][indice+8] = z;
+                    // vertices 3
+                    chunk.vertices[5][index+6] = x+1;
+                    chunk.vertices[5][index+7] = y;
+                    chunk.vertices[5][index+8] = z;
 
-                    // vertex 4
-                    morceau.vertex[5][indice+9] = x;
-                    morceau.vertex[5][indice+10] = y;
-                    morceau.vertex[5][indice+11] = z;
+                    // vertices 4
+                    chunk.vertices[5][index+9] = x;
+                    chunk.vertices[5][index+10] = y;
+                    chunk.vertices[5][index+11] = z;
 
-                    indice += 12;
+                    index += 12;
 
-                    // vertex 1
-                    morceau.coordonneTexture[5][indiceCoordonneeTexture+0] = i*0.0625 + 0.001;
-                    morceau.coordonneTexture[5][indiceCoordonneeTexture+1] = (j+1)*0.0625 - 0.001;
+                    // vertices 1
+                    chunk.texturesCoordinates[5][textureCoordinateIndex+0] = i*0.0625 + 0.001;
+                    chunk.texturesCoordinates[5][textureCoordinateIndex+1] = (j+1)*0.0625 - 0.001;
 
-                    // vertex 2
-                    morceau.coordonneTexture[5][indiceCoordonneeTexture+2] = (i+1)*0.0625 - 0.001;
-                    morceau.coordonneTexture[5][indiceCoordonneeTexture+3] = (j+1)*0.0625 - 0.001;
+                    // vertices 2
+                    chunk.texturesCoordinates[5][textureCoordinateIndex+2] = (i+1)*0.0625 - 0.001;
+                    chunk.texturesCoordinates[5][textureCoordinateIndex+3] = (j+1)*0.0625 - 0.001;
 
-                    // vertex 3
-                    morceau.coordonneTexture[5][indiceCoordonneeTexture+4] = (i+1)*0.0625 - 0.001;
-                    morceau.coordonneTexture[5][indiceCoordonneeTexture+5] = j*0.0625 + 0.001;
+                    // vertices 3
+                    chunk.texturesCoordinates[5][textureCoordinateIndex+4] = (i+1)*0.0625 - 0.001;
+                    chunk.texturesCoordinates[5][textureCoordinateIndex+5] = j*0.0625 + 0.001;
 
-                    // vertex 4
-                    morceau.coordonneTexture[5][indiceCoordonneeTexture+6] = i*0.0625 + 0.001;
-                    morceau.coordonneTexture[5][indiceCoordonneeTexture+7] = j*0.0625 + 0.001;
-                    indiceCoordonneeTexture += 8;
+                    // vertices 4
+                    chunk.texturesCoordinates[5][textureCoordinateIndex+6] = i*0.0625 + 0.001;
+                    chunk.texturesCoordinates[5][textureCoordinateIndex+7] = j*0.0625 + 0.001;
+                    textureCoordinateIndex += 8;
 
-                    blockColor(typeBloc, r,g,b,2,x,y,z);
+                    blockColor(blockType, r,g,b,2,x,y,z);
 
                     // Y
                     // | 1 2
                     // | 4 3
                     // Z - - X
 
-                    // vertex 1
-                    nombreCube = 0;
+                    // vertices 1
+                    cubeCount = 0;
                     if(isBlock(m_blocks[(z-1) * limitX * limitY + (y+1) * limitX + x]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z-1) * limitX * limitY + (y+1) * limitX + x-1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z-1) * limitX * limitY + y * limitX + x-1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z-1) * limitX * limitY + y * limitX + x]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
-                    blockColorWithShadow(nombreCube, r, g, b, ombreR, ombreG, ombreB);
+                    blockColorWithShadow(cubeCount, r, g, b, shadowR, shadowG, shadowB);
 
-                    morceau.couleur[5][indiceCouleur+0] = ombreR;
-                    morceau.couleur[5][indiceCouleur+1] = ombreG;
-                    morceau.couleur[5][indiceCouleur+2] = ombreB;
+                    chunk.colors[5][colorIndex+0] = shadowR;
+                    chunk.colors[5][colorIndex+1] = shadowG;
+                    chunk.colors[5][colorIndex+2] = shadowB;
 
-                    // vertex 2
-                    nombreCube = 0;
+                    // vertices 2
+                    cubeCount = 0;
                     if(isBlock(m_blocks[(z-1) * limitX * limitY + (y+1) * limitX + x+1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z-1) * limitX * limitY + (y+1) * limitX + x]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z-1) * limitX * limitY + y * limitX + x]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z-1) * limitX * limitY + y * limitX + x+1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
-                    blockColorWithShadow(nombreCube, r, g, b, ombreR, ombreG, ombreB);
+                    blockColorWithShadow(cubeCount, r, g, b, shadowR, shadowG, shadowB);
 
-                    morceau.couleur[5][indiceCouleur+3] = ombreR;
-                    morceau.couleur[5][indiceCouleur+4] = ombreG;
-                    morceau.couleur[5][indiceCouleur+5] = ombreB;
+                    chunk.colors[5][colorIndex+3] = shadowR;
+                    chunk.colors[5][colorIndex+4] = shadowG;
+                    chunk.colors[5][colorIndex+5] = shadowB;
 
-                    // vertex 3
-                    nombreCube = 0;
+                    // vertices 3
+                    cubeCount = 0;
                     if(isBlock(m_blocks[(z-1) * limitX * limitY + y * limitX + x+1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z-1) * limitX * limitY + y * limitX + x]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z-1) * limitX * limitY + (y-1) * limitX + x]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z-1) * limitX * limitY + (y-1) * limitX + x+1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
-                    blockColorWithShadow(nombreCube, r, g, b, ombreR, ombreG, ombreB);
+                    blockColorWithShadow(cubeCount, r, g, b, shadowR, shadowG, shadowB);
 
-                    morceau.couleur[5][indiceCouleur+6] = ombreR;
-                    morceau.couleur[5][indiceCouleur+7] = ombreG;
-                    morceau.couleur[5][indiceCouleur+8] = ombreB;
+                    chunk.colors[5][colorIndex+6] = shadowR;
+                    chunk.colors[5][colorIndex+7] = shadowG;
+                    chunk.colors[5][colorIndex+8] = shadowB;
 
-                    // vertex 4
-                    nombreCube = 0;
+                    // vertices 4
+                    cubeCount = 0;
                     if(isBlock(m_blocks[(z-1) * limitX * limitY + y * limitX + x]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z-1) * limitX * limitY + y * limitX + x-1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z-1) * limitX * limitY + (y-1) * limitX + x-1]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
                     if(isBlock(m_blocks[(z-1) * limitX * limitY + (y-1) * limitX + x]) != 0)
-                        nombreCube++;
+                        cubeCount++;
 
-                    blockColorWithShadow(nombreCube, r, g, b, ombreR, ombreG, ombreB);
+                    blockColorWithShadow(cubeCount, r, g, b, shadowR, shadowG, shadowB);
 
-                    morceau.couleur[5][indiceCouleur+9] = ombreR;
-                    morceau.couleur[5][indiceCouleur+10] = ombreG;
-                    morceau.couleur[5][indiceCouleur+11] = ombreB;
+                    chunk.colors[5][colorIndex+9] = shadowR;
+                    chunk.colors[5][colorIndex+10] = shadowG;
+                    chunk.colors[5][colorIndex+11] = shadowB;
 
-                    indiceCouleur += 12;
+                    colorIndex += 12;
                 }
             }
         }
     }
 
-    return morceau;
+    return chunk;
 }
 
 bool World::isBlock(int type)
@@ -1423,7 +1414,7 @@ bool World::isBlock(int type)
 
 void World::blockColor(int &blockType, int &r, int &g, int &b, int face, int x, int y, int z)
 {
-    // on varie légèrement la couleur selon les coordonnées x, y, z du cube
+    // on varie légèrement la colors selon les coordonnées x, y, z du cube
     x = x % 16;
     y = y % 16;
     z = z % 16;
@@ -1434,7 +1425,7 @@ void World::blockColor(int &blockType, int &r, int &g, int &b, int face, int x, 
     // à 250 il n'y a presque plus de différence de teinte
     int R,G,B;
 
-    //TerrainCubeCouleur(typeBloc, R, G, B);
+    //TerrainCubecolors(blockType, R, G, B);
     switch (blockType)
     {
         case 1:
@@ -1503,36 +1494,36 @@ void World::blockColor(int &blockType, int &r, int &g, int &b, int face, int x, 
     b = B;
 }
 
-void World::blockColorWithShadow(int &nombreCube, int r, int g, int b, int &ombreR, int &ombreG, int &ombreB)
+void World::blockColorWithShadow(int &cubeCount, int r, int g, int b, int &shadowR, int &shadowG, int &shadowB)
 {
-    switch (nombreCube)
+    switch (cubeCount)
     {
         case 0:
-            ombreR = r;
-            ombreG = g;
-            ombreB = b;
+            shadowR = r;
+            shadowG = g;
+            shadowB = b;
             break;
 
         case 1:
-            ombreR = r - 30;
-            ombreG = g - 30;
-            ombreB = b - 30;
+            shadowR = r - 30;
+            shadowG = g - 30;
+            shadowB = b - 30;
             break;
 
         case 2:
-            ombreR = r - 60;
-            ombreG = g - 60;
-            ombreB = b - 60;
+            shadowR = r - 60;
+            shadowG = g - 60;
+            shadowB = b - 60;
             break;
 
         case 3:
-            ombreR = r - 70;
-            ombreG = g - 70;
-            ombreB = b - 70;
+            shadowR = r - 70;
+            shadowG = g - 70;
+            shadowB = b - 70;
             break;
     }
 
-    colorLimit(ombreR, ombreG, ombreB);
+    colorLimit(shadowR, shadowG, shadowB);
 }
 
 void World::colorLimit(int &red, int &green, int &blue)
@@ -1549,7 +1540,7 @@ void World::colorLimit(int &red, int &green, int &blue)
 
 void World::updateBlock(int x, int y, int z)
 {
-    // on détermine dans quel morceau se trouve le bloc qu'on a changé
+    // on détermine dans quel chunk se trouve le bloc qu'on a changé
     int X,Y,Z;
     int index;
     X = x / m_chunkSize;
@@ -1560,7 +1551,7 @@ void World::updateBlock(int x, int y, int z)
 
     setChunk(updateChunk(index), index);
 
-    // si on se trouve sur un bord on met à jour le morceau d'à côté
+    // si on se trouve sur un bord on met à jour le chunk d'à côté
     if((x % m_chunkSize) == 15 && X+1 < m_chunkX)
     {
         index = Z * m_chunkX * m_chunkY + Y * m_chunkX + X+1;

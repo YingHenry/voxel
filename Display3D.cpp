@@ -110,7 +110,7 @@ void Display3D::renderWorld(World &world, Player &player)
     int chunkSize = world.getChunkSize();
     struct Chunk *chunks = world.getChunks();
 
-    int numeroMorceau;
+    int chunkIndex;
     float X,Y,Z;
 
     // le backface culling augmente les performances surtout pour les gros polygones
@@ -125,71 +125,65 @@ void Display3D::renderWorld(World &world, Player &player)
     for (int y = 0; y < chunkCountY; y++)
     for (int x = 0; x < chunkCountX; x++)
     {
-        numeroMorceau = z * chunkCountX * chunkCountY + y * chunkCountX + x;
+        chunkIndex = z * chunkCountX * chunkCountY + y * chunkCountX + x;
 
         // on se déplace au centre du morceau
-        X = x*chunkSize + chunkSize/2.0f;
-        Y = y*chunkSize + chunkSize/2.0f;
-        Z = z*chunkSize + chunkSize/2.0f;
+        X = x * chunkSize + chunkSize / 2.0f;
+        Y = y * chunkSize + chunkSize / 2.0f;
+        Z = z * chunkSize + chunkSize / 2.0f;
 
-        if(chunks[numeroMorceau].nombreFace[0] > 0 && player.getCameraX() >= x*chunkSize)
+        if(chunks[chunkIndex].faceCounts[0] > 0 && player.getCameraX() >= x * chunkSize)
         {
-            glVertexPointer(3, GL_FLOAT, 0, chunks[numeroMorceau].vertex[0]);
-            glColorPointer(3, GL_UNSIGNED_BYTE  , 3*sizeof(GLubyte), chunks[numeroMorceau].couleur[0]);
-            glTexCoordPointer(2, GL_FLOAT, 0, chunks[numeroMorceau].coordonneTexture[0]);
-
+            glVertexPointer(3, GL_FLOAT, 3 * sizeof(GLfloat), chunks[chunkIndex].vertices[0]);
+            glColorPointer(3, GL_UNSIGNED_BYTE  , 3 * sizeof(GLubyte), chunks[chunkIndex].colors[0]);
+            glTexCoordPointer(2, GL_FLOAT, 2 * sizeof(GLfloat), chunks[chunkIndex].texturesCoordinates[0]);
             glBindTexture(GL_TEXTURE_2D, m_textureBlockXY);
-            glDrawArrays(GL_QUADS, 0, chunks[numeroMorceau].nombreFace[0]*4);
+            glDrawArrays(GL_QUADS, 0, chunks[chunkIndex].faceCounts[0] * 4);
         }
 
-        if(chunks[numeroMorceau].nombreFace[1] > 0 && player.getCameraX() <= (x+1)*chunkSize)
+        if(chunks[chunkIndex].faceCounts[1] > 0 && player.getCameraX() <= (x+1) * chunkSize)
         {
-            glVertexPointer(3, GL_FLOAT, 3*sizeof(float), chunks[numeroMorceau].vertex[1]);
-            glColorPointer(3, GL_UNSIGNED_BYTE  , 3*sizeof(GLubyte), chunks[numeroMorceau].couleur[1]);
-            glTexCoordPointer(2, GL_FLOAT, 2*sizeof(float), chunks[numeroMorceau].coordonneTexture[1]);
-
+            glVertexPointer(3, GL_FLOAT, 3 * sizeof(GLfloat), chunks[chunkIndex].vertices[1]);
+            glColorPointer(3, GL_UNSIGNED_BYTE  , 3 * sizeof(GLubyte), chunks[chunkIndex].colors[1]);
+            glTexCoordPointer(2, GL_FLOAT, 2 * sizeof(GLfloat), chunks[chunkIndex].texturesCoordinates[1]);
             glBindTexture(GL_TEXTURE_2D, m_textureBlockXY);
-            glDrawArrays(GL_QUADS, 0, chunks[numeroMorceau].nombreFace[1]*4);
+            glDrawArrays(GL_QUADS, 0, chunks[chunkIndex].faceCounts[1] * 4);
         }
 
-        if(chunks[numeroMorceau].nombreFace[2] > 0 && player.getCameraY() >= y*chunkSize)
+        if(chunks[chunkIndex].faceCounts[2] > 0 && player.getCameraY() >= y * chunkSize)
         {
-            glVertexPointer(3, GL_FLOAT, 3*sizeof(float), chunks[numeroMorceau].vertex[2]);
-            glColorPointer(3, GL_UNSIGNED_BYTE  , 3*sizeof(GLubyte), chunks[numeroMorceau].couleur[2]);
-            glTexCoordPointer(2, GL_FLOAT, 2*sizeof(float), chunks[numeroMorceau].coordonneTexture[2]);
-
+            glVertexPointer(3, GL_FLOAT, 3 * sizeof(GLfloat), chunks[chunkIndex].vertices[2]);
+            glColorPointer(3, GL_UNSIGNED_BYTE  , 3 * sizeof(GLubyte), chunks[chunkIndex].colors[2]);
+            glTexCoordPointer(2, GL_FLOAT, 2 * sizeof(GLfloat), chunks[chunkIndex].texturesCoordinates[2]);
             glBindTexture(GL_TEXTURE_2D, m_textureBlockXY);
-            glDrawArrays(GL_QUADS, 0, chunks[numeroMorceau].nombreFace[2]*4);
+            glDrawArrays(GL_QUADS, 0, chunks[chunkIndex].faceCounts[2] * 4);
         }
 
-        if(chunks[numeroMorceau].nombreFace[3] > 0 && player.getCameraY() <= (y+1)*chunkSize)
+        if(chunks[chunkIndex].faceCounts[3] > 0 && player.getCameraY() <= (y+1) * chunkSize)
         {
-            glVertexPointer(3, GL_FLOAT, 3*sizeof(float), chunks[numeroMorceau].vertex[3]);
-            glColorPointer(3, GL_UNSIGNED_BYTE  , 3*sizeof(GLubyte), chunks[numeroMorceau].couleur[3]);
-            glTexCoordPointer(2, GL_FLOAT, 2*sizeof(float), chunks[numeroMorceau].coordonneTexture[3]);
-
+            glVertexPointer(3, GL_FLOAT, 3 * sizeof(GLfloat), chunks[chunkIndex].vertices[3]);
+            glColorPointer(3, GL_UNSIGNED_BYTE  , 3 * sizeof(GLubyte), chunks[chunkIndex].colors[3]);
+            glTexCoordPointer(2, GL_FLOAT, 2 * sizeof(GLfloat), chunks[chunkIndex].texturesCoordinates[3]);
             glBindTexture(GL_TEXTURE_2D, m_textureBlockXY);
-            glDrawArrays(GL_QUADS, 0, chunks[numeroMorceau].nombreFace[3]*4);
+            glDrawArrays(GL_QUADS, 0, chunks[chunkIndex].faceCounts[3] * 4);
         }
 
-        if(chunks[numeroMorceau].nombreFace[4] > 0 && player.getCameraZ() >= z*chunkSize)
+        if(chunks[chunkIndex].faceCounts[4] > 0 && player.getCameraZ() >= z * chunkSize)
         {
-            glVertexPointer(3, GL_FLOAT, 3*sizeof(float), chunks[numeroMorceau].vertex[4]);
-            glColorPointer(3, GL_UNSIGNED_BYTE  , 3*sizeof(GLubyte), chunks[numeroMorceau].couleur[4]);
-            glTexCoordPointer(2, GL_FLOAT, 2*sizeof(float), chunks[numeroMorceau].coordonneTexture[4]);
-
+            glVertexPointer(3, GL_FLOAT, 3 * sizeof(GLfloat), chunks[chunkIndex].vertices[4]);
+            glColorPointer(3, GL_UNSIGNED_BYTE  , 3 * sizeof(GLubyte), chunks[chunkIndex].colors[4]);
+            glTexCoordPointer(2, GL_FLOAT, 2 * sizeof(GLfloat), chunks[chunkIndex].texturesCoordinates[4]);
             glBindTexture(GL_TEXTURE_2D, m_textureBlockZP);
-            glDrawArrays(GL_QUADS, 0, chunks[numeroMorceau].nombreFace[4]*4);
+            glDrawArrays(GL_QUADS, 0, chunks[chunkIndex].faceCounts[4] * 4);
         }
 
-        if(chunks[numeroMorceau].nombreFace[5] > 0 && player.getCameraZ() <= (z+1)*chunkSize)
+        if(chunks[chunkIndex].faceCounts[5] > 0 && player.getCameraZ() <= (z+1) * chunkSize)
         {
-            glVertexPointer(3, GL_FLOAT, 3*sizeof(float), chunks[numeroMorceau].vertex[5]);
-            glColorPointer(3, GL_UNSIGNED_BYTE  , 3*sizeof(GLubyte), chunks[numeroMorceau].couleur[5]);
-            glTexCoordPointer(2, GL_FLOAT, 2*sizeof(float), chunks[numeroMorceau].coordonneTexture[5]);
-
+            glVertexPointer(3, GL_FLOAT, 3 * sizeof(GLfloat), chunks[chunkIndex].vertices[5]);
+            glColorPointer(3, GL_UNSIGNED_BYTE  , 3 * sizeof(GLubyte), chunks[chunkIndex].colors[5]);
+            glTexCoordPointer(2, GL_FLOAT, 2 * sizeof(GLfloat), chunks[chunkIndex].texturesCoordinates[5]);
             glBindTexture(GL_TEXTURE_2D, m_textureBlockZN);
-            glDrawArrays(GL_QUADS, 0, chunks[numeroMorceau].nombreFace[5]*4);
+            glDrawArrays(GL_QUADS, 0, chunks[chunkIndex].faceCounts[5] * 4);
         }
     }
 
